@@ -1,0 +1,21 @@
+<html>
+  <body>
+    <script>
+      (async () => {
+        const user = 'MarcFrappierUdeS';
+        const repo = 'MarcFrappierUdeS.github.io';
+        const path = 'mat115/devoirs';
+        const response = await fetch('ttps://api.github.com/repos/${user}/${repo}/contents/${path}');
+        const data = await response.json();
+        let htmlString = '<ul>';
+        
+        for (let file of data) {
+          htmlString += `<li><a href="${file.path}">${file.name}</a></li>`;
+        }
+
+        htmlString += '</ul>';
+        document.getElementsByTagName('body')[0].innerHTML = htmlString;
+      })()
+    </script>
+  <body>
+</html>
