@@ -1,0 +1,3527 @@
+%PDF-1.3
+%âãÏÓ
+2 0 obj
+<<
+/Length 3762
+>>
+stream
+1 1 1 rg
+/GS1 gs
+13 -12 612 792 re
+f
+BT
+/TT2 1 Tf
+12 0 0 12 535.2399 38.88 Tm
+0 0 0 rg
+0 Tc
+0 Tw
+(1)Tj
+18 0 0 18 222.04 692.28 Tm
+0.0013 Tc
+(Gestion de la maintenabilité)Tj
+12 0 0 12 271.6 643.68 Tm
+-0.0021 Tc
+(Marc Frappier)Tj
+9.96 0 0 9.96 89.68 619.596 Tm
+0.0004 Tc
+(Département de mathématiques et d'informatique, Université de Sherbrooke, Sherbrooke, Québec, J1K 2R1,)Tj
+6.3735 -1.1807 TD
+0.0019 Tc
+0.0006 Tw
+(tél.: 819-821-7096, fax: )Tj
+9.7952 0 TD
+0.0016 Tc
+0 Tw
+(819-821-8200, email:)Tj
+8.6988 0 TD
+-0.0001 Tc
+0.0031 Tw
+( marc.frappier@dmi.usherb.ca)Tj
+/TT4 1 Tf
+12 0 0 12 70.84 582 Tm
+-0.003 Tc
+0 Tw
+(Résumé)Tj
+/TT2 1 Tf
+2.94 -2.16 TD
+-0.0018 Tc
+(De 50 à 75 % de l'effort logiciel est consacré à la maintenance de systèmes.  La)Tj
+-2.94 -1.18 TD
+-0.0009 Tc
+(productivité des équipes de maintenance est fortement influencée par la maintenabilité.  Il est)Tj
+T*
+-0.0011 Tc
+(donc essentiel pour un gestionnaire de systèmes de bien gérer la maintenabilité pour planifier et)Tj
+T*
+(contrôler adéquatement les projets de maintenance.  Puisqu'on ne peut gérer ce qu'on ne peut)Tj
+T*
+-0.0009 Tc
+(mesurer, il apparaît nécessaire de pouvoir quantifier la maintenabilité pour bien gérer la)Tj
+T*
+-0.0007 Tc
+(maintenance.  Dans cet article, nous proposons une mesure de la maintenabilité qui peut être)Tj
+T*
+-0.0008 Tc
+(calculée durant la phase de maintenance. Nous identifions aussi une approche pour estimer la)Tj
+T*
+(maintenabilité durant la phase de développement.  Nous tentons également de clarifier le concept)Tj
+T*
+(de maintenabilité, et de le distinguer des autres caractéristiques du logiciel.)Tj
+/TT4 1 Tf
+0 -2.2 TD
+-0.0012 Tc
+(Mots clés)Tj
+/TT2 1 Tf
+0 -2.16 TD
+-0.0009 Tc
+(Maintenabilité, coûts de maintenance, réingénierie.)Tj
+/TT6 1 Tf
+14.04 0 0 14.04 70.84 362.1611 Tm
+-0.0018 Tc
+1.4505 Tw
+[(1.)-5.9( I)-5.9(n)2.4(tr)-6(oducti)-5.9(on)]TJ
+/TT2 1 Tf
+12 0 0 12 106.12 332.76 Tm
+-0.0008 Tc
+0.0001 Tw
+(Plusieurs études de la maintenance du logiciel dans les organisations \(Lientz, 78\),)Tj
+-2.94 -1.18 TD
+-0.001 Tc
+0 Tw
+(\(McKee, 84\) montrent que de 50 à 75 % des ressources humaines affectées au logiciel sont)Tj
+T*
+(consacrées à la maintenance.  Cette situation s'explique aisément.  Les organisations procèdent)Tj
+T*
+-0.0006 Tc
+(constamment à l'introduction de nouveaux logiciels.  Le taux d'introduction de nouveaux logiciels)Tj
+T*
+(étant généralement plus élevé que le taux d'élimination, on assiste à un accroissement du)Tj
+T*
+-0.0011 Tc
+(portefeuille logiciel des organisations.  De plus, si on analyse la répartition de l'effort pour le)Tj
+T*
+-0.0014 Tc
+(cycle de vie d'un logiciel \(Guimaraes, 83\), on constate que la maintenance représente de 50 à 80)Tj
+T*
+(% de l'effort.  Il est donc tout à fait normal d'affecter de 50 % à 75 % des ressources à la)Tj
+T*
+-0.0009 Tc
+(maintenance.  Puisque la maintenance accapare autant de ressources, il est essentiel pour une)Tj
+T*
+(organisation de bien contrôler les coûts de maintenance.)Tj
+2.94 -2.18 TD
+-0.0008 Tc
+(La maintenabilité est une caractéristique du logiciel.  On définit la maintenabilité comme)Tj
+-2.94 -1.18 TD
+-0.0009 Tc
+(étant la facilité avec laquelle un logiciel peut être maintenu. La maintenabilité est donc un des)Tj
+T*
+-0.001 Tc
+(facteurs qui influencent les coûts de maintenance.  Il est essentiel pour les gestionnaires de)Tj
+T*
+(systèmes de bien contrôler cet aspect de la qualité des logiciels.  Pour faire une gestion rationnelle)Tj
+T*
+-0.0006 Tc
+(de la maintenabilité, il est primordial de disposer d'une mesure quantitative.  Une telle mesure)Tj
+T*
+(permettrait de définir des critères quantitatifs de maintenabilité pour les logiciels à développer et)Tj
+T*
+-0.0009 Tc
+(d'assurer un suivi durant la maintenance du logiciel.  De plus, cette mesure pourrait servir à)Tj
+ET
+endstream
+endobj
+3 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/TT2 4 0 R
+/TT4 5 0 R
+/TT6 6 0 R
+>>
+/ExtGState <<
+/GS1 7 0 R
+>>
+>>
+endobj
+10 0 obj
+<<
+/Length 4685
+>>
+stream
+1 1 1 rg
+/GS1 gs
+13 -12 612 792 re
+f
+BT
+/TT2 1 Tf
+12 0 0 12 535.2399 38.88 Tm
+0 0 0 rg
+0 Tc
+0 Tw
+(2)Tj
+-38.7 55.92 TD
+-0.0012 Tc
+(identifier les systèmes nécessitant une réingénierie afin d'améliorer la maintenabilité et de réduire)Tj
+0 -1.18 TD
+-0.0008 Tc
+(les coûts de maintenance.)Tj
+2.94 -2.18 TD
+-0.0006 Tc
+(Dans cet article, nous proposons une mesure de maintenabilité.  Cette mesure est)Tj
+/TT8 1 Tf
+-2.94 -1.18 TD
+(calculable)Tj
+/TT2 1 Tf
+4.16 0 TD
+-0.001 Tc
+( après le début de la phase de maintenance.  Elle permet donc de gérer la maintenabilité)Tj
+-4.16 -1.18 TD
+-0.0006 Tc
+(durant la maintenance.  Comme il est aussi nécessaire de contrôler la maintenabilité durant le)Tj
+T*
+(développement et à la livraison du logiciel, nous proposons également une technique pour )Tj
+/TT8 1 Tf
+36.21 0 TD
+(estimer)Tj
+/TT2 1 Tf
+-36.21 -1.18 TD
+-0.0002 Tc
+(la maintenabilité.)Tj
+2.94 -2.18 TD
+-0.0011 Tc
+(La mesure que nous proposons n'est pas parfaite, car la maintenabilité est un concept)Tj
+-2.94 -1.18 TD
+-0.0006 Tc
+(difficile à mesurer avec précision.  Nous indiquons donc les conditions dans lesquelles la mesure)Tj
+T*
+-0.0005 Tc
+(peut être utilisée et la manière dont elle doit être utilisée.)Tj
+2.94 -2.18 TD
+-0.0003 Tc
+(Cet article est structuré comme suit.  Dans la section 2, nous situons la maintenabilité dans)Tj
+-2.94 -1.18 TD
+-0.0006 Tc
+(le contexte de la qualité du logiciel et nous la distinguons des autres caractéristiques de qualité.)Tj
+T*
+-0.0012 Tc
+0.0001 Tw
+(Dans la section 3, nous analysons la structure des coûts de maintenance pour bien caractériser)Tj
+T*
+-0.0004 Tc
+0 Tw
+(comment la maintenabilité influence ces coûts.  Dans la section 4, nous introduisons notre mesure)Tj
+T*
+(de maintenabilité ainsi que les prémisses menant à sa définition.  Dans la section 5, nous)Tj
+T*
+-0.0006 Tc
+(discutons de quelques méthodes d'estimation de la maintenabilité pour ensuite conclure par)Tj
+T*
+(quelques remarques sur la nature de notre proposition.)Tj
+/TT6 1 Tf
+14.04 0 0 14.04 70.84 419.0411 Tm
+0.0018 Tc
+0.0023 Tw
+[(2. )-1444.6(M)-11.4(a)2.2(in)6(ten)6(a)2.2(b)6(ilité et la q)6(u)6(a)2.2(lité d)6(u)6( lo)6(g)6(i)-2.3(ciel)]TJ
+/TT2 1 Tf
+12 0 0 12 106.12 389.64 Tm
+-0.0008 Tc
+0 Tw
+(La maintenabilité est un facteur de qualité du logiciel.  Dans cette section, nous allons)Tj
+-2.94 -1.18 TD
+(distinguer la maintenabilité des autres facteurs de qualité.)Tj
+2.94 -2.18 TD
+-0.0009 Tc
+(Plusieurs chercheurs ont proposé des modèles de qualité.  Pour notre analyse, nous)Tj
+-2.94 -1.18 TD
+-0.0008 Tc
+0.0004 Tw
+(retenons un des premiers modèles proposés, celui de Boehm )Tj
+/TT8 1 Tf
+24.34 0 TD
+0 Tc
+0 Tw
+(et al)Tj
+/TT2 1 Tf
+1.75 0 TD
+-0.0006 Tc
+-0.0001 Tw
+( \(Boehm 78\), pour sa simplicité)Tj
+-26.09 -1.18 TD
+-0.0012 Tc
+0.0004 Tw
+(et sa complétude.  Le modèle est illustré à la figure 1.)Tj
+ET
+0 0 0 RG
+0 J 0 j 0.96 w 10 M []0 d
+1 i 
+258.4 305.64 94.68 -20.4 re
+S
+BT
+11.04 0 0 11.04 266.68 291.7234 Tm
+0.0022 Tc
+-0.0022 Tw
+(facteurs de qualité)Tj
+ET
+1 J 1 j 
+305.68 283.92 m
+209.32 238.56 l
+S
+209.68 241.8 m
+210.04 238.92 l
+212.2 236.64 l
+205 236.52 l
+209.68 241.8 l
+f*
+305.56 283.92 m
+385.96 238.92 l
+S
+383.2 237.24 m
+385.48 239.28 l
+385.96 242.16 l
+390.28 236.52 l
+383.2 237.24 l
+f*
+BT
+11.04 0 0 11.04 181.12 222.1234 Tm
+0.0035 Tc
+0 Tw
+(utilisabilité)Tj
+-9.3804 -6.8696 TD
+0.003 Tc
+[(fiabilité)-1152(efficacité)-1739(conv)13.9(iv)13.9(ialité)-3217.3(com)20.1(p)3(réhe)]TJ
+21.6624 0 TD
+0.0032 Tc
+[(nsibilité)-967.3(m)20.3(odifiabilité)-1173.8(testabilité)-1249.8(portabilité)]TJ
+ET
+0 J 0 j 
+173.68 236.04 62.88 -20.4 re
+S
+BT
+11.04 0 0 11.04 361.12 222.1234 Tm
+0.003 Tc
+[(m)20.1(a)1.3(intenabilité)]TJ
+ET
+353.68 236.04 73.44 -20.4 re
+73 162.24 41.76 -20.52 re
+120.76 162.24 52.2 -20.52 re
+178.96 162.24 62.88 -20.52 re
+268.96 162.24 84.12 -20.52 re
+358.96 162.24 62.88 -20.52 re
+427.84 162.24 52.32 -20.52 re
+486.16 162.24 52.2 -20.52 re
+S
+1 J 1 j 
+205 215.4 m
+98.08 164.76 l
+S
+98.56 168 m
+98.92 165 l
+100.96 162.84 l
+93.76 162.6 l
+98.56 168 l
+f*
+205 215.4 m
+150.4 165.96 l
+S
+149.68 169.2 m
+150.88 166.44 l
+153.52 165 l
+146.68 162.6 l
+149.68 169.2 l
+f*
+205 215.64 m
+205 167.4 l
+S
+202.12 169.2 m
+205 168.24 l
+207.88 169.2 l
+205 162.6 l
+202.12 169.2 l
+f*
+390.28 215.4 m
+314.8 165.36 l
+S
+314.8 168.72 m
+315.52 165.72 l
+317.92 163.92 l
+310.96 162.6 l
+314.8 168.72 l
+f*
+390.28 215.64 m
+390.28 167.4 l
+S
+387.4 169.2 m
+390.28 168.24 l
+393.16 169.2 l
+390.28 162.6 l
+387.4 169.2 l
+f*
+390.4 215.4 m
+450.04 165.84 l
+S
+446.92 164.64 m
+449.56 166.08 l
+450.52 169.08 l
+453.88 162.6 l
+446.92 164.64 l
+f*
+390.28 215.4 m
+507.52 164.64 l
+S
+505 162.6 m
+506.92 164.88 l
+507.16 167.88 l
+512.2 162.6 l
+505 162.6 l
+f*
+BT
+12 0 0 12 235.72 116.988 Tm
+-0.0015 Tc
+(Figure 1 - Facteurs de qualité)Tj
+ET
+endstream
+endobj
+11 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/TT2 4 0 R
+/TT6 6 0 R
+/TT8 12 0 R
+>>
+/ExtGState <<
+/GS1 7 0 R
+>>
+>>
+endobj
+14 0 obj
+<<
+/Length 4240
+>>
+stream
+1 1 1 rg
+/GS1 gs
+13 -12 612 792 re
+f
+BT
+/TT2 1 Tf
+12 0 0 12 535.2399 38.88 Tm
+0 0 0 rg
+0 Tc
+0 Tw
+(3)Tj
+-35.76 55.92 TD
+-0.0007 Tc
+0.0006 Tw
+(Selon le modèle de Boehm )Tj
+/TT8 1 Tf
+11.01 0 TD
+0 Tc
+0 Tw
+(et al)Tj
+/TT2 1 Tf
+1.75 0 TD
+-0.0007 Tc
+(, il y a deux facteurs principaux de qualité, soit)Tj
+-15.7 -1.18 TD
+(l'utilisabilité, qui représente le point de vue de l'utilisateur, et la maintenabilité, qui représente le)Tj
+T*
+-0.0009 Tc
+(point de vue du concepteur.  L'utilisabilité se décompose en trois facteurs:)Tj
+1.5 -2.18 TD
+-0.0017 Tc
+(fiabilité: le degré avec lequel un système s'exécute sans occurrence d'erreurs;)Tj
+T*
+-0.0013 Tc
+(efficacité: le degré avec lequel un système exécute les fonctions requises sans gaspiller les)Tj
+2.94 -1.18 TD
+(ressources de l'ordinateur;)Tj
+-2.94 -2.18 TD
+(convivialité: le degré représentant la commodité et la facilité de l'usage d'un système.)Tj
+1.44 -2.18 TD
+(La maintenabilité se décompose en quatre facteurs:)Tj
+-1.44 -2.18 TD
+-0.0009 Tc
+(compréhensibilité: le degré représentant la facilité pour un humain de comprendre l'objet des)Tj
+2.94 -1.18 TD
+-0.0005 Tc
+(éléments \(divers produits logiciels, par exemple la spécification fonctionnelle, le)Tj
+T*
+-0.0019 Tc
+(design, le code source, etc.\) d'un système;)Tj
+-2.94 -2.18 TD
+-0.001 Tc
+(modifiabilité: le degré de facilité de modification du système;)Tj
+T*
+-0.0012 Tc
+(testabilité: le degré de facilité pour tester un système;)Tj
+T*
+-0.0014 Tc
+(portabilité: le degré de facilité pour porter un système d'une plateforme à une autre.)Tj
+1.44 -2.18 TD
+-0.0006 Tc
+(Quelques auteurs \(Martin, 83\) incluent les facteurs d'utilisabilité dans la définition de la)Tj
+-2.94 -1.18 TD
+-0.0014 Tc
+(maintenabilité.  Nous croyons que cette approche est inadéquate parce qu'elle ne correspond pas à)Tj
+T*
+-0.0011 Tc
+(la définition généralement acceptée de la maintenabilité, soit la facilité avec laquelle un système)Tj
+T*
+-0.0008 Tc
+(peut être maintenu.  Les facteurs d'utilisabilité influencent plutôt la )Tj
+/TT8 1 Tf
+26.98 0 TD
+0.0003 Tc
+(quantité)Tj
+/TT2 1 Tf
+3.28 0 TD
+-0.0013 Tc
+( de maintenance à)Tj
+-30.26 -1.18 TD
+(faire: un système peu fiable, peu convivial ou inefficace nécessitera plus de changements qu'un)Tj
+T*
+-0.0017 Tc
+(système ayant bonne utilisabilité; la )Tj
+/TT8 1 Tf
+14.52 0 TD
+0.0002 Tc
+(facilité)Tj
+/TT2 1 Tf
+2.78 0 TD
+-0.0017 Tc
+( de faire ces changement dépendra de la)Tj
+-17.3 -1.18 TD
+-0.0003 Tc
+(maintenabilité.  En pratique, il est possible qu'il existe une corrélation entre l'utilisabilité et la)Tj
+T*
+-0.0014 Tc
+(maintenabilité, c'est-à-dire que les systèmes ayant une faible utilisabilité ont typiquement une)Tj
+T*
+-0.001 Tc
+(faible maintenabilité, et vice versa.  Toutefois, il existe aussi des systèmes ayant une bonne)Tj
+T*
+-0.0005 Tc
+(utilisabilité, mais qui ont une très faible maintenabilité.  Notons également que certains facteurs)Tj
+T*
+-0.0012 Tc
+(de qualité sont en conflit.  Par exemple, si on désire augmenter l'efficacité d'un système, on le fera)Tj
+T*
+-0.0003 Tc
+(peut être en utilisant des algorithmes plus complexes, donc plus difficiles à maintenir.)Tj
+/TT6 1 Tf
+14.04 0 0 14.04 70.84 219.6011 Tm
+0.0015 Tc
+0.0026 Tw
+[(3. )-1444.6(M)-11.7(a)1.9(in)5.7(ten)5.7(a)1.9(b)5.7(ilité et co)5.7(û)5.7(t)1.2(s d)5.7(e)1.9( main)5.7(ten)5.7(a)1.9(n)5.7(c)1.9(e)]TJ
+/TT2 1 Tf
+12 0 0 12 106.12 190.2 Tm
+-0.001 Tc
+0 Tw
+(La qualité du logiciel influence les coûts de maintenance.  Pour bien comprendre comment)Tj
+-2.94 -1.18 TD
+-0.0006 Tc
+(la qualité influence les coûts de maintenance, il est utile de diviser la maintenance en trois)Tj
+T*
+-0.002 Tc
+(catégories:)Tj
+/TT10 1 Tf
+1.5 -2.24 TD
+0 Tc
+(•)Tj
+/TT2 1 Tf
+0.46 0 TD
+-0.001 Tc
+( la maintenance )Tj
+/TT8 1 Tf
+6.51 0 TD
+-0.0014 Tc
+(corrective)Tj
+/TT2 1 Tf
+4.04 0 TD
+-0.0007 Tc
+(, qui consiste en la correction de fautes;)Tj
+/TT10 1 Tf
+-11.01 -2.24 TD
+0 Tc
+(•)Tj
+/TT2 1 Tf
+0.46 0 TD
+-0.001 Tc
+( la maintenance )Tj
+/TT8 1 Tf
+6.51 0 TD
+-0.0002 Tc
+(adaptative)Tj
+/TT2 1 Tf
+4.22 0 TD
+-0.0011 Tc
+(, qui consiste à modifier le design \(l'implantation\) d'un système)Tj
+-8.25 -1.18 TD
+-0.0009 Tc
+(tout en préservant ses fonctions \(ex: améliorer la performance, améliorer la)Tj
+T*
+-0.0013 Tc
+0.0001 Tw
+(maintenabilité, porter le système sur une autre plateforme\))Tj
+ET
+endstream
+endobj
+15 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/TT2 4 0 R
+/TT6 6 0 R
+/TT8 12 0 R
+/TT10 16 0 R
+>>
+/ExtGState <<
+/GS1 7 0 R
+>>
+>>
+endobj
+18 0 obj
+<<
+/Length 6215
+>>
+stream
+1 1 1 rg
+/GS1 gs
+13 -12 612 792 re
+f
+BT
+/TT2 1 Tf
+12 0 0 12 535.2399 38.88 Tm
+0 0 0 rg
+0 Tc
+0 Tw
+(4)Tj
+/TT10 1 Tf
+-37.2 55.86 TD
+(•)Tj
+/TT2 1 Tf
+0.46 0 TD
+-0.001 Tc
+( la maintenance )Tj
+/TT8 1 Tf
+6.51 0 TD
+-0.0013 Tc
+(perfective)Tj
+/TT2 1 Tf
+3.93 0 TD
+0.0001 Tw
+(, qui consiste à modifier la fonction d'un système, typiquement)Tj
+-7.96 -1.18 TD
+-0.0006 Tc
+0 Tw
+(pour s'adapter à de nouveaux besoins des utilisateurs.)Tj
+-1.5 -2.18 TD
+-0.0012 Tc
+(Les coûts de maintenance pour une période donnée peuvent être estimés, grossièrement, à)Tj
+-2.94 -1.18 TD
+-0.0009 Tc
+(l'aide de la formule suivante:)Tj
+/TT8 1 Tf
+7.72 -2.32 TD
+-0.0049 Tc
+[(COÛT)-3008.4(COÛT)-3288.4(NB)-2854.1(NB)-2924.1(NB)]TJ
+9.96 0 0 9.96 195.52 623.796 Tm
+0.0025 Tc
+[(M)-7.9(N)6.8(T)-4766.6(M)-7.9(O)13.7(D)-3166.7(C)6.9(O)1.6(R)-3097.3(A)-1(DP)-3061.4(PER)]TJ
+/TT10 1 Tf
+12 0 0 12 221.56 627 Tm
+9.4812 Tc
+[(=+)5840(+)]TJ
+/TT2 1 Tf
+5.68 -0.01 TD
+0.12 Tc
+[(*\()-11337(\))]TJ
+12.92 -0.42 TD
+6.43 Tc
+[(,\()6433(1)6430(\))]TJ
+-28.22 -2.18 TD
+0 Tc
+(où )Tj
+/TT8 1 Tf
+1.25 0 TD
+0.0008 Tc
+(COÛT)Tj
+8.04 0 0 8.04 153.16 594.084 Tm
+0.0012 Tc
+(MNT)Tj
+/TT2 1 Tf
+12 0 0 12 169.72 595.68 Tm
+-0.001 Tc
+( représente les coûts de maintenance, )Tj
+/TT8 1 Tf
+15.04 0 TD
+0.0007 Tc
+(COÛT)Tj
+8.04 0 0 8.04 382.24 594.084 Tm
+-0.0028 Tc
+(MOD)Tj
+/TT2 1 Tf
+12 0 0 12 400.48 595.68 Tm
+-0.0015 Tc
+( représente le coût d'une)Tj
+-27.47 -1.18 TD
+-0.0012 Tc
+(unité de changement, et )Tj
+/TT8 1 Tf
+9.72 0 TD
+0.001 Tc
+(NB)Tj
+8.04 0 0 8.04 202.84 579.924 Tm
+0 Tc
+(COR)Tj
+/TT2 1 Tf
+12 0 0 12 218.92 581.52 Tm
+(, )Tj
+/TT8 1 Tf
+0.5 0 TD
+0.001 Tc
+(NB)Tj
+8.04 0 0 8.04 240.28 579.924 Tm
+-0.0012 Tc
+(ADP)Tj
+/TT2 1 Tf
+12 0 0 12 255.88 581.52 Tm
+-0.0005 Tc
+( et )Tj
+/TT8 1 Tf
+1.22 0 TD
+0.001 Tc
+(NB)Tj
+8.04 0 0 8.04 285.88 579.924 Tm
+0.0009 Tc
+(PER)Tj
+/TT2 1 Tf
+12 0 0 12 300.64 581.52 Tm
+-0.001 Tc
+( représentent respectivement le nombre d'unités)Tj
+-19.15 -1.18 TD
+(de changements correctifs, adaptatifs et perfectifs pour la période donnée.  Nous discuterons dans)Tj
+T*
+-0.0007 Tc
+(la prochaine section de la définition d'une unité de changement.  Pour l'instant, nous faisons appel)Tj
+T*
+-0.001 Tc
+(à l'intuition du lecteur pour considérer qu'une unité de changement représente une unité de travail)Tj
+T*
+-0.0014 Tc
+(à effectuer dans la phase de maintenance.)Tj
+2.94 -2.18 TD
+-0.0016 Tc
+0.0002 Tw
+(L'équation \(1\) nous permet d'analyser comment les facteurs de qualité influencent les)Tj
+-2.94 -1.18 TD
+-0.0011 Tc
+0 Tw
+(coûts de maintenance.  La maintenabilité influence la variable )Tj
+/TT8 1 Tf
+24.98 0 TD
+0.0007 Tc
+(COÛT)Tj
+8.04 0 0 8.04 402.64 482.964 Tm
+-0.0028 Tc
+(MOD)Tj
+/TT2 1 Tf
+12 0 0 12 420.88 484.56 Tm
+-0.0011 Tc
+( : moins un système est)Tj
+-29.17 -1.18 TD
+-0.0014 Tc
+(maintenable, plus le coût d'une unité de changement sera grand.  Soulignons qu'il y a d'autres)Tj
+T*
+-0.0009 Tc
+(facteurs reliés au processus de maintenance et aux ressources qui influencent )Tj
+/TT8 1 Tf
+30.95 0 TD
+0.0008 Tc
+(COÛT)Tj
+8.04 0 0 8.04 474.28 454.644 Tm
+-0.0028 Tc
+(MOD)Tj
+/TT2 1 Tf
+12 0 0 12 492.52 456.24 Tm
+-0.0006 Tc
+(, comme)Tj
+-35.14 -1.18 TD
+-0.0013 Tc
+(l'habileté de l'équipe de maintenance et l'usage d'outils de GLAO \(ex: générateurs de tests, outils)Tj
+T*
+-0.001 Tc
+(de vérification, outils de gestion des configurations\).  La fiabilité influence la variable )Tj
+/TT8 1 Tf
+34.54 0 TD
+0.001 Tc
+(NB)Tj
+8.04 0 0 8.04 500.68 426.324 Tm
+0 Tc
+(COR)Tj
+/TT2 1 Tf
+12 0 0 12 516.7599 427.92 Tm
+0.001 Tc
+( :)Tj
+-37.16 -1.18 TD
+-0.0015 Tc
+(moins un système est fiable, plus il y aura de changements correctifs à faire.  De même,)Tj
+T*
+(l'efficacité influence la variable )Tj
+/TT8 1 Tf
+12.79 0 TD
+0.001 Tc
+(NB)Tj
+8.04 0 0 8.04 239.68 398.004 Tm
+-0.0012 Tc
+(ADP)Tj
+/TT2 1 Tf
+12 0 0 12 255.28 399.6 Tm
+-0.0007 Tc
+( et la convivialité influence la variable )Tj
+/TT8 1 Tf
+15.55 0 TD
+0.001 Tc
+(NB)Tj
+8.04 0 0 8.04 457.24 398.004 Tm
+0.0009 Tc
+(PE)Tj
+/TT2 1 Tf
+12 0 0 12 467.08 399.6 Tm
+-0.0002 Tc
+(.  Notons que)Tj
+-33.02 -1.18 TD
+-0.0008 Tc
+0.0002 Tw
+(ces variables ne sont pas influencées uniquement par les les facteurs de qualité du logiciel; la)Tj
+T*
+-0.0007 Tc
+0 Tw
+(qualité du processus de maintenance, la qualité des ressources et la volatilité des exigences des)Tj
+T*
+-0.0003 Tc
+(utilisateurs les influencent aussi.)Tj
+2.94 -2.18 TD
+-0.0012 Tc
+(A la lumière de cette équation, il est assez facile d'analyser les causes de coûts de)Tj
+-2.94 -1.18 TD
+-0.0011 Tc
+(maintenance lorsqu'ils sont jugés trop élevés.  Par exemple, il est courant d'énoncer qu'un système)Tj
+T*
+-0.0015 Tc
+[(coûte cher à maintenir et d'en déduire que le système a une faible maintenabilité.  L'équation )-6.5(\(1\))]TJ
+T*
+(nous force à user de plus de discernement dans l'analyse des causes.  Un système qui coûte cher à)Tj
+T*
+-0.0013 Tc
+(maintenir n'est pas nécessairement un système ayant une faible maintenabilité; la cause peut aussi)Tj
+T*
+-0.0008 Tc
+(être une faible utilisabilité, un processus de maintenance mal structuré, des ressources de faible)Tj
+T*
+-0.001 Tc
+(qualité ou un grand nombre de changements perfectifs demandés par les utilisateurs.)Tj
+/TT6 1 Tf
+14.04 0 0 14.04 70.84 217.6811 Tm
+0.0021 Tc
+0.002 Tw
+[(4. )-1444.6(D)6.2(é)2.5(fin)6.3(i)-2(r et év)11.1(alu)6.3(e)2.5(r la main)6.3(ten)6.3(a)2.5(b)6.3(ilité)]TJ
+/TT2 1 Tf
+12 0 0 12 106.12 188.28 Tm
+-0.0004 Tc
+0 Tw
+(Dans cette section, nous proposons une définition théorique de la maintenabilité, puis)Tj
+-2.94 -1.18 TD
+-0.0011 Tc
+(nous identifions un indicateur permettant de l'évaluer durant l'opération du système.)Tj
+/TT12 1 Tf
+3 -2.19 TD
+0.0012 Tc
+-0.0002 Tw
+[(4.1. )-1041.2(Définition rigoureuse de la maintenabilité)]TJ
+/TT2 1 Tf
+-0.06 -2.41 TD
+-0.0005 Tc
+0 Tw
+(En introduction, nous avons défini de manière informelle la maintenabilité comme étant la)Tj
+-2.94 -1.18 TD
+(facilité avec laquelle un logiciel peut être maintenu.  Cette définition est au mieux imprécise, et)Tj
+T*
+-0.0009 Tc
+(nous allons essayer de la clarifier.  Nous définissons la maintenabilité comme étant une relation)Tj
+T*
+-0.0018 Tc
+(d'ordre sur les systèmes: on dit que le système )Tj
+/TT8 1 Tf
+18.62 0 TD
+0 Tc
+(A)Tj
+/TT2 1 Tf
+0.61 0 TD
+-0.0011 Tc
+( est moins maintenable que le système )Tj
+/TT8 1 Tf
+15.54 0 TD
+0 Tc
+(B)Tj
+/TT2 1 Tf
+0.61 0 TD
+-0.0008 Tc
+(, que)Tj
+ET
+endstream
+endobj
+19 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/TT2 4 0 R
+/TT6 6 0 R
+/TT8 12 0 R
+/TT10 16 0 R
+/TT12 20 0 R
+>>
+/ExtGState <<
+/GS1 7 0 R
+>>
+>>
+endobj
+22 0 obj
+<<
+/Length 7982
+>>
+stream
+1 1 1 rg
+/GS1 gs
+13 -12 612 792 re
+f
+BT
+/TT2 1 Tf
+12 0 0 12 535.2399 38.88 Tm
+0 0 0 rg
+0 Tc
+0 Tw
+(5)Tj
+-38.7 55.92 TD
+-0.0002 Tc
+(nous notons par )Tj
+/TT8 1 Tf
+6.84 0 TD
+1.8592 Tc
+(AB)Tj
+9.96 0 0 9.96 170.56 706.836 Tm
+0 Tc
+(m)Tj
+/TT9 1 Tf
+12 0 0 12 163.12 709.92 Tm
+<0029>Tj
+/TT2 1 Tf
+2.39 0 TD
+(, si et seulement si )Tj
+/TT8 1 Tf
+7.61 0 TD
+(A)Tj
+/TT2 1 Tf
+0.61 0 TD
+-0.0005 Tc
+( et )Tj
+/TT8 1 Tf
+1.22 0 TD
+0 Tc
+(B)Tj
+/TT2 1 Tf
+0.61 0 TD
+-0.0002 Tc
+( fournissent les mêmes fonctions et, pour tout)Tj
+-20.13 -1.36 TD
+-0.002 Tc
+(changement )Tj
+/TT8 1 Tf
+5.06 0 TD
+0 Tc
+(c)Tj
+/TT2 1 Tf
+0.44 0 TD
+-0.0005 Tc
+0.0001 Tw
+(, le coût de modification de )Tj
+/TT8 1 Tf
+11.18 0 TD
+0 Tc
+0 Tw
+(A)Tj
+/TT2 1 Tf
+0.61 0 TD
+-0.0006 Tc
+( est supérieur au coût de modification de )Tj
+/TT8 1 Tf
+16.47 0 TD
+0 Tc
+(B)Tj
+/TT2 1 Tf
+0.61 0 TD
+0.0007 Tc
+(.  Si on)Tj
+-34.37 -1.18 TD
+-0.0005 Tc
+(exprime cette définition de manière formelle, nous obtenons la formule suivante:)Tj
+/TT8 1 Tf
+5.88 -2.18 TD
+0 Tc
+[(A)-1869.2(B)-1759.2(fonction)-500.7(A)-1619.2(fonction)-440.7(B)-2089.2(c)-286.2(c)4(oût)-442.3(c)-416.2(B)-1429.2(coût)-442.3(c)-476.2(A)]TJ
+9.96 0 0 9.96 159.04 650.196 Tm
+(m)Tj
+/TT9 1 Tf
+12 0 0 12 151.6 653.28 Tm
+1.9712 Tc
+<0029008b>Tj
+/TT10 1 Tf
+9.01 0 TD
+0 Tc
+(=)Tj
+/TT9 1 Tf
+5.9 0 TD
+0.197 Tc
+[<008e0099>-4800.1<0029>]TJ
+/TT2 1 Tf
+-7.61 0 TD
+0.757 Tc
+[(\(\))-3830(\()30(\))-1360(:)-1105.2(\()270(,)-33(\))-2110(\()270(,)-63(\))610(.)-3713(\()760(2)757(\))]TJ
+-11.09 -2.36 TD
+-0.0011 Tc
+(Cette relation nous permet de comparer les systèmes, de les ordonner selon la)Tj
+-2.94 -1.18 TD
+(maintenabilité.  On remarque que certains systèmes ne peuvent être comparés.  Si )Tj
+/TT8 1 Tf
+32.82 0 TD
+0 Tc
+(A)Tj
+/TT2 1 Tf
+0.61 0 TD
+-0.0005 Tc
+( et )Tj
+/TT8 1 Tf
+1.22 0 TD
+0 Tc
+(B)Tj
+/TT2 1 Tf
+0.61 0 TD
+-0.0021 Tc
+( n'offrent)Tj
+-35.26 -1.18 TD
+-0.0004 Tc
+(pas les mêmes fonctions, alors on ne peut dire si )Tj
+/TT8 1 Tf
+19.56 0 TD
+0 Tc
+(A)Tj
+/TT2 1 Tf
+0.61 0 TD
+-0.0003 Tc
+( est plus \(ou moins\) maintenable que )Tj
+/TT8 1 Tf
+14.96 0 TD
+0 Tc
+(B)Tj
+/TT2 1 Tf
+0.61 0 TD
+-0.0013 Tc
+(; cela)Tj
+-35.74 -1.18 TD
+(n'a pas de sens, parce qu'on ne peut appliquer les mêmes changements à )Tj
+/TT8 1 Tf
+28.93 0 TD
+0 Tc
+(A)Tj
+/TT2 1 Tf
+0.61 0 TD
+-0.001 Tc
+( et à )Tj
+/TT8 1 Tf
+1.91 0 TD
+0 Tc
+(B)Tj
+/TT2 1 Tf
+0.61 0 TD
+-0.0003 Tc
+( pour pouvoir)Tj
+-32.06 -1.18 TD
+-0.0012 Tc
+0.0001 Tw
+(comparer la difficulté de faire un changement.  Par exemple, on ne peut dire si un système de)Tj
+T*
+-0.0008 Tc
+0 Tw
+(gestion du personnel est plus \(ou moins\) maintenable qu'un système de comptabilité.  Pour)Tj
+T*
+-0.0009 Tc
+(pouvoir les comparer, il faudrait leur appliquer les mêmes changements et comparer ensuite le)Tj
+T*
+-0.0008 Tc
+(coût requis pour effectuer les changements.  Puisqu'ils ont des fonctions différentes, on ne peut)Tj
+T*
+-0.0007 Tc
+(leur appliquer les mêmes changements.  Toutefois, il est possible de comparer les )Tj
+/TT8 1 Tf
+32.8 0 TD
+(coûts de)Tj
+-32.8 -1.18 TD
+-0.0009 Tc
+(maintenance)Tj
+/TT2 1 Tf
+5.1 0 TD
+-0.0008 Tc
+( de ces systèmes pour une période donnée.  Cela illustre la distinction entre la notion)Tj
+-5.1 -1.18 TD
+-0.0007 Tc
+(de maintenabilité et la notion de coûts de maintenance, comme nous l'avons souligné à la)Tj
+T*
+-0.0002 Tc
+0.0002 Tw
+(section 3.)Tj
+2.94 -2.18 TD
+-0.0007 Tc
+0 Tw
+(Si deux systèmes offrent les mêmes fonctions, il est possible qu'on ne puisse comparer)Tj
+-2.94 -1.18 TD
+-0.0008 Tc
+(leur maintenabilité.  Par exemple, il est assez facile d'imaginer deux systèmes, )Tj
+/TT8 1 Tf
+31.47 0 TD
+0 Tc
+(A)Tj
+/TT2 1 Tf
+0.61 0 TD
+-0.0005 Tc
+( et )Tj
+/TT8 1 Tf
+1.22 0 TD
+0 Tc
+(B)Tj
+/TT2 1 Tf
+0.61 0 TD
+0.0004 Tc
+(, qui)Tj
+-33.91 -1.18 TD
+-0.0007 Tc
+(fournissent les mêmes fonctions tout en ayant des conceptions \(implantations\) différentes.  Pour)Tj
+T*
+-0.002 Tc
+(certains changements, le système )Tj
+/TT8 1 Tf
+13.46 0 TD
+0 Tc
+(A)Tj
+/TT2 1 Tf
+0.61 0 TD
+-0.0013 Tc
+( peut être plus facile à maintenir que le système )Tj
+/TT8 1 Tf
+19.21 0 TD
+0 Tc
+(B)Tj
+/TT2 1 Tf
+0.61 0 TD
+-0.0006 Tc
+(, et pour)Tj
+-33.89 -1.18 TD
+-0.0022 Tc
+(d'autres changements, le système )Tj
+/TT8 1 Tf
+13.41 0 TD
+0 Tc
+(B)Tj
+/TT2 1 Tf
+0.61 0 TD
+-0.0013 Tc
+( peut être plus facile à maintenir que le système )Tj
+/TT8 1 Tf
+19.21 0 TD
+0 Tc
+(A)Tj
+/TT2 1 Tf
+0.61 0 TD
+-0.0013 Tc
+(.  Dans ce)Tj
+-33.84 -1.18 TD
+-0.001 Tc
+(cas, on ne peut conclure que )Tj
+/TT8 1 Tf
+11.55 0 TD
+0 Tc
+(A)Tj
+/TT2 1 Tf
+0.61 0 TD
+-0.0003 Tc
+( est plus \(ou moins\) maintenable que )Tj
+/TT8 1 Tf
+14.96 0 TD
+0 Tc
+(B)Tj
+/TT2 1 Tf
+0.61 0 TD
+-0.001 Tc
+(.  On peut comparer la)Tj
+-27.73 -1.18 TD
+-0.0003 Tc
+(maintenabilité de )Tj
+/TT8 1 Tf
+7.16 0 TD
+0 Tc
+(A)Tj
+/TT2 1 Tf
+0.61 0 TD
+-0.0005 Tc
+( et )Tj
+/TT8 1 Tf
+1.22 0 TD
+0 Tc
+(B)Tj
+/TT2 1 Tf
+0.61 0 TD
+-0.001 Tc
+( à condition de se restreindre à un ensemble de changements.  Pour ce)Tj
+-9.6 -1.18 TD
+-0.0003 Tc
+(faire, nous définissons la notion de )Tj
+/TT8 1 Tf
+14.18 0 TD
+-0.0001 Tc
+(maintenabilité relative)Tj
+/TT2 1 Tf
+9.08 0 TD
+-0.0005 Tc
+(.  On dit que, pour un ensemble de)Tj
+-23.26 -1.18 TD
+-0.0017 Tc
+(changements )Tj
+/TT8 1 Tf
+5.45 0 TD
+0 Tc
+(C)Tj
+/TT2 1 Tf
+0.67 0 TD
+-0.0022 Tc
+(, que le système )Tj
+/TT8 1 Tf
+6.6 0 TD
+0 Tc
+(A)Tj
+/TT2 1 Tf
+0.61 0 TD
+-0.0011 Tc
+( est moins maintenable que le système )Tj
+/TT8 1 Tf
+15.54 0 TD
+0 Tc
+(B)Tj
+/TT2 1 Tf
+0.61 0 TD
+-0.0003 Tc
+(, que nous notons par)Tj
+/TT8 1 Tf
+-29.22 -1.19 TD
+2.6192 Tc
+(AB)Tj
+9.96 0 0 9.96 91.6 312.516 Tm
+0.1814 Tc
+(mC)Tj
+/TT9 1 Tf
+12 0 0 12 84.16 315.6 Tm
+0 Tc
+<0029>Tj
+/TT2 1 Tf
+9.96 0 0 9.96 98.44 312.516 Tm
+(|)Tj
+12 0 0 12 122.8 315.6 Tm
+(, si et seulement si )Tj
+/TT8 1 Tf
+7.61 0 TD
+(A)Tj
+/TT2 1 Tf
+0.61 0 TD
+-0.0005 Tc
+( et )Tj
+/TT8 1 Tf
+1.22 0 TD
+0 Tc
+(B)Tj
+/TT2 1 Tf
+0.61 0 TD
+-0.0006 Tc
+( fournissent les mêmes fonctions et, pour tout changement )Tj
+/TT8 1 Tf
+23.52 0 TD
+0 Tc
+(c)Tj
+/TT2 1 Tf
+-37.9 -1.61 TD
+-0.0013 Tc
+(de )Tj
+/TT8 1 Tf
+1.19 0 TD
+0 Tc
+(C)Tj
+/TT2 1 Tf
+0.67 0 TD
+-0.0005 Tc
+0.0001 Tw
+(, le coût de modification de )Tj
+/TT8 1 Tf
+11.18 0 TD
+0 Tc
+0 Tw
+(A)Tj
+/TT2 1 Tf
+0.61 0 TD
+-0.0006 Tc
+( est supérieur au coût de modification de )Tj
+/TT8 1 Tf
+16.47 0 TD
+0 Tc
+(B)Tj
+/TT2 1 Tf
+0.61 0 TD
+0.0006 Tc
+(.  Si on exprime)Tj
+-30.73 -1.18 TD
+-0.0005 Tc
+(cette définition de manière formelle, nous obtenons la formule suivante:)Tj
+/TT8 1 Tf
+4.63 -2.19 TD
+-0.0002 Tc
+[(A)-2619.4(B)-1759.4(fonction)-500.9(A)-1619.4(fonction)-430.9(B)-2089.4(c)-1016.4(C)-313.2(coût)-442.5(c)-416.4(B)-1429.4(coût)-442.5(c)-476.4(A)]TJ
+9.96 0 0 9.96 144.04 252.756 Tm
+0.1814 Tc
+(mC)Tj
+/TT9 1 Tf
+12 0 0 12 136.6 255.84 Tm
+2.7112 Tc
+<0029008b>Tj
+/TT10 1 Tf
+9.75 0 TD
+0 Tc
+(=)Tj
+/TT9 1 Tf
+5.91 0 TD
+0.197 Tc
+[<008e0099>-480.1<0044>-5110.1<0029>]TJ
+/TT2 1 Tf
+9.96 0 0 9.96 150.88 252.756 Tm
+0 Tc
+(|)Tj
+12 0 0 12 233.08 255.84 Tm
+0.767 Tc
+[(\(\))-3810(\()40(\))-3060(:)-1095.2(\()290(,)-33(\))-2100(\()280(,)-53(\))]TJ
+20.85 0.01 TD
+3.22 Tc
+[(.\()3223(3)3220(\))]TJ
+-31.43 -2.61 TD
+-0.0014 Tc
+(Lorsqu'on conçoit un système, on cherche à définir le design qui maximisera la)Tj
+-2.94 -1.18 TD
+-0.0004 Tc
+(maintenabilité, soit d'un point de vu absolu, en considérant tous les changements possibles, ou)Tj
+T*
+-0.0008 Tc
+(soit d'un point de vu relatif, en considérant un ensemble de changements que l'on estime très)Tj
+T*
+-0.0017 Tc
+(probables.  On cherche donc un système )Tj
+/TT8 1 Tf
+16.32 0 TD
+0 Tc
+(A)Tj
+/TT2 1 Tf
+0.61 0 TD
+-0.0004 Tc
+( qui est un maximum selon la relation d'ordre de)Tj
+-16.93 -1.18 TD
+-0.0001 Tc
+(maintenabilité.)Tj
+2.94 -2.18 TD
+-0.0008 Tc
+(Notre définition de la maintenabilité se démarque de celles généralement utilisées dans la)Tj
+-2.94 -1.18 TD
+-0.0006 Tc
+(littérature scientifique.  En général, on observe deux tendances: soit la maintenabilité est réduite à)Tj
+T*
+-0.0011 Tc
+(une caractéristique organique du logiciel comme le flot d'information ou le graphe de contrôle, ou)Tj
+T*
+-0.0006 Tc
+(soit la définition choisie comprend d'autres facteurs que la maintenabilité.  Par exemple, dans)Tj
+T*
+-0.0005 Tc
+(\(Coleman, 94\), on propose deux mesures de maintenabilité qui sont basées sur le guide AFOTEC)Tj
+ET
+endstream
+endobj
+23 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/TT2 4 0 R
+/TT8 12 0 R
+/TT9 24 0 R
+/TT10 16 0 R
+>>
+/ExtGState <<
+/GS1 7 0 R
+>>
+>>
+endobj
+26 0 obj
+<<
+/Length 4886
+>>
+stream
+1 1 1 rg
+/GS1 gs
+13 -12 612 792 re
+f
+BT
+/TT2 1 Tf
+12 0 0 12 535.2399 38.88 Tm
+0 0 0 rg
+0 Tc
+0 Tw
+(6)Tj
+-38.7 55.92 TD
+-0.0013 Tc
+(\(USAF, 89\).  Le guide AFOTEC permet de calculer la maintenabilité en évaluant une centaine)Tj
+0 -1.18 TD
+(d'aspects organiques jugés représentatifs de la maintenabilité.  Les aspects sont évalués par un)Tj
+T*
+-0.001 Tc
+(expert sur une échelle de 0 à 5.  La maintenabilité est représentée par la somme des valeurs.)Tj
+T*
+(Aucune étude empirique indique que cette mesure permet de comparer la difficulté de faire un)Tj
+T*
+-0.0009 Tc
+(changement.  De plus, une étude \(Gibson, 89\) montre que les programmeurs sont incapables de)Tj
+T*
+-0.0013 Tc
+(discerner les différences entre les systèmes.  Il faut donc utiliser les évaluations par des personnes)Tj
+T*
+-0.0008 Tc
+(avec prudence et appliquer des méthodes pour contrôler la subjectivité.)Tj
+/TT12 1 Tf
+3 -2.19 TD
+0.0014 Tc
+-0.0002 Tw
+[(4.2. )-1041(Indicateur de maintenabilité)]TJ
+/TT2 1 Tf
+-0.06 -2.41 TD
+-0.0009 Tc
+0.0003 Tw
+(Les définitions \(2\) et \(3\) données dans la section précédentes sont intéressantes d'un point)Tj
+-2.94 -1.18 TD
+-0.0008 Tc
+0 Tw
+(de vue théorique pour bien cerner le concept de maintenabilité.  Toutefois, elles n'aident pas)Tj
+T*
+-0.0006 Tc
+(beaucoup le praticien dans la gestion de la maintenabilité puisqu'elles sont difficilement)Tj
+T*
+(calculables.  Dans cette section, nous proposons une mesure que nous qualifions d')Tj
+/TT8 1 Tf
+33.01 0 TD
+-0.0004 Tc
+(indicateur de)Tj
+-33.01 -1.18 TD
+0.0001 Tc
+(maintenabilité)Tj
+/TT2 1 Tf
+5.78 0 TD
+0 Tc
+(.)Tj
+-2.84 -2.18 TD
+-0.001 Tc
+0.0002 Tw
+(Ayant mentionné dans la section 3 que la maintenabilité influence la valeur de la variable)Tj
+/TT8 1 Tf
+-2.94 -1.18 TD
+0.0007 Tc
+0 Tw
+(COÛT)Tj
+8.04 0 0 8.04 102.88 471.204 Tm
+-0.0028 Tc
+(MOD)Tj
+/TT2 1 Tf
+12 0 0 12 121.12 472.8 Tm
+-0.0007 Tc
+0.0001 Tw
+(, il semblerait naturel d'utiliser cette variable comme indicateur de maintenabilité.)Tj
+-4.19 -1.18 TD
+-0.0008 Tc
+0 Tw
+(Toutefois, il y a plusieurs problèmes à cette approche.  En premier lieu, il faut définir la notion)Tj
+T*
+-0.005 Tc
+(d')Tj
+/TT8 1 Tf
+0.67 0 TD
+-0.0008 Tc
+(unité de changement)Tj
+/TT2 1 Tf
+8.26 0 TD
+-0.0012 Tc
+(.  Une unité de changement devrait représenter une certaine quantité de)Tj
+-8.93 -1.18 TD
+-0.0014 Tc
+0.0001 Tw
+(travail à faire.  La mesure en jours-personnes de l'effort requis pour effectuer une unité de)Tj
+T*
+-0.001 Tc
+0 Tw
+(changement devrait être constante pour des systèmes de même maintenabilité.  Actuellement, il)Tj
+T*
+-0.0009 Tc
+(n'existe pas, à notre connaissance, de définition adéquate d'une unité de changement.  Plusieurs)Tj
+T*
+-0.001 Tc
+(mesures ont été suggérées, comme les mesures de taille du logiciel telles les lignes de code source)Tj
+T*
+-0.0003 Tc
+(ou les points de fonction. Ces mesures comportent plusieurs faiblesses.  Par exemple, le nombre)Tj
+T*
+-0.0007 Tc
+(de lignes de code est influencé par plusieurs facteurs dont la complexité du domaine)Tj
+T*
+-0.0013 Tc
+(d'application, le style de programmation et le langage de programmation; le nombre de points de)Tj
+T*
+-0.0007 Tc
+(fonction ne tient pas compte, entre autres, de la difficulté d'implanter une fonction.)Tj
+2.94 -2.18 TD
+-0.0011 Tc
+(La définition d'une unité de changement qui nous semble la )Tj
+/TT8 1 Tf
+24 0 TD
+0 Tc
+(moins pire)Tj
+/TT2 1 Tf
+4.25 0 TD
+-0.0004 Tc
+( est la suivante: une)Tj
+-31.19 -1.18 TD
+-0.0014 Tc
+(unité de changement consiste en la correction d'une faute.  La génération des fautes étant un)Tj
+T*
+-0.0006 Tc
+(facteur relativement aléatoire et indépendant des utilisateurs, la distribution de la taille des fautes)Tj
+T*
+-0.0012 Tc
+(devrait être similaire d'un système à un autre.  De plus, le processus de maintenance corrective est)Tj
+T*
+-0.0011 Tc
+(essentiellement le même que le processus de maintenance adaptative et perfective.  Il est donc)Tj
+T*
+(raisonnable de supposer que la difficulté de faire la maintenance corrective est représentative de)Tj
+T*
+(la difficulté de faire la maintenance adaptative et perfective.)Tj
+2.94 -2.18 TD
+(Notre choix d'unité de changement nous amène à proposer )Tj
+/TT8 1 Tf
+23.59 0 TD
+0.0008 Tc
+(COÛT)Tj
+8.04 0 0 8.04 421.24 192.324 Tm
+0 Tc
+(COR)Tj
+/TT2 1 Tf
+12 0 0 12 437.3199 193.92 Tm
+-0.0022 Tc
+(, le coût moyen de)Tj
+-30.54 -1.18 TD
+-0.0008 Tc
+(correction d'une faute, comme indicateur de maintenabilité.  Si la valeur de )Tj
+/TT8 1 Tf
+30.22 0 TD
+0.0007 Tc
+(COÛT)Tj
+8.04 0 0 8.04 465.52 178.164 Tm
+0 Tc
+(COR)Tj
+/TT2 1 Tf
+12 0 0 12 481.6 179.76 Tm
+-0.0018 Tc
+( augmente,)Tj
+-34.23 -1.18 TD
+-0.0007 Tc
+(la maintenabilité devrait diminuer, et vice versa.  Pour calculer )Tj
+/TT8 1 Tf
+25.34 0 TD
+0.0008 Tc
+(COÛT)Tj
+8.04 0 0 8.04 406.96 164.004 Tm
+0 Tc
+(COR)Tj
+/TT2 1 Tf
+12 0 0 12 423.04 165.6 Tm
+-0.0006 Tc
+(, on calcule le temps)Tj
+-29.35 -1.18 TD
+-0.0014 Tc
+0.0002 Tw
+(moyen pour exécuter le processus illustré à la figure 2 pour corriger une faute.)Tj
+ET
+endstream
+endobj
+27 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/TT2 4 0 R
+/TT8 12 0 R
+/TT12 20 0 R
+>>
+/ExtGState <<
+/GS1 7 0 R
+>>
+>>
+endobj
+29 0 obj
+<<
+/Length 7902
+>>
+stream
+1 1 1 rg
+/GS1 gs
+13 -12 612 792 re
+f
+BT
+/TT2 1 Tf
+12 0 0 12 535.2399 38.88 Tm
+0 0 0 rg
+0 Tc
+0 Tw
+(7)Tj
+ET
+0 0 0 RG
+1 J 1 j 0.96 w 10 M []0 d
+1 i 
+153.22 718.44 m
+135.52 718.44 l
+127.368 718.44 120.76 711.832 120.76 703.68 c
+120.76 674.28 l
+120.76 666.128 127.368 659.52 135.52 659.52 c
+170.92 659.52 l
+179.072 659.52 185.68 666.128 185.68 674.28 c
+185.68 703.68 l
+185.68 711.832 179.072 718.44 170.92 718.44 c
+h
+290.98 631.68 m
+267.28 631.68 l
+259.128 631.68 252.52 625.072 252.52 616.92 c
+252.52 587.4 l
+252.52 579.248 259.128 572.64 267.28 572.64 c
+314.68 572.64 l
+322.832 572.64 329.44 579.248 329.44 587.4 c
+329.44 616.92 l
+329.44 625.072 322.832 631.68 314.68 631.68 c
+h
+440.62 720 m
+416.92 720 l
+408.768 720 402.16 713.392 402.16 705.24 c
+402.16 675.72 l
+402.16 667.568 408.768 660.96 416.92 660.96 c
+464.32 660.96 l
+472.472 660.96 479.08 667.568 479.08 675.72 c
+479.08 705.24 l
+479.08 713.392 472.472 720 464.32 720 c
+h
+344.8 720.72 m
+327.04 720.72 l
+318.888 720.72 312.28 714.112 312.28 705.96 c
+312.28 676.44 l
+312.28 668.288 318.888 661.68 327.04 661.68 c
+362.56 661.68 l
+370.712 661.68 377.32 668.288 377.32 676.44 c
+377.32 705.96 l
+377.32 714.112 370.712 720.72 362.56 720.72 c
+h
+249.04 720 m
+225.28 720 l
+217.128 720 210.52 713.392 210.52 705.24 c
+210.52 675.72 l
+210.52 667.568 217.128 660.96 225.28 660.96 c
+272.8 660.96 l
+280.952 660.96 287.56 667.568 287.56 675.72 c
+287.56 705.24 l
+287.56 713.392 280.952 720 272.8 720 c
+h
+195.88 631.68 m
+178.12 631.68 l
+169.968 631.68 163.36 625.072 163.36 616.92 c
+163.36 587.4 l
+163.36 579.248 169.968 572.64 178.12 572.64 c
+213.64 572.64 l
+221.792 572.64 228.4 579.248 228.4 587.4 c
+228.4 616.92 l
+228.4 625.072 221.792 631.68 213.64 631.68 c
+s
+BT
+12 0 0 12 247.12 706.08 Tm
+(2)Tj
+-2.46 -1.2 TD
+0.0012 Tc
+-0.0012 Tw
+[(é)5.2(t)-0.8(a)5.2(b)1.2(lir la)5.2( liste)]TJ
+0.22 -1.19 TD
+-0.0005 Tc
+0.0005 Tw
+(des modules)Tj
+0.42 -1.2 TD
+-0.0024 Tc
+0.0024 Tw
+[(à m)-4.4(odi)-4.4(fi)-4.4(er)]TJ
+9.8 3.59 TD
+0 Tc
+0 Tw
+(3)Tj
+-2.13 -1.2 TD
+-0.0013 Tc
+(comprendre)Tj
+0.01 -1.19 TD
+-0.0004 Tc
+0.0004 Tw
+(les modules)Tj
+0.3 -1.2 TD
+-0.0024 Tc
+0.0024 Tw
+[(à m)-4.4(odi)-4.4(fi)-4.4(er)]TJ
+9.82 3.59 TD
+0 Tc
+0 Tw
+(4)Tj
+-2.4 -1.2 TD
+-0.0015 Tc
+0.0015 Tw
+(concevoir les)Tj
+-0.09 -1.19 TD
+-0.0001 Tc
+0 Tw
+(modifications)Tj
+-17.95 -5.09 TD
+0 Tc
+(5)Tj
+-1.95 -1.2 TD
+(modifier le)Tj
+-0.17 -1.2 TD
+-0.0016 Tc
+0.0016 Tw
+(code source)Tj
+10.12 2.4 TD
+0 Tc
+0 Tw
+(6)Tj
+-1.51 -1.2 TD
+0.0016 Tc
+-0.0016 Tw
+[(te)5.6(ste)5.6(r)4.6( le)5.6(s)]TJ
+-0.98 -1.2 TD
+-0.0001 Tc
+0 Tw
+(modifications)Tj
+10.99 2.4 TD
+0 Tc
+(7)Tj
+-1.71 -1.2 TD
+0.0013 Tc
+-0.0013 Tw
+[(me)5.3(ttre)5.3( le)5.3(s)]TJ
+-0.33 -1.2 TD
+-0.0007 Tc
+0.0007 Tw
+(modules en)Tj
+0.13 -1.19 TD
+-0.0003 Tc
+0 Tw
+(production)Tj
+-18.18 11.07 TD
+0 Tc
+(1)Tj
+-1.91 -1.2 TD
+-0.0027 Tc
+0.0027 Tw
+[(anal)-4.7(y)27.3(s)-3.7(er l)-4.7(a)]TJ
+-0.25 -1.19 TD
+-0.001 Tc
+0.001 Tw
+(demande de)Tj
+-0.01 -1.2 TD
+-0.0013 Tc
+0 Tw
+[(chang)8.7(e)2.7(m)-3.3(e)2.7(nt)]TJ
+ET
+185.92 684.6 m
+204.76 684.6 l
+S
+202.6 681.36 m
+203.68 684.6 l
+202.6 687.72 l
+210.04 684.6 l
+202.6 681.36 l
+f*
+288.4 684.6 m
+307.24 684.6 l
+S
+305.08 681.36 m
+306.28 684.6 l
+305.08 687.72 l
+312.64 684.6 l
+305.08 681.36 l
+f*
+377.44 685.32 m
+397 685.32 l
+S
+394.96 682.08 m
+396.04 685.32 l
+394.96 688.56 l
+402.4 685.32 l
+394.96 682.08 l
+f*
+479.44 686.04 m
+494.44 686.04 l
+494.44 644.16 l
+140.44 644.16 l
+140.44 605.28 l
+156.52 605.28 l
+S
+154.72 601.92 m
+155.8 605.16 l
+154.72 608.52 l
+162.16 605.16 l
+154.72 601.92 l
+f*
+227.8 605.16 m
+246.64 605.16 l
+S
+244.48 601.92 m
+245.68 605.16 l
+244.48 608.52 l
+252.04 605.16 l
+244.48 601.92 l
+f*
+330.28 604.44 m
+349.12 604.44 l
+S
+346.96 601.2 m
+348.16 604.44 l
+346.96 607.68 l
+354.52 604.44 l
+346.96 601.2 l
+f*
+392.74 631.68 m
+369.22 631.68 l
+360.969 631.68 354.28 624.991 354.28 616.74 c
+354.28 586.86 l
+354.28 578.609 360.969 571.92 369.22 571.92 c
+416.26 571.92 l
+424.511 571.92 431.2 578.609 431.2 586.86 c
+431.2 616.74 l
+431.2 624.991 424.511 631.68 416.26 631.68 c
+s
+BT
+12 0 0 12 218.44 542.52 Tm
+0.0001 Tw
+(Figure 2 - Processus de maintenance)Tj
+-9.36 -2.18 TD
+-0.0001 Tc
+0 Tw
+(Nous qualifions )Tj
+/TT8 1 Tf
+6.61 0 TD
+0.0007 Tc
+(COÛT)Tj
+8.04 0 0 8.04 217.48 514.764 Tm
+0 Tc
+(COR)Tj
+/TT2 1 Tf
+12 0 0 12 233.56 516.36 Tm
+-0.0007 Tc
+( d'indicateur de maintenabilité parce qu'il existe plusieurs)Tj
+-13.56 -1.18 TD
+(facteurs autres que la maintenabilité qui l'influencent, comme la qualité du processus de)Tj
+T*
+-0.0008 Tc
+0.0001 Tw
+[(maintenance et la qualité des ressources.  Ceci étant dit, les remarques de la section )-5.7(4.1 sur la)]TJ
+T*
+-0.0007 Tc
+0 Tw
+(définition de la maintenabilité et la nature d'indicateur de )Tj
+/TT8 1 Tf
+23.05 0 TD
+0.0007 Tc
+(COÛT)Tj
+8.04 0 0 8.04 379.48 472.284 Tm
+0 Tc
+(COR)Tj
+/TT2 1 Tf
+12 0 0 12 395.56 473.88 Tm
+-0.0011 Tc
+( nous amène à faire les)Tj
+-27.06 -1.18 TD
+-0.0005 Tc
+(précisions suivantes: il n'est pas valide d'utiliser )Tj
+/TT8 1 Tf
+19.36 0 TD
+0.0007 Tc
+(COÛT)Tj
+8.04 0 0 8.04 335.2 458.124 Tm
+0 Tc
+(COR)Tj
+/TT2 1 Tf
+12 0 0 12 351.28 459.72 Tm
+-0.0008 Tc
+( pour comparer la maintenabilité de)Tj
+-23.37 -1.18 TD
+-0.0013 Tc
+(systèmes ayant des fonctions différentes, des processus logiciels différents ou étant maintenus par)Tj
+T*
+-0.0009 Tc
+(des ressources de qualité différente; de plus, l'indicateur )Tj
+/TT8 1 Tf
+22.59 0 TD
+0.0007 Tc
+(COÛT)Tj
+8.04 0 0 8.04 373.96 429.804 Tm
+0 Tc
+(COR)Tj
+/TT2 1 Tf
+12 0 0 12 390.04 431.4 Tm
+-0.0008 Tc
+( ne reflète pas la notion de)Tj
+-26.6 -1.18 TD
+-0.0005 Tc
+(maintenabilité relative telle que définie à la section 4.1.)Tj
+2.94 -2.18 TD
+-0.0013 Tc
+(Le gestionnaire de logiciels peut utiliser l'indicateur )Tj
+/TT8 1 Tf
+20.91 0 TD
+0.0007 Tc
+(COÛT)Tj
+8.04 0 0 8.04 389.08 389.484 Tm
+0 Tc
+(COR)Tj
+/TT2 1 Tf
+12 0 0 12 405.16 391.08 Tm
+-0.0014 Tc
+( pour effectuer les tâches)Tj
+-27.86 -1.18 TD
+0 Tc
+(suivantes:)Tj
+/TT10 1 Tf
+1.5 -2.24 TD
+(•)Tj
+/TT2 1 Tf
+1.5 0 TD
+-0.0011 Tc
+(suivre l'évolution de la maintenabilité d'un système;)Tj
+0 -2.18 TD
+-0.0009 Tc
+0.0001 Tw
+(En calculant )Tj
+/TT8 1 Tf
+5.21 0 TD
+0.0007 Tc
+0 Tw
+(COÛT)Tj
+8.04 0 0 8.04 201.4 322.284 Tm
+0 Tc
+(COR)Tj
+/TT2 1 Tf
+12 0 0 12 217.48 323.88 Tm
+-0.0003 Tc
+( pour des intervalles réguliers \(ex: six mois ou un an\), le)Tj
+-9.22 -1.18 TD
+-0.0006 Tc
+(gestionnaire peut suivre l'évolution dans le temps, et décider du moment opportun pour)Tj
+T*
+-0.0014 Tc
+(faire la réingénierie du système, afin d'améliorer la maintenabilité, ou de faire la)Tj
+T*
+-0.0012 Tc
+(réingénierie du processus de maintenance, afin d'augmenter la productivité, ou de)Tj
+T*
+(procéder à la restructuration de l'équipe de maintenance.)Tj
+/TT10 1 Tf
+-1.5 -2.24 TD
+0 Tc
+(•)Tj
+/TT2 1 Tf
+1.5 0 TD
+-0.0013 Tc
+0.0001 Tw
+(bâtir une norme afin de comparer les systèmes entre eux;)Tj
+0 -2.18 TD
+-0.0004 Tc
+0 Tw
+(On peut bâtir un historique qui comporterait les informations suivantes pour chaque)Tj
+0 -1.18 TD
+-0.0012 Tc
+(système: caractérisation des fonctions, caractérisation du processus logiciel,)Tj
+T*
+(caractérisation de l'équipe de maintenance et valeur de )Tj
+/TT8 1 Tf
+21.99 0 TD
+0.0007 Tc
+(COÛT)Tj
+8.04 0 0 8.04 402.7599 184.284 Tm
+0 Tc
+(COR)Tj
+/TT2 1 Tf
+12 0 0 12 418.84 185.88 Tm
+-0.001 Tc
+(.  Un gestionnaire peut)Tj
+-26 -1.18 TD
+-0.0013 Tc
+(ensuite comparer des systèmes de mêmes caractéristiques pour établir des critères de)Tj
+T*
+-0.001 Tc
+(valeurs désirées pour )Tj
+/TT8 1 Tf
+8.67 0 TD
+0.0007 Tc
+(COÛT)Tj
+8.04 0 0 8.04 242.92 155.964 Tm
+0 Tc
+(COR)Tj
+/TT2 1 Tf
+12 0 0 12 259 157.56 Tm
+-0.0009 Tc
+(, c'est-à-dire qu'il peut bâtir une norme de maintenabilité.)Tj
+/TT10 1 Tf
+-14.18 -2.24 TD
+0 Tc
+(•)Tj
+/TT2 1 Tf
+1.5 0 TD
+-0.0011 Tc
+(sélectionner les logiciels pour la réingénierie)Tj
+0 -2.18 TD
+-0.0013 Tc
+(L'objectif de la réingénierie est d'améliorer la maintenabilité afin de réduire les coûts de)Tj
+0 -1.18 TD
+-0.0011 Tc
+(maintenance.  Lorsqu'on dispose d'une norme fondée sur un historique tel que décrit au)Tj
+T*
+-0.0005 Tc
+(point précédent, on peut ensuite choisir plus rationnellement les logiciels pour la)Tj
+ET
+endstream
+endobj
+30 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/TT2 4 0 R
+/TT8 12 0 R
+/TT10 16 0 R
+>>
+/ExtGState <<
+/GS1 7 0 R
+>>
+>>
+endobj
+32 0 obj
+<<
+/Length 7322
+>>
+stream
+1 1 1 rg
+/GS1 gs
+13 -12 612 792 re
+f
+BT
+/TT2 1 Tf
+12 0 0 12 535.2399 38.88 Tm
+0 0 0 rg
+0 Tc
+0 Tw
+(8)Tj
+-35.7 55.92 TD
+-0.0007 Tc
+(réingénierie.  Par exemple, supposons qu'un gestionnaire dispose du tableau suivant pour)Tj
+0 -1.18 TD
+(son portefeuille de logiciels.)Tj
+6.06 -17.04 TD
+-0.0013 Tc
+(Tableau 1 - Table d'aide à la décision de réingénierie)Tj
+-6.06 -2.18 TD
+-0.0011 Tc
+0.0003 Tw
+(La deuxième colonne du tableau 1 donne la valeur de )Tj
+/TT8 1 Tf
+21.55 0 TD
+0.0007 Tc
+0 Tw
+(COÛT)Tj
+8.04 0 0 8.04 397.48 463.524 Tm
+0 Tc
+(COR)Tj
+/TT2 1 Tf
+12 0 0 12 413.56 465.12 Tm
+-0.0007 Tc
+-0.0001 Tw
+( en jours-personnes selon)Tj
+-25.56 -1.18 TD
+-0.0013 Tc
+0 Tw
+(la norme établie pour un système.  La troisième colonne donne la valeur actuelle de)Tj
+/TT8 1 Tf
+T*
+0.0008 Tc
+(COÛT)Tj
+8.04 0 0 8.04 138.88 435.204 Tm
+0 Tc
+(COR)Tj
+/TT2 1 Tf
+12 0 0 12 154.96 436.8 Tm
+-0.001 Tc
+(.  La quatrième colonne donne la réduction potentielle de la valeur de )Tj
+/TT8 1 Tf
+27.92 0 TD
+0.0008 Tc
+(COÛT)Tj
+8.04 0 0 8.04 522.0399 435.204 Tm
+0 Tc
+(COR)Tj
+/TT2 1 Tf
+12 0 0 12 106.84 422.64 Tm
+-0.0015 Tc
+(après avoir effectué une réingénierie.  En posant comme hypothèses que )Tj
+/TT8 1 Tf
+29.05 0 TD
+0.0008 Tc
+(COÛT)Tj
+8.04 0 0 8.04 487.48 421.044 Tm
+0 Tc
+(COR)Tj
+/TT2 1 Tf
+12 0 0 12 503.56 422.64 Tm
+-0.0003 Tc
+( est)Tj
+-33.06 -1.18 TD
+-0.0007 Tc
+(directement proportionnel à )Tj
+/TT8 1 Tf
+11.34 0 TD
+0.0007 Tc
+(COÛT)Tj
+8.04 0 0 8.04 274.96 406.884 Tm
+-0.0028 Tc
+(MOD)Tj
+/TT2 1 Tf
+12 0 0 12 293.2 408.48 Tm
+-0.0014 Tc
+( et que le nombre de changements à faire demeure)Tj
+-15.53 -1.18 TD
+-0.0015 Tc
+0.0003 Tw
+(constant d'une année à l'autre, on peut, grâce à l'équation \(1\), calculer l'économie annuelle)Tj
+T*
+-0.001 Tc
+0.0001 Tw
+[(des coûts de maintenance après une réingénierie.  Dans l'exemple illustré au tableau )-5.4(1, le)]TJ
+T*
+-0.0012 Tc
+(système A offre le meilleur potentiel d'accroissement de la maintenabilité \(33 %\).)Tj
+T*
+-0.0011 Tc
+0 Tw
+(Toutefois, le système C offre le meilleur potentiel d'économie de coûts de maintenance)Tj
+T*
+-0.0008 Tc
+(parce qu'il a un plus gros volume de changements.  Pour finaliser son choix de)Tj
+T*
+-0.0014 Tc
+(réingénierie, le gestionnaire pourra prendre en considération d'autres facteurs comme le)Tj
+T*
+(coût du projet de réingénierie, la valeur corporative du système, sa durée de vie et les)Tj
+T*
+-0.001 Tc
+(coûts d'opération.)Tj
+/TT6 1 Tf
+14.04 0 0 14.04 70.84 266.8811 Tm
+0.0018 Tc
+0.0023 Tw
+[(5. )-1444.6(Estimatio)6(n)6( d)6(e)2.2( l'in)6(d)6(i)-2.3(cateu)6(r d)6(e)2.2( main)6(ten)6(a)2.2(b)6(ilité)]TJ
+/TT2 1 Tf
+12 0 0 12 106.12 237.48 Tm
+-0.0031 Tc
+0 Tw
+(L'indicateur )Tj
+/TT8 1 Tf
+5 0 TD
+0.0008 Tc
+(COÛT)Tj
+8.04 0 0 8.04 198.16 235.884 Tm
+0 Tc
+(COR)Tj
+/TT2 1 Tf
+12 0 0 12 214.24 237.48 Tm
+-0.0008 Tc
+( que nous proposons peut être calculé seulement après que le)Tj
+-11.95 -1.18 TD
+-0.0014 Tc
+(système ait été en opération et qu'un nombre significatifs de fautes aient été corrigées.)Tj
+T*
+-0.0009 Tc
+(Néanmoins, un estimé de cet indicateur serait fort précieux pour la phase de développement.  Il)Tj
+T*
+-0.001 Tc
+(permettrait d'évaluer la maintenabilité du logiciel durant sa construction, et de guider l'équipe de)Tj
+T*
+-0.0009 Tc
+0.0001 Tw
+(développement dans le choix d'alternatives de conception afin d'obtenir un certain niveau de)Tj
+T*
+-0.0001 Tc
+0 Tw
+(maintenabilité.)Tj
+2.94 -2.18 TD
+-0.001 Tc
+(On peut tenter d'estimer )Tj
+/TT8 1 Tf
+9.82 0 TD
+0.0007 Tc
+(COÛT)Tj
+8.04 0 0 8.04 256 138.924 Tm
+0 Tc
+(COR)Tj
+/TT2 1 Tf
+12 0 0 12 272.08 140.52 Tm
+-0.0009 Tc
+( à partir de mesures des caractéristiques du logiciel, du)Tj
+-16.77 -1.18 TD
+(processus de maintenance et des ressources.  Pour ce faire, il faut identifier des mesures )Tj
+/TT8 1 Tf
+35.27 0 TD
+0 Tc
+(X)Tj
+8.04 0 0 8.04 501.4 124.764 Tm
+(i)Tj
+/TT2 1 Tf
+12 0 0 12 503.68 126.36 Tm
+( du)Tj
+-36.07 -1.18 TD
+-0.0006 Tc
+(logiciel, du processus de maintenance et des ressources.  Ensuite, on doit bâtir un échantillon de)Tj
+T*
+-0.0016 Tc
+(systèmes où on peut mesurer )Tj
+/TT8 1 Tf
+11.76 0 TD
+0.0007 Tc
+(COÛT)Tj
+8.04 0 0 8.04 244 96.444 Tm
+0 Tc
+(COR)Tj
+/TT2 1 Tf
+12 0 0 12 260.08 98.04 Tm
+-0.0006 Tc
+( ainsi que les autres mesures )Tj
+/TT8 1 Tf
+11.59 0 TD
+0 Tc
+(X)Tj
+8.04 0 0 8.04 406.48 96.444 Tm
+(i)Tj
+/TT2 1 Tf
+12 0 0 12 408.7599 98.04 Tm
+-0.0007 Tc
+(.  Finalement, on tente de)Tj
+-28.16 -1.18 TD
+-0.0009 Tc
+(dériver de l'échantillon un modèle \(une fonction\) qui permet d'estimer )Tj
+/TT8 1 Tf
+28.18 0 TD
+0.0008 Tc
+(COÛT)Tj
+8.04 0 0 8.04 441.04 82.284 Tm
+0 Tc
+(COR)Tj
+/TT2 1 Tf
+12 0 0 12 457.12 83.88 Tm
+-0.0009 Tc
+( à partir des )Tj
+/TT8 1 Tf
+4.93 0 TD
+0 Tc
+(X)Tj
+8.04 0 0 8.04 523.6 82.284 Tm
+(i)Tj
+/TT2 1 Tf
+12 0 0 12 525.8799 83.88 Tm
+(.)Tj
+-35.23 46.51 TD
+-0.003 Tc
+[(Système)-1999.2(Norme)]TJ
+/TT8 1 Tf
+4.74 -1.18 TD
+0.0008 Tc
+(COÛT)Tj
+8.04 0 0 8.04 192.04 626.244 Tm
+0 Tc
+(COR)Tj
+/TT2 1 Tf
+12 0 0 12 150.88 613.68 Tm
+-0.0015 Tc
+0.0001 Tw
+(\(j-p par faute\))Tj
+6.59 2.36 TD
+-0.0013 Tc
+0 Tw
+(valeur actuelle)Tj
+/TT8 1 Tf
+0.92 -1.18 TD
+0.0007 Tc
+(COÛT)Tj
+8.04 0 0 8.04 273.0399 626.244 Tm
+0 Tc
+(COR)Tj
+/TT2 1 Tf
+12 0 0 12 231.88 613.68 Tm
+-0.0015 Tc
+0.0001 Tw
+(\(j-p par faute\))Tj
+7.25 2.36 TD
+-0.0008 Tc
+0 Tw
+(réduction)Tj
+-0.22 -1.18 TD
+-0.0002 Tc
+(potentielle)Tj
+/TT8 1 Tf
+0.1 -1.18 TD
+0.0007 Tc
+(COÛT)Tj
+8.04 0 0 8.04 349.4799 612.084 Tm
+0 Tc
+(COR)Tj
+/TT2 1 Tf
+12 0 0 12 398.56 642 Tm
+-0.0002 Tc
+(coûts)Tj
+-1.06 -1.18 TD
+-0.0009 Tc
+(annuels de)Tj
+-0.4 -1.18 TD
+-0.0013 Tc
+(maintenance)Tj
+6.2 2.36 TD
+-0.001 Tc
+(économie)Tj
+0.25 -1.18 TD
+(annuelle)Tj
+-0.42 -1.18 TD
+-0.0002 Tc
+(potentielle)Tj
+ET
+98.8 666.72 1.44 -1.44 re
+f
+98.8 666.72 279.84 -1.44 re
+f
+1 i 
+378.64 666.72 66 -1.44 re
+f*
+444.64 666.72 68.64 -1.44 re
+f
+511.84 666.72 1.44 -1.44 re
+f
+98.8 665.28 1.44 -68.64 re
+f
+143.2 665.28 0.72 -68.64 re
+f
+224.2 665.28 0.72 -68.64 re
+f
+305.2 665.28 0.72 -68.64 re
+f
+377.2 665.28 0.72 -68.64 re
+f
+444.64 665.28 0.72 -68.64 re
+f
+511.84 665.28 1.44 -68.64 re
+f
+BT
+12 0 0 12 118.96 572.64 Tm
+-0.0004 Tc
+[(A)-4448.2(4)-6250.4(6)-5090.4(3)0.3(3 %)-3279.6(300K $)-2649.9(100K $)]TJ
+ET
+98.8 596.64 279.12 -0.72 re
+f
+377.92 596.64 66.72 -0.72 re
+f*
+444.64 596.64 68.64 -0.72 re
+f
+98.8 595.92 1.44 -26.16 re
+f
+143.2 595.92 0.72 -26.16 re
+f
+224.2 595.92 0.72 -26.16 re
+f
+305.2 595.92 0.72 -26.16 re
+f
+377.2 595.92 0.72 -26.16 re
+f
+444.64 595.92 0.72 -26.16 re
+f
+511.84 595.92 1.44 -26.16 re
+f
+BT
+12 0 0 12 119.32 545.76 Tm
+[(B)-4473.4(3)-6250.4(4)-5090.4(2)0.3(5 %)-3279.6(100K $)-2899.9(25K $)]TJ
+ET
+98.8 569.76 279.12 -0.72 re
+f
+377.92 569.76 66.72 -0.72 re
+f*
+444.64 569.76 68.64 -0.72 re
+f
+98.8 569.04 1.44 -26.16 re
+f
+143.2 569.04 0.72 -26.16 re
+f
+224.2 569.04 0.72 -26.16 re
+f
+305.2 569.04 0.72 -26.16 re
+f
+377.2 569.04 0.72 -26.16 re
+f
+444.64 569.04 0.72 -26.16 re
+f
+511.84 569.04 1.44 -26.16 re
+f
+BT
+12 0 0 12 119.2 518.88 Tm
+-0.0001 Tw
+[(C)-4483.3(2)-5880.3(2,5)-4710.3(20 %)-3279.5(800K $)-2649.8(200K $)]TJ
+ET
+98.8 542.88 279.12 -0.72 re
+f
+377.92 542.88 66.72 -0.72 re
+f*
+444.64 542.88 68.64 -0.72 re
+f
+98.8 542.16 1.44 -27.6 re
+f
+98.8 516 44.4 -1.44 re
+f
+143.2 542.16 0.72 -26.16 re
+f
+143.2 516 81 -1.44 re
+f
+224.2 542.16 0.72 -26.16 re
+f
+224.2 516 81 -1.44 re
+f
+305.2 542.16 0.72 -26.16 re
+f
+305.2 516 72 -1.44 re
+f
+377.2 542.16 0.72 -26.16 re
+f
+377.2 516 1.44 -1.44 re
+f
+378.64 516 66 -1.44 re
+f*
+444.64 542.16 0.72 -26.16 re
+f
+444.64 516 67.2 -1.44 re
+f
+511.84 542.16 1.44 -27.6 re
+f
+511.84 516 1.44 -1.44 re
+f
+endstream
+endobj
+33 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/TT2 4 0 R
+/TT6 6 0 R
+/TT8 12 0 R
+>>
+/ExtGState <<
+/GS1 7 0 R
+>>
+>>
+endobj
+35 0 obj
+<<
+/Length 4614
+>>
+stream
+1 1 1 rg
+/GS1 gs
+13 -12 612 792 re
+f
+BT
+/TT2 1 Tf
+12 0 0 12 535.2399 38.88 Tm
+0 0 0 rg
+0 Tc
+0 Tw
+(9)Tj
+-38.7 55.92 TD
+-0.0007 Tc
+0.0001 Tw
+(Il existe plusieurs techniques pour créer des modèles.  Certaines proviennent des statistiques)Tj
+0 -1.18 TD
+-0.0014 Tc
+0 Tw
+(\(régression linéaire, régression logistique\), d'autres proviennent de la recherche en apprentissage)Tj
+T*
+-0.0009 Tc
+(automatique \(réseau de neurones, arbre de classification, réduction optimisée d'ensembles\).)Tj
+2.94 -2.18 TD
+-0.0007 Tc
+(Comme le lecteur s'en doute, la construction d'un modèle d'estimation est plutôt ardue.)Tj
+-2.94 -1.18 TD
+-0.001 Tc
+(Les difficultés sont nombreuses.  D'une part, on ne sait pas encore très bien quelles mesures)Tj
+T*
+(permettent d'estimer )Tj
+/TT8 1 Tf
+8.38 0 TD
+0.0007 Tc
+(COÛT)Tj
+8.04 0 0 8.04 203.44 625.524 Tm
+0 Tc
+(COR)Tj
+/TT2 1 Tf
+12 0 0 12 219.52 627.12 Tm
+-0.001 Tc
+(.  Les candidats semblent nombreux.  Nous référons le lecteur à)Tj
+-12.39 -1.18 TD
+-0.0008 Tc
+(\(Frappier, 94\), où plusieurs mesures de logiciel sont identifiées en se basant sur des études)Tj
+T*
+-0.0012 Tc
+(empiriques, et à \(Briand, 96\), \(Evanco, 95\) et \(Jorgensen, 95\).  Les facteurs reliés au processus de)Tj
+T*
+-0.0007 Tc
+(maintenance et aux ressources sont tout aussi difficiles à mesurer: comment peut-on caractériser)Tj
+T*
+(les habilités d'une équipe de maintenance, la structure d'un processus logiciel, les outils logiciels?)Tj
+2.94 -2.18 TD
+(D'autre part, il est difficile de construire un échantillon de taille significative où des)Tj
+-2.94 -1.18 TD
+-0.0013 Tc
+(mesures fiables et rigoureuses peuvent être calculées.  Il n'est pas tout de rassembler la)Tj
+T*
+0.0001 Tw
+(documentation de plusieurs systèmes.  Il faut s'assurer que les mesures sont calculées de la même)Tj
+T*
+-0.0011 Tc
+0 Tw
+(façon pour chaque système, que les mêmes définitions ont été utilisées.  Pour les systèmes)Tj
+T*
+(développés et maintenus il y a plusieurs années, il peut être difficile de faire cette vérification.  De)Tj
+T*
+-0.0009 Tc
+(plus, le coût de cette opération de collecte des mesures n'est pas négligeable.  A titre indicatif, la)Tj
+T*
+-0.001 Tc
+(littérature cite des coûts de programmes de mesure effectués durant la phase de développement)Tj
+T*
+-0.0006 Tc
+(qui varient entre 7 % et 15 % des coûts de développement \(Sommerville, 96\).)Tj
+2.94 -2.18 TD
+-0.0009 Tc
+(Quelques modèles d'estimation ont été proposés dans la littérature.  Leur précision varie)Tj
+-2.94 -1.18 TD
+(beaucoup, allant d'erreurs relatives de 5 % à 50 % dans les meilleurs cas.  De plus, ces modèles)Tj
+T*
+-0.0005 Tc
+(sont difficilement applicables dans des environnements différents de celui où ils ont été)Tj
+T*
+-0.001 Tc
+(développé, ce qui démontre qu'il est compliqué de caractériser correctement le domaine)Tj
+T*
+-0.0009 Tc
+(d'application, le processus logiciel et la qualité des ressources.)Tj
+/TT6 1 Tf
+14.04 0 0 14.04 70.84 334.0811 Tm
+-0.0023 Tc
+1.451 Tw
+[(6.)-6.4( Concl)-6.4(u)1.9(si)-6.4(on)]TJ
+/TT2 1 Tf
+12 0 0 12 106.12 304.68 Tm
+-0.0009 Tc
+0 Tw
+(La maintenabilité est un facteur de qualité du logiciel qui influence les coûts de)Tj
+-2.94 -1.18 TD
+-0.0007 Tc
+(maintenance.  Il est important de faire la distinction entre la maintenabilité et les coûts de)Tj
+T*
+-0.0012 Tc
+(maintenance.  La maintenabilité représente la facilité de maintenir un système, alors que les coûts)Tj
+T*
+-0.0015 Tc
+(de maintenance représentent l'effort consacré pour effectuer un certain nombre de changements.)Tj
+2.94 -2.18 TD
+-0.0005 Tc
+(Nous avons proposé une définition théorique de la maintenabilité qui est basée sur le coût)Tj
+-2.94 -1.18 TD
+-0.0009 Tc
+(pour effectuer un changement.  Cette définition implique qu'on ne peut comparer la)Tj
+T*
+-0.0012 Tc
+(maintenabilité de systèmes offrant des fonctions différentes, parce que cela n'a pas de sens.  Nous)Tj
+T*
+-0.001 Tc
+(identifions un indicateur de maintenabilité, le coût moyen de correction d'une faute, qui peut être)Tj
+T*
+-0.0012 Tc
+(calculé lorsque le système est en opération.  Pour évaluer cet indicateur durant la phase de)Tj
+T*
+-0.0004 Tc
+(développement, on doit bâtir un modèle qui estime la maintenabilité à partir de mesures du)Tj
+T*
+-0.0009 Tc
+(logiciel, du processus de maintenance et des ressources.  Cette tâche est plutôt ardue, et peu de)Tj
+T*
+-0.0008 Tc
+(modèles de précision adéquate ont été présentés dans la littérature jusqu'à maintenant.)Tj
+2.94 -2.18 TD
+-0.0006 Tc
+(Notre indicateur de maintenabilité peut être utilisé pour suivre l'évolution de la)Tj
+-2.94 -1.18 TD
+-0.0012 Tc
+(maintenabilité d'un logiciel, et décider du moment opportun pour effectuer une réingénierie.  Il)Tj
+ET
+endstream
+endobj
+36 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/TT2 4 0 R
+/TT6 6 0 R
+/TT8 12 0 R
+>>
+/ExtGState <<
+/GS1 7 0 R
+>>
+>>
+endobj
+38 0 obj
+<<
+/Length 3957
+>>
+stream
+1 1 1 rg
+/GS1 gs
+13 -12 612 792 re
+f
+BT
+/TT2 1 Tf
+12 0 0 12 529.2399 38.88 Tm
+0 0 0 rg
+0 Tc
+0 Tw
+(10)Tj
+-38.2 55.92 TD
+-0.001 Tc
+(permet également de bâtir une norme, de comparer les logiciels entre eux, et de sélectionner les)Tj
+0 -1.18 TD
+-0.0008 Tc
+(candidats les plus profitables pour la réingénierie.)Tj
+/TT6 1 Tf
+14.04 0 0 14.04 70.84 667.441 Tm
+-0.0032 Tc
+1.4519 Tw
+[(7.)-7.3( Bi)-7.3(bl)-7.3(i)-7.3(ogr)-7.4(aphi)-7.3(e)]TJ
+/TT2 1 Tf
+12 0 0 12 70.84 638.04 Tm
+-0.0018 Tc
+0 Tw
+(BOEHM, B. )Tj
+/TT8 1 Tf
+5.26 0 TD
+0 Tc
+(et al)Tj
+/TT2 1 Tf
+1.75 0 TD
+-0.0004 Tc
+( \(1978\): )Tj
+/TT8 1 Tf
+3.44 0 TD
+0.0002 Tc
+0.0004 Tw
+(Characteristics of Software Quality)Tj
+/TT2 1 Tf
+14.26 0 TD
+-0.0004 Tc
+0.0007 Tw
+(, TRW Series of Software)Tj
+-24.71 -1.18 TD
+-0.0039 Tc
+0 Tw
+(Technology, )Tj
+5.23 0 TD
+-0.0006 Tc
+(North-Holland.)Tj
+-5.23 -2.18 TD
+-0.0025 Tc
+-0.0001 Tw
+(BRIAND, L. C., S. MORASCA, V.R. BASILI \(1996\): Property-Based Software Engineering)Tj
+0 -1.2 TD
+-0.001 Tc
+0 Tw
+(Measurement, )Tj
+/TT8 1 Tf
+5.93 0 TD
+0 Tc
+(IEEE Transactions on Software Engineering)Tj
+/TT2 1 Tf
+17.89 0 TD
+(, )Tj
+/TT4 1 Tf
+0.5 0 TD
+(22)Tj
+/TT2 1 Tf
+1 0 TD
+-0.0008 Tc
+(\(1\), 68-86.)Tj
+-25.32 -2.18 TD
+-0.0011 Tc
+(COLEMAN, D., D. ASH, B. LOWTHER, P. OMAN \(1994\): Using Metrics to Evaluate Software)Tj
+0 -1.18 TD
+-0.0022 Tc
+-0.0012 Tw
+(System Maintainability. )Tj
+/TT8 1 Tf
+9.81 0 TD
+-0.0002 Tc
+0.0001 Tw
+(IEEE Software)Tj
+/TT2 1 Tf
+5.97 0 TD
+-0.0005 Tc
+(, August 1994, 44-49.)Tj
+-15.78 -2.18 TD
+(EVANCO, W.M. \(1995\): Modeling the Effort to Correct Faults, )Tj
+/TT8 1 Tf
+25.88 0 TD
+-0.0002 Tc
+0.0002 Tw
+(Journal of Systems and)Tj
+-25.88 -1.2 TD
+0.0005 Tc
+0 Tw
+(Software)Tj
+/TT2 1 Tf
+3.56 0 TD
+0 Tc
+(, )Tj
+/TT4 1 Tf
+0.5 0 TD
+(29)Tj
+/TT2 1 Tf
+1 0 TD
+-0.0004 Tc
+(, 75-84.)Tj
+-5.06 -2.18 TD
+-0.0019 Tc
+-0.0001 Tw
+(FRAPPIER, M., S. MATWIN and A. MILI \(1994\): Software  Metrics for Predicting)Tj
+0 -1.18 TD
+-0.0016 Tc
+0.0008 Tw
+[(Maintainability. Software Metrics Study, Tech. Memo. 2, Canadian Space Agency, )5.3(St-Hubert,)]TJ
+T*
+-0.0003 Tc
+0 Tw
+(Canada, http://www.dmi.usherb.ca/personnel/profs_info/html/Frappier/tm2.html.)Tj
+0 -2.18 TD
+-0.0012 Tc
+(GIBSON, V.R., J.A. SENN \(1989\):: System Structure and Software Maintenance Performance.)Tj
+/TT8 1 Tf
+0 -1.2 TD
+0 Tc
+0.0001 Tw
+(Communications of the ACM)Tj
+/TT2 1 Tf
+11.64 0 TD
+0 Tw
+(, )Tj
+/TT4 1 Tf
+0.5 0 TD
+(32)Tj
+/TT2 1 Tf
+1 0 TD
+-0.0007 Tc
+(\(3\), 347-358.)Tj
+-13.14 -2.18 TD
+-0.0011 Tc
+(GUIMARAES, T \(1983\): Managing Application Program Maintenance Expenditures.)Tj
+/TT8 1 Tf
+0 -1.2 TD
+0 Tc
+0.0001 Tw
+(Communications of the ACM)Tj
+/TT2 1 Tf
+11.64 0 TD
+0 Tw
+(, )Tj
+/TT4 1 Tf
+0.5 0 TD
+(26)Tj
+/TT2 1 Tf
+1 0 TD
+-0.0006 Tc
+(\(10\), 739-746.)Tj
+-13.14 -2.18 TD
+-0.0011 Tc
+0.0003 Tw
+(JORGENSEN, M. \(1995\): Experience with the Accuracy of Software Maintenance Task Effort)Tj
+0 -1.2 TD
+-0.0001 Tc
+0.0006 Tw
+(Prediction Models, )Tj
+/TT8 1 Tf
+7.86 0 TD
+0 Tc
+0 Tw
+(IEEE Transactions on Software Engineering)Tj
+/TT2 1 Tf
+17.89 0 TD
+(, )Tj
+/TT4 1 Tf
+0.5 0 TD
+(21)Tj
+/TT2 1 Tf
+1 0 TD
+-0.0007 Tc
+(\(8\), 674-681.)Tj
+-27.25 -2.18 TD
+-0.0019 Tc
+(LIENTZ, W, B. SWANSON \(1978\): )Tj
+/TT8 1 Tf
+14.94 0 TD
+-0.0006 Tc
+(Software Maintenance Management)Tj
+/TT2 1 Tf
+14.48 0 TD
+-0.0016 Tc
+0.0016 Tw
+(. Addison Wesley.)Tj
+-29.42 -2.18 TD
+-0.0009 Tc
+0 Tw
+(MCKEE, J.R. \(1984\): Maintenance as a Function of Design. In )Tj
+/TT8 1 Tf
+25.44 0 TD
+0 Tc
+(Proc. AFIPS National Computer)Tj
+-25.44 -1.18 TD
+-0.001 Tc
+(Conference)Tj
+/TT2 1 Tf
+4.6 0 TD
+-0.0022 Tc
+(, Las Vegas, 187-193.)Tj
+-4.6 -2.18 TD
+-0.0037 Tc
+(SOMMERVILLE, I. \(1996\): )Tj
+/TT8 1 Tf
+11.66 0 TD
+0 Tc
+(Software Engineering)Tj
+/TT2 1 Tf
+8.75 0 TD
+-0.0016 Tc
+0.0016 Tw
+(.  Addison Wesley.)Tj
+-20.41 -2.18 TD
+-0.0009 Tc
+0.0002 Tw
+(USAF \(1989\): Software Maintainability - Evaluation Guide, AFOTEC Pamphlet 800-2 \(updated\),)Tj
+0 -1.18 TD
+-0.001 Tc
+0.0001 Tw
+(HQ Air Force Operational Test and Evaluation Center, Kirkland Air Force Base, NM, USA,)Tj
+T*
+0.0003 Tc
+-0.0003 Tw
+(vol. 3.)Tj
+ET
+endstream
+endobj
+39 0 obj
+<<
+/ProcSet [/PDF /Text ]
+/Font <<
+/TT2 4 0 R
+/TT4 5 0 R
+/TT6 6 0 R
+/TT8 12 0 R
+>>
+/ExtGState <<
+/GS1 7 0 R
+>>
+>>
+endobj
+7 0 obj
+<<
+/Type /ExtGState
+/SA false
+/SM 0.02
+/OP false
+/op false
+/OPM 1
+/BG2 /Default
+/UCR2 /Default
+/HT /Default
+/TR2 /Default
+>>
+endobj
+40 0 obj
+<<
+/Type /FontDescriptor
+/Ascent 750
+/CapHeight 662
+/Descent -250
+/Flags 34
+/FontBBox [-168 -218 1000 898]
+/FontName /Times-Roman
+/ItalicAngle 0
+/StemV 84
+/XHeight 450
+/StemH 84
+>>
+endobj
+41 0 obj
+<<
+/Type /FontDescriptor
+/Ascent 750
+/CapHeight 676
+/Descent -250
+/Flags 262178
+/FontBBox [-168 -218 1000 935]
+/FontName /Times-Bold
+/ItalicAngle 0
+/StemV 133
+/XHeight 461
+/StemH 139
+>>
+endobj
+42 0 obj
+<<
+/Type /FontDescriptor
+/Ascent 770
+/CapHeight 718
+/Descent -229
+/Flags 262176
+/FontBBox [-170 -228 1003 962]
+/FontName /Helvetica-Bold
+/ItalicAngle 0
+/StemV 133
+/XHeight 532
+/StemH 140
+>>
+endobj
+43 0 obj
+<<
+/Type /FontDescriptor
+/Ascent 750
+/CapHeight 653
+/Descent -250
+/Flags 98
+/FontBBox [-169 -217 1010 883]
+/FontName /Times-Italic
+/ItalicAngle -15
+/StemV 76
+/XHeight 441
+/StemH 76
+>>
+endobj
+44 0 obj
+<<
+/Type /FontDescriptor
+/Ascent 701
+/CapHeight 0
+/Descent -298
+/Flags 4
+/FontBBox [-167 -299 1094 827]
+/FontName /KDFJGE+Symbol
+/ItalicAngle 0
+/StemV 0
+/FontFile2 45 0 R
+>>
+endobj
+45 0 obj
+<<
+/Filter /FlateDecode
+/Length 21303
+/Length1 40752
+>>
+stream
+H‰äW}tÕ¿3»3;³3»‰O*$œcµb(`BÅ’bàÄèA§å ‡Ùİ·Ù‘ÙffÉ†VI	ÂG@M1Ò­¥«Õ”RJ)µH¡IäClÁ"-P(¡˜†@zßìì&€ÇSëŸyïÌüîï½ûŞÜ{ß}3o€€Ûğæ„ìÇŸ~ÿ©yEs˜;±u–ÏĞ"@ûùŞŠısÍÜ'ea"ò] ì¸`Àğ¼o4ŒeD0	œÿŞÒä# *cåá–ûnxzêC¹V|U:;àÅ&äu!¢^Íş
+@cÂy7ûÀ|Ô‡»Ba3±Ú]Z…ü= GîSqÃd\U , úšõ+{'” 4¢MÏ…•DL8,¾ƒó¡>ä†‰©Œ8¶¾ :  çE”0É^ó$ÀÚƒ¨ïˆé$v1·_+ÀÊU Â¥˜Uî™P¿û¿g³
+8p²[Ù¥8ãò2Gá~è„^M<[ÀÌúøöÂUê ÜÑÍ5\k àÙ c¯!¹7ñ/QÎÃ>xC;¦A3Ì„sÌFxYÃ˜ì}ÖÃFhÅkƒYt4C€-xÍ`÷àˆ Œ„l3L†2Ôj –ÄÆ±}5Ó^v<ÛÄ4B;Ÿy¦CÜãl†Ëğ]ØäC>¼ÆÎ„§œ‹Xpğ
+Êf´`;™eÅz¸â“¸°6@ÂÓìLWt0qÁQ8£`ëƒàck``63‡˜÷™Rv?ìdº˜}L1Gkè4s›áv`JÁ0œT1öçÀ½h?½‚èû®ıŸÂœÇQ#a<‹ík ˜Û€¬Ş1-É‡ ë½Èë‘Us%°VB)à¦CZø4?ËêÛìØÈä£TÍµ2”×; úÁ‡Ì ~,qŞÃÎäã\¸‡ØClTÃ¶šÛÄ‡\ãÑiàªY“ŠÉd(å–aÏí™!ˆ3pErà2W
+o2ÃØl\›×3±y‹;ÍÊì$> ç¸óL3œÿ¿‘éà€­†ffÿt1ùü6f,ïåCø\FpÑ÷»ç/ Ü~CÑ±ñèôt¨€e˜#!‹p7èúXÜMÇåŠa°ƒ\EyÈ¤rEÀQÄ­oÒhÌ˜2@DÑ‚VÆ²xñ@—£?¦–nL~Wî“¢2ì‹jĞİG‹t,/@¶ àÙ}6©’³6“~˜zø.î?¡¯ÇdÊŞLLpg¢yòX_IPËÄÄ0¡@,éë11gb2 àÑF<­îë1ÁR:&"³À<™Ò×c’:Iº¿óå>¿Ùô›¡”ò»J™©ÙxBçï¶˜zú¤É 3õúÌTúÍÇâ°Nødº¸2¸sqã;ßpøÄï!¾óñ€Ù‹¹œ)×Ê®ÜÆzÆÉ$kŞ/X€IŸ5°TUñ‘¨ ÁÚ¸ÀÆjÚ¸ÈÆÙ¸ØÆ%6ÖØ¸ÔÆe6.·q…µ6®´q•ÏÚøœÏÛXgãm\mã6ÖÛø¢klü‰6®µ±ÑÆ—l|Ù91®G*LªŒ|…«‘¸I~&jÄ0Èœ¸¢­‚ºâ7Õhäç‚	ªÕ¬LòA-ª«‘W~-î{ÍP•0şÁı‚Ãß0İ|3bJ€¼!*º­ğEÍPSJÔHĞü¥Ëã±õnKĞU<>ş*ÕˆVD6ğR®òk1¦Åj±‘7ˆ§ÿŒŠItË®MB8®™jL«ü­L¿¢:µQÑ6K1´AU´€ş÷Å5˜[ø€:Wßè·5üM	A«h$â'”Î‘°z¶
+DÓTˆñGÉ2k.ÑM’Ø&[$„~Ï#‰í^?RU)GkÌ¸ÙÁáL±P³ğFk6¶üI(µ¥RQ‰n˜ºb»¼~U÷k$mûŸİ)NmH8fVÄl•Õú‰nSŸÚ¸xá-/u[ãôFÌİ^5’Hó="úfÄ}(î•Óª”í“ÓŠ”½í"øx1÷»i,Rò;œ)×È_„r]	¨ØğWNÊUÃ2BWƒ¼~üÁµÖÊâ½èM€„}¶Åßuáq¿ù7À¯h‡\¨VÌĞ{n-ZN[ği‡Ó²	ü]´å¨şTh>&Ë‘£ùrÔfñØ1OZ¶,9Q¤‰ÓîÒ¢óH¤œœ-_èà“rÆ%b¼ïéqé~(ñ0Œ‘>ESˆDèfìt!‰3=Äg~äñáÎ˜MÌ”âÇ½)IœíM}æ9‰R’Rı§œ!a5p¾§ËgşËe’¸ÀaNjä¢ÛòÆ²ú¦.‘vÉ–ÌØåŒLÿÎÈ>óŠlÙj4cŸöb$ÑÑ‹ùÌÿxmSmİÎ8I\½ûÌ®”ù¶ö5OCo®÷êô™İ®o¤Ş4é7¸¸¦wpÚ-Ìå{n®©‘NàÊ¤ B›§LÖ]<WÆ•Qæ´.§ò-Õ©c{­®¯
+mR­»Iªw‹-òh1)ÕreîØÖéı¦T+ÕÊ%Òá”˜[$·‹—KÜ¥ò±…+ó¼zKp¶"÷ k¦3.^˜Æ×‰I®HLÒ±@˜f=ïbÒÅ‹RÈİéú ¯3®õ\ë±ıs=ü_ªtF<ç¸,´±M4
+²]²›²v‹IzñA¡¯£vH!|îŒ”ßB[6ˆÉlp/ñä¹;å-Y»å¹Ä“GïR¨w¥\^'¯ó~Ë“G#*…Ä$ÌÌï:ÃÑ~¹N
+ñwõT|–Uåu\‘Óçî¤õÖşÔ:®²a…‡kYÜ»øİw`[)|ñ’Óş¹·´àRac>wÊÜ4ptj·¶ï-lxbI—uáÿ0KÜÜTØÛ «ÜiÛè¨ÊØøÌ)*}ÒKişzk·mŒçÌFÌ9¹K‘¿½kè‰âå%òàK;&>si &w²àÂã9ŸC•v&ëÈœœÖœ®ü-Cš;N¿tiÿöíwÈ9‡÷wÃ	TXõKç@oíÖô°¤v8éÁÌ*C†Ñ¸kÿK}ÙÀ6qqüy?l_Ì%>;˜”‘³sƒ +
+VÚeäâ8Áa´dTÚu"	ŸZ×6AKÉ9jhI%Ô@Ê&u¨Œ®U5T:9%À€¶´LD“®T Q‡nk2Œ½çÎ6I !¡½¯îÃïóŞóüşÏûqg5ÅH¤®ã9İAoUg.\’Õã0Y¥hÑK•JwXô¸óÊEÙ½Môìc™şlë‘Âï¡ûbÁenÁ+TúÇIrGë¬#cE÷îÖ&K³^nô%iªÁèÔÃ0ÜË°Zò[-h4ê¥ÀzR‰Œl×úlÁÂ‚C©ò:~/«É1 s‘ÛıQ£Œ@FÅO<øuê(>Vó;uFT¼¡Ü#’œ\ÙŞâ÷+Ê|¥	éx£Ó`´k²ÁÈuÇ88,ÃêV`Õ~&€”Š/èŒáAFz|óp{ëñe´.·)_îL3B%˜ìÏwd/±îªâv!£dmË]—_»<'„Œ|äÓêƒ]ª¦ğkêC\&UìP+Û_­Ì?w·g©¡`£âBÆ¬O«^œô«P·}Ò¡ë#Ú>ØÆ¿à)Q ¨ŠÈXë> –P„K(Ä‹$°FÑ_±Ësæh¾§H-şè\,^7}`Wv(ÛäY*tõ*‰É®lUšÛÆÎ$£Cl²®=3Ö:B@FqEyÿŒ¥¥P5®{FİÒŸ{ls8ô^seş„Ïskºe]Ä§3æ4}:{ü›ï”=9Ó.]¬ˆ]³)ÏîV
+µÀŞ»ªvEÇiÕ:ÈÌ~¿”‹èŒ_ŠŸ)‹'¹¼]ª,;ì ©2òmò\:íDÀ<®—»·ÊÍ{ÑY×¡3–‰9¥MVú£åfdt8„œÒÿ!±Î¥r_MĞß/ù7ª¡–­˜Ç'‚œËjHÓ|úXÛ¥ærG…çÑñV»ĞYáª–±D©÷,íWEG\{m üú;H `oy‰%çã4óÍCgêª,‰Y¶i:»Û×6àÉN´ÅO|h÷]›İÈ¨$}ÎĞ¦b:îØôœDq³CÂ¥j( óì‹İŠÏ_¸åPKSe~¾S@F¤ÃôŒ¯—5ÏôTLt2~Àİ;@eÂ¼?$®]Ã8”ˆ!cØç+ç]k$‰8sQÇ/OÉ ŒŒØÁŠc²·1Ã=¢˜ÇßüÌ·UÑ¨‘Ç¾d]¢ÕI+‚f‡GÙv.
+aA\„ŒpÍl´ó]Múš‘q2@€'ÊÈ8Án7yÓŒoQ‹ª°§7/>ğÍõt	¼q¨˜Ä¸>Öõ)­GÇ˜`·j0dÍ:zÑdÔ¬ö<#'6yZv ×çã‚ôš©
+:éÆ“›$A]X¸°uÎ‰Ì·q>ª‚²,?ß+Hş¿ä¡Æã¸÷ø¸«¹J^'véóñà®çÇoğÌ«ØóxÙ’ŸúÚ¹sìÖğ@@_3¸¾K÷×^˜Ÿšú²7?&•ö¥@â=çOMm=¾$„eG	ÎÇ¤ñJ —€Uê0æãËúŞ‚Î8û|’17tÖmxq92V>½ÚRëzv¬®·.Ñ3jZlEÛ–£ı=»Vœ,>™•õuâ\W¬«8
+âiçÃ=fÏÂPäoEÇ/¿îúuï•Uµ}¸÷DŠÃ€BM®k¿Ä¦I #:§VŸµ°}°%7¹®ëAK ¢3ŠBØX×”ËÑ"\{kÄòÎ½î‘b¹-šÚîåÁ7Ù››Iîˆún'å¤ÔF‡9Cù¶HåMO»p
+¤‹–:°ÔF†„Ñ]æö#£Ê»=È(¤Èéî0xssÉÂèÑ¨¨3Ü`TäŠ$#d„!±SßiF[?Ä-ÃHÆ³-5V•óGrÄr)mØ’¥Ÿ,±E@ªN1ÂÆirmFdTŸNu.¸mÃĞ°6#,ğ¢Q¶ÃUw€v'…€ì0s<&Â$˜#Ÿ_Ù3á1˜OÂXÏàwÍJXxB°	š Ú`/ìƒwá}è†¿À)8çá2\CœXˆƒ<@òÈÉòñ’
+2‡Ì'5ä²’¼D4"¯²“¼Aö‘·ÉAògÒE‘ÉiÒK.Kä*ù%ÔBmÔIs¨›¡Ò‡¨JËél:>EN«è’{PŸ£+é4@7Ğ-ôUÚFGß¢ïÑ.ú	=C¿ ÿ }´Ÿ&˜™e²ï±˜ÌÆ²‰l*+b3˜Ÿ=Á°¥ìy¶šÕ³WXkco²wØ!ö!;ÉN³»È®°N¹È‡s7ŸÀ'ó)ü'¼Œ?ÊŸâKùsüE^Ï7òÍ|;ßÃ÷ñwùŸøAşïàü0?ÆOğOø)ŞË#üïü¿Ì£üŸü_|€_çq5™M¦L¬NÂ7•t¾î ÎL$ƒX¨€3w1StN-D Ì88Z,Ä¨ôÆ™¡(*¬ÔŒÇ0ša©;ôG­ÄJ3ñŞj‚nÅV†±ô^&l5+Ñ#eè¾p¬ÍØı^…dMYô«n†Ş,º¬Lo¿…·Ñ\¨ÿ’ê4tÃŠQl$)ğĞ±ÃnI“1›)ƒØˆ•‰¨DÔs‡Ù±®|ÈŠ;²‹¨E¢gÂğOõÔkØ±Ÿy°rŒÅ±¢ÍD¸ÙjFoÔl2lú™ Ÿ‚9hÔ×q²ñtà²nÇ³Û–Ü£=â¾3nŠİxõrI
+Æ¿Ñû^„ÛwÚWĞR÷f[Ô…Z&wòÜÈç¶ØÿçP-BŒZæur©ªEä÷IÿÖ¯»Ñâ¢%K(PQ‹¿µ4Ü-¹ı0íÖ!ı²¿¹Ü¥’ˆ¤û,¢e¸®Å~oğ®´ŒúßfØRQÃú9õ†iäÖ*SZRFƒ“uõ|·ÿp8­¥¿|5j‰ÑµdÉ~¯/©%"lè`šñ=Æ£¥=á¼èÒoz4üµ
+„âFIu]]‰1ÏÚ~©Ö]STûU"Ñ¶õ$Š‹Úh#Èáÿ2_ÿ±M\w À¿ï½‹}ÀÅ9'©wÏ¹ü E«Î1
+AÍğ%„nÙ
+ÒúcÒVÆFÁ¬İˆ¦(¹„ÄI&‡$¥“œA™ø£[»Ê¦­ıcœcƒS-lZ'&MÅV$˜R=ÁFPİÜŞ;Û!”_ÚVi{–,û|wï>~ïû}ßNİê
+kìİûBk7È°£ÃºÃ’«oÛo[¶ßØm]Õ­/?±Ä,ŒyÈ0Äü6Ç°¥o¸°e–[&Vl*­Š¢ÉkZgz8»‡Éæ€—.ó¢ëˆE«%U”’¤`¸Şî×ô†‹‘g7 Î[$]¶ú²,¢¾ôiVÓMœ\z>z”«	Xv‹ĞBO‡ÍöØğ2	RâÂ"³pÁ°Ôê‡Vf¹:ÑÖ\“³\'µÌB»/Z1Û­]&¼§[³,©SlP¶¥õXÔ/é‡ÇÙ‘Œs~›ÏÊÙ¾sÉ"À2‹Âş»ÉâÕ@ˆÔ¢k‚'dıêa–Jvºí¶¥;SO-´£Â¬W-K5ÖºlÎ¯†¼Ì2ÄsB«Og–³7/,Y.]_p¬·œ)ŸĞa•ÃP‚WÂ³Ì¢4(î)=6uÄW¹"’Nï¢øì)	æŒœKtÚCd“>/#qoàdÒ~ıòç>r]¢ù”QL-ïæ…Œ(òğà9I¶q³ğyKO¨ºoÔ'K‹ìƒ`/TÌgûÓ·àçj¾]°°‹«è¦uˆ?Ú–Øºİ`–¤9²d™­”möÆºÒãÔ"J|_Ò¨½Øk£8Q+¯÷ùÆôØ‘ó«¡İår•Áœ{ºK1”Õ)7?g$lÌBj/.éz­øüĞÍÆt$vºïä;Çn~°Æ¦%G¾O-ê4T&¸µ ó"İ/P†ŒxØŒôOes–çF:7‹ç«‚İIÇĞ¦E.WAÿà¨4é¬1•N-vqı÷FFK}U[·ka^iÚfòmÍå¢vÈ²<úa´Dr¹ËRyYÛ«UG{İ¦²º¡¶Â0ÚÔbFãj©-c–3»RšâU4÷Âóıƒ–ÅV~ÎåN¿1:6ºIKG‚é?.\|·ÌEÔvá‡Ì"h±PJÏôù0«r2Œè˜m:ƒÎdWz|%,Ë“6m£Ï^Ä“@—q1µ¡ÁQ7*Xú²³ªÏä'v”Öá–	…ZZ·™œep$Ñ$óş#¢—YÊCíÑÖ+ÛæR"l‘4ãËÖ¸Dã?‚Á²ZçaféUdÅ·@ƒÖ³yâ.%ıúäØ”[§–àKJ&³›¸ªİ–ÅŒ<*ï¥µí¢UEYéÇë’PqƒeyFùëìü¾kòñrĞEÔ/bP[0Ìr£ÇÃPŞÂ.¦ñ22±ÃÃ,ò—¤e‘­qa–ÚıÓ‹«ß¸eR‹È¬WÚ¯Ät 2ôI>-¬ä,k \V+¶æèÔ"Vòár>.(o½¾ƒZbÓ¿e	æ-¶êıª 3aqÜ4/İ´Šu¾ÏL¨2hÍbÒÌgYâ]T_0üvÑqQY¨¥Ï„Y:Çèú2;l¾¼Î,ßxušÎ1š†¬x°,,^ğp†ß³ßğz&Ø¸Ä@¡ãÑŒ )TgJ~%lÅ~4îîÇÎsâï­ØG@-|ly‹D-iËœÔß\fA5‡LêF©¥oüJa\jtél\JòsÌØŸ’üÉªàÊ~u%‚œEmã!ôµôç³t•\——èYq²Ö.ıE–%ÑÖ,ä-*?J¸$]‡J~Æ£ì¡– .Ñrú£u>’ËÉq)F¨e¿•“1§Jûµ9Ky\¢–Ê±)§¿lÌ<½ıäDS5µôGX¼´ƒ#”7öø/<àG@¶!g2‘ k!sášT-ê“eD]E@Æ-,^ÚDÑœ\°âeH¤9™¦{f9»ÌÃ*™ê©— éhrQÛÛ:½4)Ewº	]+©¥Kê bXT¬µÒU„ŠsQ<ZËck/—»;^­û™oMÅ¸ÇÿÂŸßŠÆæ«Ÿşæùs§b4'G€Ã{½D×X*¢;Aú/´£A{–´”1<½¾ù£#t}	«+Â Ùv
+4)2È´Kúó@LÌç±"ÌÓµ0áFèZÉr² jZóÇğ¶[ÃÇgDjI]7¯»Æìs^Ú—ß<hş.`šñxl>ÛØkgeÅÆ@¯·b<›Ø³æb "«uš ™¿lp4†*#ÉXEñ?yop|£b±ˆox>õwºV
+4ÒÙZ‰@cK}ÑØ·g¹\=fYÔÆ-ñØc¡ÍöD·Êw÷ÖsA¦5LÎÒ$æ×Œy/Jı#Ër€o{‘YnïÅ°xYñ°üó}šV’;Ó¨ÙÃ²ğdş$Y_QS8Ÿ>{¬{´BİØúñcrşJ§î¸Àª}Jn1Ë	p¶u3‹¸d¡õØeéPj¹ÿ­î¶”˜t¼L]¾çé…:qmŠzœ#ª km¹…»ëä5û– ~/Jé›ò–âÜ«`iyh¯ù–ë”ZÆ È<µôE`ÉbÕüÿN³çŞu/Rù«Õ»-†ZÈ}t<à^Ë}vtw·‚e¬Z–bĞ„e–ÿe{è¾òŞÑ
+•Z€Wÿ?–ÿ°!Ï[„OĞ‚i8<Ÿ¦Õ|=|š`+İ1>ÏĞÍLtÁ^xz`"ğ2…ğœ†_Â¯àÌÂø¼ƒ°ˆV RäE¢:TšĞ—ĞWÑnô]4€ÆÑtııÍ wĞ{èºŠşna‚í¸¯Ák±‚p3~?‰ŸÆ_Ç]ø[ø;¸ã	<…§ñOñ›ømœÀ¿ÅÄ)|_Ç‹¤ˆ¬$«ˆH¤OàUE>K#õ¤´vò,é Ï“d„DÉ49EŞ&¿!Iò.y¼OşJ> 7H–+âœ‹«áÖr¹fî‹ÜS\ÛÇ}â&¹W¸Ÿp¿àşE{Õ Eu]ásï»ïíİÜ·)«efß.‹‚Šh[ˆT6ü(Dí Áhkgdˆ•L'Q›V§FØè.CPGIdÔ´Ò™F;S'&mEÆˆÎdR;cÒ“vlÄØ‰2ş¼{Yğ/Fí˜{ö¼·ïşœóİs¿nö>ûˆ}ÂşÅ.±*WTC¢ÎPÔÙj‰ºP]¬V©!5ª¾®îT;Õ·ÔwÕ£ê‡j¿ú©z^½ ~©^V‡ÔÑTMÓÜZ¢–¤ù4¿6A›¤MÖ¦kOi3´§µ­H›‡ò¨xY¹#{ƒù	Tª‘8°q’1À	:&V°QMªŠ%V¸MÄQ©
+6°aNlGhÁÏ1ÄªçT¸ğÿjÃ;Öá˜ã@?¢):²FZ´ƒ[Vi‹cMÑ^äØcŠ‚9\Z-ÄJ­„Qlû0=|@ÿ…'ÑDÆĞ1Rã©óP	Ç7—~ùO`¢n&ÊŠ“Äa·è«ˆ 
+öH¡(â[ÆA'N°1´BíÔNâq½Øã©ÅâG,B@Š‚qVP°GAÃ«-u€E•eòi5pS°›f£XÇ¦8ÖÌË!—ºÿ‹c³à±ìÿò8MQŸ	k.|;¸…$wêãF¢ßv.= ‰g‹|_ŸfÀ†4ï†õƒâ)ç^×w$d-åDBä3C’Ùgt7§¸¢ëôû5¸uM!€*yò8 v³Ğ¥Yc¤BğFõ6$7®ƒ×¹şÔFªkäk)¸}â½°!ÏéH{\˜å'dæüğì ÒŸó@ou–¹vÎÛ³½IŸõu™gğãê"‰0aH\[ä}ÍA*»-ûƒ†53Şd‹“HßÆ—Àh,Jn®Z}©ÄÄ—}éæ6DÂ;’ELzŠ3¢IM<Ÿ÷Vå?!šÛÃŠÃ>½>Pdäµºİ’æˆŞµ«=È%r‰s@‡c/ªisõÄ…uèH«Ú#5ôF#"9:ni°¤"½87JkÃ¯.ò")ÍÍ]”‹H&Ÿ“Hâÿz5£níO[xoh§îñp.²ÖÔ¦¤s÷ÔÛ
+õ’ò]µyˆdÉıÓÚùƒŠ”7vôıeWakŠÕĞ¹6©éPëIÃƒ…DvjBñŞŠQ&KZ–lx¦"}Ó{Ş¾C—/_ég+3æû
+õP€¸K´Ì÷yòrş+‘$v<ûvÈŞµc[ûØ™ƒ­ã*Ïëtı:[vsİ¹ÖPÇglO|˜¯—Á@X ÙüZÁ¼ŠúÎuí+Öf”¶d”wZÇWG<«ö÷W›¦ËŒ8»’ÍŞë`1k2“V5å/Û—ª|Æ¼`Nn‰o‰X<dî6›v·—¸<ór
+$K7ûïpöBj‡æ‹ú/…ÈoÏåÏrškÑ`GÑDÛë~c±—‹Ñ‰Dw—Õÿ^”•ÎšªK$i\›·€6“"éùeW9£³ĞñbÛñŠG×=…Üiêi+s¯µ§’Ò6G§´ì@;XEL$’u	›¯¦LU¬RwY>‰úõÊó†¥·Èå[ƒH|î¢q8:\÷ë!¦K$‘Èá²úÎè-$.=‡“îÄ+}]bL$Ğ½³a_ÎMß\Ç‹sOWL—H"œ§is2À7‚deÙîp	$_ÏX^œ’QÇÉïz§Öûx ¸­]¯4¹ÜV1c]ºßj„3/„`K$òAa}gQ Pz$ƒB0ñòúïG‚!% :ébíTW^¨,Âµ“š`0³ôõp|:‰zåèøssAÌ“)Ã3vldÁç'^á`TVgN^‘t`ÂõêwM3ëèÚç»º¼‘Ï²Næd.?`nÈ9³l*öÍ‰®H'yÓŒ“|éÛ—3,Û½İzûî±Î›\¬bŞ ÆùÕGŞô:·¾ß'fì nê«V!ˆr1cşìlÈC$ã{’ØÛ8²;İgg
+›FMx¸!×¤È§Fšl¨ßÛ„ÅÇ¶’Ñü•!¸-ÏLÀ=–wäù¢±s§Qúºo’,O"©-~4$åÃÎAñ»ÛªĞ„¬Éu¾¡mp{ƒoLåg7ÔÀI0†„G»ÅÛ¸’%âäàW®	=Tıo/×0’šÇ…„àu âá»QM‚È‚ÈªrñX(BfUÏÁ"ŒıÏá°¹ÕËğkxê 
+¯Á&dXĞ	ûàmäW‡áôI†õ)|_Á¢â½ÙM<ÄKÆ“‰È´²H.n\sÈ³d>ù© /*ò2YCjÈ«¤™×²´’dy‹ü‰¼CzÈò>9M>"gÉ?É¿ÉEò¹FL
+”QÛc7õ £óÑd:‘N¢ÓéÉëæÓrZI—ÓUt­£ºn¡­Èìv#·ÛK÷Ó?ÓÃô=MÏĞ~zÒ!…"»KP’”€ò¤2]É–Ì¬¹Y¹R©,CvV£D•F¥	9Z«Ò¡üA9 t)Ç•SÈÒÎ(ÈÓ•+Ê5djÀ²5+s0's³x–Ä¼ÌÏÆ³	ì{l
+KgÓY&Ëb?bA–Çf¡Ìåv <—R(÷y° K°"wBò‹IUğ¦¯Á]BÌ—·z,Ã[=ò+Î"v,¨ä7r…aæ%r¹(Ì†¹	C†$ê	{\òÁÛ„Z€ğ	ô$|óUÚ-¸ÄD…ïÇÀ¥8Ú½¡ÈæE‹dmâö+UôSğÌ6âP,Xg˜ÿÙçHwñÎXÿ…Ø±¦EÁ>ÈşHûR5Œ×KUo	òXj‚ÑŠaœ!U‘eò)Ê4\¿–Q.…¬Ê¼)x«òÚ_öÃm3¿¡,(.Ï2é_[nÈJTVÊºÔÂãv<å}mÕ{“"ÏôØÛ–Ñ£f Bêğ†~ûñÍokh¹*ıH¿9?ÉëI©ß4ŞêYğwƒòdKøâ…n İÉŸê»ò_%oüøâÅß˜_X6¾dÖÀjƒØ0d aïwªø‘ZCş'Å©É3RÇ©cY58vèĞ]à#{i8~ıÌvôëN•~;Š—¥"±öæÜ&dJä§ËS
+Ãÿ‘_>ÀQTwÿ½÷6»\s›d£ïGš(Ú5 ¤L6˜$BM‚Ô?ı·”–2NQ+yGäh¨CM`Z‚ˆpûÇv†îå&L3¢mu¤åø3€«ÛéEâmo÷’\;µj§ãøŞíß÷ç÷û}Şşö¾;­í÷³ïxòúJõhhA»aAÁ¾åÜT{?Tƒ¾çm–ávÙıÕ¾ÊˆÀ‚‹H3&…×ç¸\ºé–Üªíµ]%y÷E„İÃ‰ÅGë¡¾eññE³keİŒËn:S°¨¨îÖı¹µ{¥¢ófhcv^»«ëï–TÕ\3¸üƒG
+î7z|¥†™jeË40µÇâù¦ä/k0ù¦ks÷•—Êz7ÓÿÆŞúËxfÆ»¹úĞâª®’âA´;Cç‹^û¥ñ8ÔG(Y<ÖÉëzsÖt”Uv¿ùë–¯øæ2IÜºÿî_üõ™WkJí*´¢k÷ÖÔ…­çêËAÁĞÊv®UKƒ)Ñ-3][S‡Ì9Úö;÷Öçğ)S“Ï^xnÿó‹+»Jª…İP'ïHÔôœ8\ßº¾dÛiÎ˜ñVEÖìÈ­İ-e«¶”vCûïİ[s ·º~_WÁ²£ë
+ûÚé¶j‘îÉ[†8‡v>Ìµ#Å
+Ûô ùb˜9Áí;¾|gÎ®W{dèÎzåæÙn¼C=n¼¾Úš~clk¯,Ùfë„HÑîª–‚êP$´sö‡²s¶LG»×n»ûÉšı{«ñä*´[Û£h°5òÏ¯ñr ;ª$_ÖØ…ïï›RéÈ5ÃEæ†\ó®û»i64<%âİrÕ!…mŞCŞú¶ŞöÊœ£´b«³±k‡aıîÄŸÁ—î;{ß‰g¾óîêwJ£—€×Š»zo¾·aÍÖ'Ï^·ó†¥m=PZ¾¹šXßœ=ñ!Ó* ?0ˆ|cİ3¥«ÎLŞå®o²!d
+»sq}§I¡*>m{I^qQdO¡—¿™©\ü(…„ÙGP¡IEĞâÉ,1"›öÀHšÄNõÕDšUyBLÍ$Æ•Òá™&o†r´K‹^ÙS¨¹wä”İô|.8'iVlüÛvmÏîª¬FÑf¤òˆÚ¾YÎÉĞ¸™Dë£eSiÕÉØYë#,}‚â)©Èƒ j©B(†™pª©9PŠzªõÔ|¨[`Ü†zê{°–Áİ°V¡z š`ü¶A'ü€}pÁ¨©¸Šê8œ†·PS½	p#—lr9ªªi¨«ŠÈ5¨¬æI™OjÈ7P]İN¾C,rYúj-y4‘ÒJÚÈ#¨°vİ¤‡<M‘_¡Âú-9LbŸA=J‘??‘7É)r¼MŞJfP?Í¥W¢¾*¤WSƒ^O¿JMZI«èBZOo£ß¦Ké2z]C¤a¡íô1úsÔYOÓCô74Jûè1úGú&Ósôoôïô"Ë`—²É¨µ.gT[×²9¨¶æ±VÇneßblkd«ÙÔ\°ÙzT^-l3ke?AõÕú«X7ÛÍ`O±v µØsìy¬/	JjøùXJŠ ÄÿöÔ>÷(¡FÅ+Jİ‘¼Wq„ƒº‚zã¼±Ãg¢MÔIî]¯Ev[2\!	£
+ÅÍÏ³áîE•¼£ĞKi-%Ÿ×íRaûÓ+)¡Ğc\
+è•[Ñ÷IØ‚•F<RÒ|”i&í^|>šéúæUe¸º3yPq‰¸iŠf‚˜{RÊºhG2T­máS“AO&)’˜Qbúâí3D‚A»Èc.Çİ[ C »¦º/¢MŸÍ+âóW¬ª&ÎğÄÕò¤ÅÆG¯ËX›†JPávØáï“øÂ°¨…±,I<ò%¼;LxlßçŠÿc[abŸ`!i¼Ylüÿ²°şëü“#Bc¡©±S,šÿ—,š Øà±?¡‡ú@ı7ÅœxË›Œ$üYÇ‡§©c&¾ ÓXPãR·e¡~ŒÉGÊˆ’şEµ Û©,56>Ò|</±µñ#Ef¥ëØÂİ½â”ïJİHN9Zt9ıK!#ÒXøSÒYÔÂÜ/9ùë²Ûmºİl7–Èoz˜Ù)ïQ{m>= ’ş¨ãøºô½„¤ğ@< D¤¿9YÊ#‡õ~çd¢ÉIÀ<'t´Ş#î­xIh–·‹N#_#XÄºWh‹4ò)Êésx6CŒtO@Àœ¡ 4_lî”Ó¿^2%.Xğ ¼~,óXÈ²hf1 sƒdu»jãw—(…K>™`Ê@£ÓÕf¤¼'`,á¶&Ë¬~¦RÃ¶$ÂóI7,üÅ:ıê,ÎIìaçeë lƒ:ÂByÖ‰wõ÷0Æ¿d¶ãI‘%:-Kh
+ns}ZÈ½¥'XĞ°Ê*b(°È`Ãø’Á%Ë²ª›õ1,Rï>‡Q}„<ÿ8#™£,ÎÃ† i0t4ûÌY­«ó	¢ä`Ÿ–òqÃ°y©LqkËÂÎ"öÌRÉĞ-İ2¢m²šÍ9÷ÁíKºÕtùãYH~‡‹8ÖåubúqÑieZ@!Æb”p5÷Éfİ"›®kƒøpMM>Ûg¶Q1YhãY„ÍùdÙ[Ç=“/^˜À¢×Òí„ƒ\ß^¢úUÂ™ñz@—¯è,–@©KuKe*Ñ£Üca©8P¡ªEÙ&Xp}˜EBŸÕœ¥œ?×+E-­F¼émµTü°7à´é¶"¦n"YW‚¹Ê¶\Ï+M—‚Ä™ôucXÄÎKÖà*ô}$¸Şd`ˆ9›²üt³2“çq=…à"Xpd± ÑßØ›[kû\SÅ†aç$/š:—ƒÂØíyÜP¯ÀwªËBKÉÿ:µ‹2ÄTE²ˆ5sæ0‹¾{£ä®’¾„)¬eİò˜¢®¾#zñlŞûşfYoœ¥;o«ÉÀEçd¡ª«Ë;˜ÈB¢†ûğXå¿H-¯x_`(A|Œ.Maqò¼ÚØÏ”È¦*£–f‡[AÃuS%sÉV}´²ÿE~ıÅÆq” ÿfw»»N×¾='˜5¹æ6NˆŠÁ˜”Ä•RİÚ!#ò€PH]'Qj/}ÁˆÊóÎ‡ä6 p…Dó€Ú×‚„Äb¯—úZÉ¤í›¥öáŒA)U6ª qÜğ}»{\;i› Bb¼ç»İÙÙßÌ~ß7¹¡ÊägĞÂ¥òA³AØ‘…ç.¸•Ò©ÊÔğ²ß±Øè·ø3Ë6ÙZ0
+Šÿ]7±pdÑâÑ” Gå ¡ÅçÑÂ,jdÁWVa7ó§iî
+«ZÅY:küÎî³Ğ~põ¤ºrô«ÕwæF‘F>28¾4¸8qõìÌ’Îõ¬y•,,|ßÿfİ”7›&™,„×À‡$Áv'#…®Yëzö­kœsm7®E¶br¼»À¥äùÃ£åÑRŸ…K=’…ë–ìåÒ¸66¼Ìc‹¬¬j^AéXüIÑ<v[Í«Ş§=¼Ù
+Zğsêj¨g‡QvAŸûŸ‚²>ZÔÉböÌZğé‘ÅòtUha]€Å:~À#]™Í\×¾xÎ9:¾×5tÇ±Æ—RjcÛŠÊun­	´0ñÎeÜäÔÛòı–®Gîyø¾‰sCê0 ¯k‰Åì¢•yÇâa-ÌøæÁ2è1@:ÁÇFË¼4™F\m»Ls^6æåMm^†n)m—Æa,m;‘Å¬J"²Xh1¥h_’— “QÌ‘…?[ƒë–2İáƒéç‚”Ûh‘’ÖÊÄ:@‹ı%²xa­&|1u˜i]„ k±ÎO¬['…G‡õñË’5\ß_Ü/ú±E®…Sº\ñ‚}Æ?å­¶K1œ&Ñ3dàh^øC)!Õ³’X<¦>g]³¼üì1ù²½F|Û.¦<²Ğú,õHëÂt+‰…e“ÅùØ‚‘…“®5sÁé³,ÂMß»4A!Ü÷ÀäÜ·˜ÚYN¦ûÎRÇ¢Çm²P[hç0ÿ^b!uÇB‹¥kpß76j±Ex
+8WN»Õµ-<Êíx½MëBW
+f1%©@µó‰Å ›õŒˆ,\³Ìœ©¬ÎµM¬/Ü"@ZKõHš[Ùe7ÑÂ¶u;Y‰…èXèO×ì\ğ…'Z2D‹ gä¨n×Ö)ª;õ¶Ëq-’xá8×"÷jüÕ²PÀg¢c¡®8şEëäYÛ-´HÿH¾\‡+®[{O¶%rP+åd“,XAy@OINJÊø‹PŞ êAŞ¯ká’…”m-ö¢Õ~QÊ´†›[¨îO‡i]Da$‰ÍÄ"Š^%2í\áŠ<Š±“9£BÄ~ƒGëB@¶É')¬œäÇ©ƒWµ–Üóqì…e¶Xàº&‹†Svôém3‹Æšñº¨ÉÈâëbAÑ)0’x¡Ö…*êñK;ÅV¼Èka´ì”ÈWsö÷ÖÅ•_íA¦`Ú'Å[èZ˜‚Y5¨Á8D|8ª;¾Ï£x!€;|â YÄõ…ãÔ„W´ÜGâœ(‘)€¯÷,'ïÏZ'÷E~g‹t%Š3vÅ«½w«5ÿ†ìÄ‹ƒ'ğ!mê²èÅ[­LÔ÷å_ÇœúeŒ{P-¼Ø³§U8şzÊìY¸½xá¿rĞÄœŠSfÇŸ”a¿œFçUÑH,¬ñ…®…Ïâ]Š‹“%X¥º“,x5UÃr3‰…Fƒ
+f´®…jô[Lğ²£®Zã¥™ëú3/O6Š8vRNM¢º¶ÙÌ]~ª“G¦NEyd¿Yvfu…É0\İhÀR}È[ÃZëf‘ 
+~Ù‹óˆpÁ`Tk‘Å.´ğ&½¾<R8a•Öò8eî-ì?VŞLÁá–ÊÏjhPÅ@¯‰Åy,p?‚&b†,â<05´È˜…c»¿ãoºg´hñÍ#ş5§X¶f~¶Wåşùñ•ÇÇëyËš¸Ö2pÔÂbaÖx²S_NCT_„sèZ·Öšo‡×Å‹×&ËXƒ—±ºØöX_ˆ¨¾@¨ï³èÕi6…¥;N0x±ÅnŠ¥ÄÂR.Zğ¦Ü§ãEÒg.ÿcI¨áã×©îÄ{y¿$^ƒzlaùÁ%µ„kÅ{³ ÛB‹ÔõÚø8ûl‰ÆÎmåßäk#Ó¦sìù#CşüVt66”`6—y)77_^Ÿ‹kpÚ¬ 4†ÀïÖ,©îÄZ/j¸©¢uáSŸ3~N{,õAVtAPİ)¢ºsfpAûd¡Q¯®èÕ»`.#U~,Ò±E‰,d“,¥ŸÆjb*©uy3T³òìs+¨Ë0'ë›ÄÛ©j3—’jñ¦Ü”¯äššQmÎ¥Ša®•ƒ9õZàïr•]–M¼.ÿvu9el1#FÍğ®2Ñª›³ğ¡Ô¾¡ãÙZ˜‹öf-ÊšLäh÷Ñ«Á±¾¨J|ıX£ßÂÆpÓÖÕİhAËn›`Ï¥úö#R¶È
+ÚHu-zû
+tm#‹]öû¢$Ş,p:Tè6|Olm>FKæâEüÁaËxÛƒ#õ«'Ô» +‘çW:ÿ°ş{i;ß!9å8Àü’\éûÊÑwè¡{^,l€%FÊ–¡áFâ¾,ìäØ³Pé+/s'ï-`»ÅmG‹¤C†cn.4CÌ›B°
+“ÅÌ–¡Ùb‹+À6š»¶èÁ©õY˜ânAÀz£ı}}L,¥ñ¯loùr.+`{‹¿K‘…kãVAd!Ô­CØy µ©aò¡g¡§Ä],R"H,wşîïëC-İë(½ähï-²XŞf±ãšúè­ã 	Ïà"daĞİï/0ù‹:~wm¢û)s¯£ô’ã‡Xü[ŸÅı4qÿ]¸ÉÑv¯DY\ùoZüï479Ú®ß³ş?-:ÍvãwÈBü;-T}áFéœ‚Óğø6œƒ'!ckÙgá'ğKx	~¿‡:¼oÃ_à:üşÆdŸ`YÆÙclš}‹]dßÇ‚øÇl…½È~Ë^eëì]vK1”eLù¬r\ùŠòuå¼ò4î^—ÿE{µ Euáÿ<îvE1ô.ƒdiª)Ú–#øZÌ®IëB”Äi:Ñ"ñµt@a­–‡¦Q15ÆØãtãDº6m}D[£¢V1ñ™4µñÇŠ·ÿ¹,j™jœ1İÿsÏùÿs¾ïüçÜ{Ïé
+ú6İ@·Ğô =E¿ ×hãÌÀú²D–Â†°,6–¹˜›ıŒÍc‹X=[Ã6°ÍlkcŸ°‹ìû7kgúHÏùÓ<àãøü%>‹{ø¼™oæ»ùA~ŒŸç_òkü.õ–4É*=#ÆIÅÒT©BZ,5JoK›¥¤£Òé†Ìe³œ §ÉY²C"¿,—Ë‹å7är«¼W>)ÿC¾(ßR˜¡P~¤ä*S”W”ÙÊ\e‰²ZyOùPÙ‰ií>åˆrT9¥œS¾Pş©\V:U¦ªªQ5©}U¿ğ’ÕAê`5CÍTG¨¹(… züº-x:?Â?`Ub‚0ÎÌ$Šö"*Q©h©€J‚+èEe—à®*.„ô"á`"F0I$‰@UÁ€ˆFÚë‘$J·„{G£®*Æ~FŠ¦c…òGèØXê!…D0a?ÃJgù(>üGÔ@edğ9£‘,R×~Rò£ä¥¡ú<wX÷¼hŒ„~0r3ÚÍ<£Š"f=bS·P½-|½©Â¥p‰|èGb0R¡a¸â¸F…ıC„€.Æ(¡ wï #®ZˆBĞ§ˆèÓêˆ@ N<Ç	Ü	Ü±ooáj‰·Cúã¿Ô‡ø·A|b®öc¡,^;ß	OøvÃÁm`Ñ“mMgÙìn£?]¿?ó[YpTå½	Òƒİıï±Ø^·İ?­s¢tĞJåğúuë÷Ş]´²²¬+—œ:éåÏ¶oì¼µºş×Ã·ÍİÖñÍoÏîFÅä<ú÷
+©\Añ¦•¥À¸ÓYÊ—®Å#Kj8=÷ïYÂı1­¯¸²0Í}8)Ş½ğß.ä¯ª€ô“ãK³B¦gØ·&×çO.Ï¯.mù¹·Ù6
+xe¬'&ËÔÖ?3R´²$Ù´ë¤ ÏËKöü²O
+6]üì{Wæ6O­•¨9âE_Hs?&X¶M®€´ªşUe7lïÔl(4¬“Ü\¿ÅQUO×ÙGÁÌ’wK÷µæÎ<y©lÉñèu\ûÁZ|¯¿=äêœAHgÊ+wM3.rT%ÆoÚ2k2Ô/XøÜõ–Öc‡ÓJ¦¬ˆwï{¿9{Ó_;”_3Ïıî.ú§ó£Öª—’k_]WUoÙ…±,oy±0ÅŸk½Tš[öŞ¤ÄjêÄ@ ­N•¶ø¼Àïö¨´ äW/ßF–ºÅw²7}Àó:ó*=ˆË­m!iî3D,Qç_ùkä7ä•$fß ‘…æ­jC®½Öœ_Xå­©Ù,%¹)4›[t–h:*îèWåÀŞ;gm9C1Cà“½cË_,UÉ•–*n—1–¯MÈ¢¯X}Qã°,ãÎÚ•}›ÕmÛşh\Ó¾æÊ™Æçşùàóí‡/€™¦ÕµIGãn­Z>1cišc¬²ëTuõV%}v×›4cè¦/×]Á}9Ó7‡Ûõ}±DVœMÀ}ÁÓïdj3şï_ÃìÛ<™¨šGíÊ¸ê
+±Àî!¸/w sğ9@gõ;Y43SÜmI‰Ó÷‹‘Ä£éİ=YŠñ¿ã*Œ¹ÇÂLËà^‚wEgœ‡Ÿ+÷?føO™çKúáô<öï!ï12À^'i¯~ôø$:~QôÂwQ4ÄB†IøÔZaÆ÷ñ30~Ù0ò`äc¾5‡q©Üğ”aæ5^‡…Pµ°s¯U°Şfø=´b¶öÀA8Ç1;à"ün@;t TœÕxFD“¾$Ä“$’B¾OÒÉP2œd;É%cÉ2‰L&Ed)%eäU2›T˜µU“E¤–,ı¤ü†¬$MdY‡yàFâÃ\ğd'ÙG‘äSr†|yáerÜ$íäJ¨„g^85ÓhúfŠÉ4•¦Óa4“Úi9£‹Ñit:‰¹c9ùc]F—ÓÕt­En¤>ê§ÛénÌ%Ğcôczš~N/Ñ+ô:ıšŞ¤íô6í¤FÃ3”…cÉ¢XÖÅ²8fañ,‰=É²§PQÖ3Cè¶ĞGÊ§(Ò0£’D–D9eh-F%ÆôR¢=„û r}œÜ%LÔ#ë6•bò¨£ŠQ¢öq¼ª÷r—[ì®å~áA)8Šê–GŠñ¡ñLŠ‘PË”.Ñ3YWäF^Ö]±‡paW4
+ÑGu•ÿKº"V°¯J%.­_Ò•£t­’¬×ƒÂtå\ß*É’…7„ØQ
+ãøüJ€M‘%.`«fôÑ¤\·Ï6Á©íqYR­=ššQÑ|àğ…Whş@Àáä±’Ë'õ÷±$ÕÇ“Î=Èy.Õ:ÚáÔüDÉ±asŠíhœèÄªh¡í9öT?(ÖÑ~Î÷	Yæò“@µìOlÅ×›R„nÕªi93ì>RŒ+R,Xµj#‘jd¾3Á¥y5o®Û«Ô¦OuãÄô+:J¼®§qŠ3°,pZ|6Wìİj‰Ë5qz	®ãx]ˆPD(Ó ;…YGk>6Àáœàôyì±>›İk±h9¾í§o»=Öâra¯ğ»3Åëü1Á9GàœÃS°bèBÁ5°ÅúÀåõvµ,>×ëÅ8‚m?lïa ĞÓ`ü #²¤?ñ8t—'Á+	–ÎÓ%Ù(Ö>gjq¥Š£GjêlÂScÒ–OÕÊ®Lñ¾ß~ JõÚm<fñB[à3ÛrTÊPŒí"Ôbî†Éèw¢ÖÒŒÀu¼Å†£®Eıq°újjj>êškQ+p¼ÀpŠ+[
+ó³@(r}ÅNÀ[d¬W–ÿa»jB·î¸fÆö†zXrhI—e)Ë6¨EÖÇ{²%ÌZc[¶<#m‰Pl}Úúx’l†–z=–öTJ¥äBO¥´‡²ôz=ä–^JaYB)LŸg'B?ÿŸŞÿû÷õ¤úä#ê#b÷^ó*>ä½õ[4QOO^Rï“y¥õ”ä]Q?8f¯‡­‡”GæşÑX]Aâı‹Ìßo¼ hrV~~ğ#>­#Â@ë‚B·±âùÙÑ½;/¨â€Ãøõ{G$ñ~u@óêø¢yEı¢ùüúUsF±Ï(Ğø‚zç€æsŠnş›ğñ;ªKÆï»{wîùœzÔ|‡BDÎH¦Qü‘ºK|4F½İz›êİ÷ZïQÇäË§Oêøù‰B“‡H»špşkêÑ}çĞ#¹§N¾¤ñc‚+b3<yBMO\ÿ½ñìú+¢çÉü[Í«ë¯HıÃı‡zBâş²Õ¢
+‚Ÿ|@úû[ƒj<#şo‘úpàâĞ÷·Aò|L¸‘8Œ	?WM‰Rnu¿%øñÿ°õÏ#¬ÇäÀWëéÑ£“»ÔŸnñÁÄ~Hr(d?i
+@z¿Ûüäú‰ñRKLlXbûá-pçÅÑ»'/ş@x±^Ë›±÷µl¼"kıÙñß ®ß¿õ#9şKğ)Ykç€;÷ ‘Ã(Ô_??%ÜöÎ}ÒËUóåõÇä´øòfï­=UßşcŞ¼ùnäE¾XïG¯u'dîûÔ_)ÒŞáä¸}{ú×ñMØ£¯-®¯ÿüMyô¿¬í,Û¼¿ÙpÂÍŠÈ½®ìõõİ[y›õ8”«·Š2Œp˜+'ó>¨<Ÿ¡C:-Œ.’»-Äsa977Ú‹®cwİx”˜ñ²õ˜ï vPÀŠIQj¡À”¡ÙQ<#¶ ¿åMtšgµêç‹U¢îÜÉ†Ë].E”ˆF(˜ÃN×ñDÛcäpu1ô°µ‡t:ßã±=H¡mZ6âÖÈğø13îv91Œ^Dû!;Ö§Q8Ğ8NÖì3=à«zßÑ¥!Ç¡?âç]ÆH8Ë;]§´•Éy){7W!ë‹µõÆ—p mÌÄÒÔîtÍ^¯$'Ö&§»Ò³€}ÙÖ3ÈlÊU>+ÆÚåN‰;u©³VwÒ•7‹óD÷¡Út'™:KæzgB®Afq0e\!s’s-Ãã­)¹@A¢J~Z¶ùÀMğ#h#;–c€¤b©-KËàE[wâ„­OÀÍÚærÛé¸²K„úíTÚb'>es¾öGô,Ñ¦(5Î¶PÛo,q¾sô³@œ·7ÂBè-U·2#b3ïBueYß1ÂBOKÙ‘×c4:½iP—Yæœ‚Ü>ß–âBÀsq\t·Ì%Û‘:˜{Z/Îéƒ²:³3íE¬i)ó…X İYëIibj±æ—Á±¼³_ù@uvòt¶'XÊ
++GcÄ 1&COŠ­"fÜ¤nH?Ş ĞöA8Äæ¹¶¥í^";ëÆ«"O&y©’T59¡XWe<è„©±	´Ş„ºSå¼¾vŒKäÔÃPJl]hi/-—Îy9ê	‰:ôÚÂÔá'ö.X:a,ª Mµq`#öÒ ãHeP÷í9W¤.µ^’3jŠä'cOÂZ¼ßuòkÒ“Ì9­âÕÔ‰L³pºjÓ½Uuä§ºxõH\Îç]z ¦+ì Ş¢&BY,;Kİd!ak+KuëzI•Ç¢+ú—‹J¡œ¥1'·[ºR"0E%ïé’~Ï9kàm,äT*Uš+b•Ûù ê‡6œ"c¶1ÜAÜ¡gmÙ¥·Ë•äœÑÄÄ7ã¾/ÏşjxÑö¤l[q£h9½poP	â¸¦ÅÕHZ[WW¢U8æ—“>Û¥³"¾PøµĞ‘Z‚[¡è®Ó±9ÚÛa¦[w«sçu&˜sŒ9.ÍRtD®	8é¼KÒc±s†V-'‘ÙóÙ)3E­c
+™ğÙñ–Œ¤8íé¡€q¢ÆFú¦€»Mk1²Õ “C|ŠM”§ò¾Ş­J .ÙìLk¡NnÄL	í•·ê¤Æ8Ğ¶*Ñd*%G`fä~C³B{Ïè-² Y4ğÁpM9W7³Ôix…KÔØ^&Îd™ÒÃ„W8EÜ"ÕB©Ü‚¥+ ¬¸]PpBVTgåskaÂår¿¢áã0×.;J´ÌXİ¡*†µ¿ëM
+ì!.Ñ®kïg’¹0À®İ‹R%ÏëSTÄİP›B¡­1ŞøhĞk¥!’•«GËDYÄyŠÄ(ÉæÛJd…ÂÄv£ mOæù²fê²w*‹ëÉf!c{ËZƒR‘OgA9Ï¶]ÃØ#Z©,>İÅbŒ f:©1F¡‚j²‰=Ë$z0èÄ²±/ÕÚJDš«Ìx–¸.yí\×{tÓÖ ğkLÂa+B[ k0:Æ¢;¶,Û Á	c'2±Çæu,?â—lI¶•ØHŒ‘-£<”Q6ÒRR(…ÂÖ$Ğ-PĞ®)¥¥<(Œ2a¥dW9=§üóów¿«û®®$S~{ˆ"‘#r!kÈB&|DÀ•®ĞZ,a#Yósğs«œ+Öâc¯Ñ˜`´Å© £1ùœAÍÄcÆt$©õ‹dĞ¡ÕS!ÎJ*üŠ²Se2%•rô:Ş]eñ»Ä’
+•®Øìp1éRy‚<m…/I¦<$iVF‹‚ÕUT*¦Æ[ğ°Æ¬¶‰:UDça*"E%¾†éX‘º€-bÜêxÔ«+RùB¤ß!Ôî¸Õ\ÀÓ¡üJšUV2)GÊåKn>Nú¥	wÊ%’Ö8~kT%¾4³&ZÄ3¼^mMy\¼ÊULÄ­qd½9”9¡,Jq‚h×x¸ =ê¤ªCAqf.A¦•1ÊV%Pô^o³ózZ4±|É„£œ}ç$Èç©µ»3[yšQæ0†ü4Òè)…!f¡+U´Ï)Â
+O:åhBÔ’ê$ŸŸĞ˜g„M‰Ç×3øB%¬?¬¥
+\š”!ª	%ÌnM6'\3ú’%6u€Ì×%HBMÄ°,ÇµyøÖ¬Ğ¹¤÷*/”MOèD—àL™B>sYb‹«õ„5ì4§+xc™èrÃNJ-ÆG¬È
+1*w9âcKÇ)Š­äy:~¯',^Ö”¤¼N6/à-$'AHmE¤˜Y&Œ³JƒÕÀŠLTĞ¹é2|ÑËù¿W(JÃ	¯ª<ì¦Òv¼#±äô¸Î§Ğª|'Í¨õ>k•ÀÎSÑ8Iğ”ÕéP±Öêöº½Õ¢J]M9ÌI§ÁÃ3LLãµ	†7‰.UIÔmñä˜Ø£)'íyVq»‹B&ÂFê,¼éù¸›7²&·KGûğyŠJí¯ÂÏ»h€a•J+şRÌÕ^Ú£|)¼~IüŠ¢nÖ®uEH.FØcNÑÍã¯£€6ÅW–Ğµ–e´"`˜|µèg«ø¤Ó#¤laÒ/‹’"ş&)Qûİáˆ‰PÄÌZÂ ÚSø½¤ŠĞ¢ÛZˆfƒ‘õ1áÒFgOR.è:3À›qI°wœ;öş ó|™Çg_ï;ù«#®ÉemS)Õæ¿ØÂ·eŒWÎR©j?|Î–VºrA£p ñü3¯õ_r´I›ûE×Ù5º2á‹©Û^œ%?ûú¦Ã¬º£cÆ^yD5â¢²áòÍç¾4ËÒ4gÂ½[İ{G”n[zi‹Î{sÕø¼eâ´­½á_·­Yz{Úè%íÙd“bæCGî/Ñ!ãÈ÷Wœ˜ó–{xÓ;wLÔ®}axÚù==¸kâÆ\ÛHêÃ+|kÍ‚Yë7k:†®Í¸Şnzş²¾)³{}şÓ-3o<º?z-{:½s]ÏÂ®ü¼Ìƒ­u–ÌE¬ıEû»wÏ×·İ¼•Øİ9M¾[cÓñnÇ1Óıç³zªß4	…Y=áo
+‡Ş¯_–5—¹ø°~Lî§o<Ê¼]áäïq'·ªjJ¶¯¼<jş’Ón01ãÊëëÚğÉGS[>Ğë¶Nn:7væÄ“¶úÌöw¯nş`Öİ{s|—^şaa¿––ŠÔ†3G9wı“vM´Ÿ~»uàÉæØ·åO_ßÑyRw`Øƒï¼GëöÉÖ.W;—jì¿âØãáÕ/¤&{©¿JV{Š¨.§«G5{ŒG6|¾¤sö…«û¾äÅJÛ…gãYk:»¯êÙğªÆæ‘/toßeÜ¦+[×³_ÕÙÔ‚²½h€lHÈÚdO#;2!=ú…ÿ
+!ÚdÃP'ê@h.*èËGî'yå¢lôzíË<‹Ô?É 6ÙÏqC©£?vôÚƒV#wÕ—„V¢*GSÌFŸÈAó~(*ıIí•=‡ÿF&Zd?S° 82?¯·_,=BrYP§!—õƒX"IÔ> ‚ßƒÿ{Àûà=ğ.x¼Ş»Á.ğ&ø_ğøxşúıâkè*ò¢ü+•¤Xşq'xü¼^/‚Àóà9ğ,x<~¿BKĞ‹x´¯Ğ8\:¹8î>‡¸£O)óÄÿ?£vì1ˆ‚íàÇà˜ûaˆÁ`øOğà‡à>p/jE4×ŞÇ¥Ş<¾”‘£ÔŒãšô”jpM3ú eâœT#Ç¾‚sRFşTØ¿¡ÅH×‹oµ¿â{2ÿÎÆÙ=pÜná}˜ë.´˜¥ÜNôqIÊI%i¤÷úzjäX©‡íÈŒãmĞæ°	Ü
+}¾&a·@üäß„Ñ!³¹¯¿Íh”¤ş¤ŒıÚmByØ7ğšÈÑFhıgmÄ¯ƒë¥û­C:ìZÈü	\=¬†ÚUàJó5¨]ïd9ú#Ó µ kZÇ,‡&Hövá¹-ƒÌoÁ¥}÷ÎR¼1åËQ¾ÒÒùÔÁu°n‹á|jñõ;‡kj¡¦íÇ55h5jäXé
+/Â›=ç¤9Vº"RFÚ­RËWÁù(GÍ\‚qÒpT
+2Õ`(ÂY'óïë8~Øà–ñÇ%h)eäˆG¬>5~äH«ÏÁês0·Š¢ñ8ƒÕÁÜ¤Œ…¡M ¬} œÎç€³ÁYÈ{}”\0O'Ä ,Ë@;hƒ•*…Ø
+Ò`	XZ@3XØû©úŸ™|ØÑˆ§ƒyà+p6Ó 
+NsÁÉà$P[Ëñ='ÅZÕ 
+ÌÁ99RB¬ ³Á‰àË¨K@œõf«.4*
+Ÿ;¿;;»ÙÙl¶Íÿ$Y·!Ù$¦ëÒÅ®ıÑ–Vll‹šTM­±øZ‚RK%*Ú@éC)EŸMÅ 1A\)kl(¸FÛl,mİıælôÉ¾”ZœÃıî™sïÜ;÷ÜóÇØÊ¸ØCEï½%ØBïc>ÎØB!`3Õ ›`ñ29,o„djàùõ,©c¾–±æ¡²T3®å½×ğ¬cctÃĞN%YØQEïÉ"dC›*zoG{uÌfoôxß¸ŒŞ·!ö®
+–Œ&£ŸÑ`ô1êÔÔ]eâEœ£Hf”Ø·$^YğÿàôÅê¯£B;‹6¦“Û‡ÚîÉC÷f›»ùÔyé– J‚R5˜ã4”¾ƒß‰í‡¢\–—TT(T‡ÜG>ËÄ¥&Æı› 
+`nŒSÏãZ‹‘jª¶M\SøZª­7q]uàë©ë4PÖi™0_3›@&Ìº3[@*L?É:
+Çiß"¸Xüı ‚KvƒÏp0ì³š4‚:ˆ–ÿ‚ÑÈD0ôÂÙ)„F‰fòÏ„Lœİ;ıy!YÉ—Hİô'ÖÏ;¡©§ÙHcYC!MøTI¡öÙf;(œ›ÍÍ&#–cÅËR¨xH®)şäNè7~{^k%^c/Å•€<Å¦¿!Ûò€Ñcì5d¿OWu£!ŒMzÌ "„©*eôfx¥ĞÙ™¶ÓıØ£˜+ôÇÒÉş¸Óí5*ºET	·Ë•²Òtq‡|.~\œX8)Z‰Ö“¸Ç‘:®\‡ëvdk´9Ÿ4G¹
+ÃàYZPjmöÎhxe»X1oj_^YÎ-'…uš4X/º€d…I:-åK‰¥›1eşöÊ›W½7wÑıXlS®^¼tàÚ¯‡EŸH€ú¼óÓSz^şzÒ@v}ĞoQ;¢)¨6+Œ+æe²´+‘ËtUú¹J‰X5¬4M¨~İîí‰úwëUá\¡J°ìXÚkĞõJ¡Xè»,ş»%…sR	J‰éN"%¢"‘rbâ»™ejf¦8Uê“>HçåMRÒ‡¥ÇRŠŸæ¥ã£–òbb³xkß‘#ûÜáÍî3ƒããĞİ
++¶ì•ONÖ–Ô%”œº¦ÊjçÇ•>?Qş—L!Œ7¢Yt)ö›îEwá1>–æKòè w0¢goJd«H—_†:¦ó­c924Ãç¾ğVk_Éä–m¬qN¤Ë[SÊÿè®ÏH›Şù¾tñRiqş[éÕ)ñÉ­ªg§Mw¸#zûE7<µÿJ½ÿ%qÜôÑĞ?4¸]	‘1*ó¸j/ò*$ÕˆoeNÁe®Ç{	zç*¯€?°Êkà_Ş¶åáŞG¶¶ízidÿsÃ·ANŞ‚:§ÏVÔ»PĞ~„ÂaÔLO£>7ˆªïöóîd„OùîA£rÔ£œ²ˆô_|×0&xmiòÖ'C™ß…åã‰“_¿rÔësï?8èN•ŞõMkï±¶ÊZ£¿ á´İ
+endstream
+endobj
+46 0 obj
+<<
+/Type /FontDescriptor
+/Ascent 701
+/CapHeight 0
+/Descent -298
+/Flags 32
+/FontBBox [-167 -299 1094 827]
+/FontName /KDFJGF+Symbol
+/ItalicAngle 0
+/StemV 0
+/FontFile2 47 0 R
+>>
+endobj
+47 0 obj
+<<
+/Filter /FlateDecode
+/Length 21052
+/Length1 40784
+>>
+stream
+H‰äW}tW¿3»3;³;»‰Ø#`…„cµ_`CS X*È	œ4öPLG9˜ÃìîÛìÀìî03K6xZbBø´MiŠ!ÔŠkm#" bE ‚IÊg*¢|…R -"”HcÄûfg7<=Öş™÷ÎÌïıî»ï½{ï»3ó ø<Şœ÷äS=|n~á< fJgù5
+´˜¼"²Ö¾yâf€†*”•æ™¹ß“„IØ>ÀÀ„ÁÆÉrQ?/‹/}wiò© •CZy¤åÁ#[>‚úP®V†ò_~àåı8Gn˜ÈÁ×³¿ °nF´—}	`êÃ=áˆ™Xí.Áµt8rgÇ“qU=PMõU5ógçß°æ"Î÷|DNhÂ1ñm€FÔ‡Ü1å¼“ZP!€4<*GHŞ¨¥e k;Pß¡ÅÔßµt½\M'Ú•Ü­ +7W5=¦Uî/P¿õï‡³Y8ÙíìR±<…Ì	xº OA“?,`f}p×„×*u°İÙÃ5ÜÀØòl†¹ÏÜÛøg(—à <
+‹¡†Ó¡Êà"³	^`–Á¦{…°	Zñ#`$ÍĞ‡a^3Ù}8"#a0ÛS µ€e‡°q”¯fšÁÇg›˜Fh`0¯ÀÈ{ÍĞß-äÃklÌv.bÁeÀ«8*›1Ğ‚‰ì–ëášsLæfÂvØIˆ8Î³e®Bèdâ†Ğ£`ë‡àgk`f¶2G™w™öìfº™LGkˆˆ4s[ánv.`ŠÁİ0œTöçÀıh?½Bèû>®ıŸÊ\ÂQ#a<‡ò5PÄmDVï–äÃûPŒõ~äõÈª¹bØ+¡s3 -|šŸeõmulbò±UÍµ2”×c€÷˜!üXæ¼—-ãã\¹ÇØ£lTÃ5¶šÛÂœ‚\ã1€iàªY?“ŠÉ(á–aÏ]™aˆ3qGr ƒ+7™l6îÍë™Ø¼Åg%v2„‹Ü%¦“yˆÿ
+¿‰éä€­†ffÿt3ùüf,ïãÃ¸®#¸èû=…<€Ğ±ñèô¨€e˜#!›p7äæX|ºNËÁP;¹Šò°IÛA3L_&íˆiÆ| ¢²²2–Å‹º1•°ô`ò»êğù1ù§*#ş˜
+=ı´xNf"âÈ ¼; ßF#UrÖfb2 SßÍ'ö÷˜LİŸ‰	>Y£h<ÑßcR31qL,‹û{LŒ¡™˜àùç[xDZİßc‚¥tLD<g=‚y2µ¿Ç$u’tû³}~³é7CéÉï.a¦e7á©õ«öSOŸ4`¦İ|ƒ™F¿ùXÖI W¦{;ƒO.>ÇøNÃ7~ñ{ˆï|ü`öb.gÊÒëŸc½ãÀ‹d²5ï§,À¤ÏXªªøhÌ’Ğl|ÖÆjÚ¸ÈÆÚ¸ØÆ%6ÖØ¸ÔÆe6.·q…µ6®´q•ÏÙø¼/ØXgã‹6®¶ñ%ëm|ÙÆ56şÈÆ×ÚØhã:_qNŠë±Ó4CQcÑ‘¯ò%7ÉOD•™—ÕõBH—¦‹şTP¢!%ª˜•I>¤Æt%ú3g@û_s9‚t?çğ·L7_çM’7DY×cş˜nJ5U2á²šqmƒÛjè
+™êÆ*¢ù )×	ù•¨©qƒZclâÀé7KØ!›D·ìÚ"Dâª©hjå¯%úûÓ©²ºÕ£¡Š¬•Pè7¼?®ªÄÜÆ•yJüV@¿­áoz”y²J¢ò;¬á	«g»@TUÁ€¿÷XfÍ#ºI;$‹„Ñïù$±Ó@ªÈåh×£»8œI7c´æ äB‰İÚí© 
+ÑS—c/ è•¤mÿ£;Å©³-‰hf¥AÌVI‰¢Ÿè6õ©‹GŞòQ7Q§7bîõé$¤’DšïÑ7#îÇæ~)­JÙ)­HÙAÁåIÔ<ä¦±Hµßæäh¹Jş$”ërPAÁŸ½:)WË]	öğ×Ú+‹ñ¡7A‘õ9Ç…ãó/.:A@Vº‚13"›á¿ºÕX9•àjÇÒm9ü›h·cúßS¡úUš,Ç3ŒæË	wšÅµ“ŞtÛ²äTF‘&Îi—›O¢å¤]´|¡ƒÏH/ä¨ñ®·×	¤g½½> }O4â4#}¦‰ÒLí|/!‰½Äo¾ïõã“1‡˜)ÅúR’ø°/õ›=”’”ê?¤‰(ÁK½]~óŸ.‹ÄesR%WÜ–7–Õ	4-p‹Ô«îtËÔ:2m’øW¦í7¯I–­ÖHSû¸#‰Î>ÌoşÛg›jëvİÂIâú-Üov§Ì·µox{zs³O§ßìq}-õ¦I¿ÁÅ5}+€Ó–0·öÜ^S#À•zÂmŞRIwñ\)WJ™Óºœ:¶ï¨Nåm´º¾(´yjİMZq¯Ø"“Z®Ô=e]¾¯{j=µR±ç¸pNLˆ-·‹—Šİ%Ò6±…+õD½%8[¡{5Ó/LçëÄ$W(&©D,¦[«à]Lºx±Àvw¹ÎâuÁµÁñˆkÊ?ÑÃÿ¥z.ˆBÛD£ Ù%»)k¯˜¤Úø:j‡'ŒëÎLù-´eƒ˜Ì÷ïpw—´-k¯T,{‡Ó»'Ü·R.­—Öû¾áN#ê	‹I™™ßu+¤ıR'ÌßÓ[q-«Jë¹B§ßİEëı©}\eÂ 7 ²¸wğ»ï@Y	|ú’sú¿sïàÒ„^Æ|â”¹iàè0Ôn=½BÛàö%İzÖåÿÃD,YPp»hB_ƒ¬ò%ÛFGUÆÆgÎÑÖG}”ì¢·Ó¶pÎlÄœ3{dé›{h/Z^,½ºkÒ3Wó 5¹3—ŸÌùxªœf²ÏÍiÍéìÎß6¬¹óüº«‡vî¼²KÊ9v¨ÚQapÕ,sĞ¨/Ø¦®+ŸûaûÅyILÊ–gç¬(hi—‘Ç	£%£ Ò®IøÔº¶húAœ`¨¡A$!”0P)›Ô¡2ºVÕPéä|” ÚÒJ0MºRÆİVg˜xç>Û$Et€„Tí^½ßsß9¿ÿ¹ïYœ"†ûiŠs†¹ø03Êx€2x W­b$JÏñÎœî Zõç/ªzŠñ4˜¬J´ø¥*­·V.º]¦
+ÙIv­cıûX¦?Ó~¸è»Ÿ_,¸Ì%y¥*ÿ8EíjŸuxÌ¢è]ÉÊ¬_úRºÁèaöîUX­ùM h4ŠR	à=©DF¶s]®daÁaŒTyí¿Sõä¹Èˆm~Œ?«ÕF; £æ'nü:µ—KénÁHƒš7”XñS«:Ûü~M›¯µ ovŒ¶€j0rá‡â°º4XµI ¤âK‚±9<ÄHmak?¶Ì6ƒÄÕí‹iF¨“ÍıÙöÜE2Ö_Õ\NdT¬ùk=uËóBÈÈG=¥ßß£#İÁÚÆĞ–)•ÛõªÎW«<ãçÎâ¶l=lÖœÈ˜ıIÍ“~ÑêµM:x}dÇû[ù¡çİ¥uë\ûõRŠj™ExQ$Ö,ı•;İ§xÜÅzÉ‡gãƒõÓ_”lÚvm«:K‡^©‘C1Ù´-Zk§ÁØd´Ë-Ö5§ÇZGJÈ(¯¨ˆÍXZÕãzgtÑÍü£›Â¡w[«<>=Ä­…úæµŸ`Ìkùdöø7Ş.b¦M¹P¿:gcÍ¥5hôB[ÿªº±9Òêõ•ûŞ>%7Œ_ÈŸj‹'9½=ºªÚmĞ›dä[Õ¹è¶	ó¸Níİ¢¶îFFG}—`,—óÊZ¬ôåfd´Û¥¼²&ÿA¹Ş©s_mĞßéQüôPÛÌããAÎU=øÄXÛ”Ö
+{¥û‘ñV›Ô]é¬Q±Tkt/é²½V­»6püâ¤KP¸§¢Ä“óqšy¿öÁÓºªÈvªj;Êtf—¯cÀ›è|,ñÍw^mu!£–dô59BKè¸£Óó%­v—R¨©Ì³/ôj>Ñ2dTCm-UCBF¤ÃôŒ¯•·ÎtWN´16|Ÿ»¶ƒÎÜE¿O\»†q(GÆ°ÏW2Xp­™$™“Ú¾xÒ(adtÀVkP½Í®1Å<şê'¾-Z€y¼’Ì£S¶:heĞlyTsÎC!Ì#È‹q®™6¾³E¬'4ğ$cS…'Øl&ošñMêfQv÷|u=G¯,!q.Æº±©Û>¥ıÈìÒÆ5`ıŞ¢ÃÈ°Ú
+Œ<ßènÛ\ÌÇé5StĞ'6*’¾°haûœãYoá|Ô%m™Çã•ÿ_FñPó1Ü{
+}ÜÙZ­®•{Ä|<°ó¹ñëİó*w?V¾äÇ¿tì»%<Ğ Ö®ï²}uçç§æ£XöæG•²˜Td°ïÜÉ©íÇ–dÁş°j/ÅùØ…4^ÔR°*]Æ||Yì= 	ÆÙç’Œùñ £~ıË‘±æƒÑ§V[jp]Ï×÷×'úFO‹¯èØ|$Ö·sÅ‰’ÙÙ_&ÎöÄ{J¢ Ÿr<Ôgv/EşÚ]|ìÒkÎ_ö_^Uw÷HIpAèÉuíö×“A‰”  #4tO­9ca®Àæüäº®O-Á(Kac]S®F‹Aqî©•+º÷¸FÉ9ÑÔv¯½ÉnÜÜ\HrG»R”SlPRÔíë$ U7=íÄ).Ô¥.2,Œp™CF÷º‘QJ;PÓİaèææ’1ŒÑ ²`,¼Á¨©•IF2ÄÃb§¾)ÒŒ91 ‰[†QŒgÛj­:ççÉJÚş&°a%[œ,É‰€R“b„ŒÓÔºX&0Ä¨=ê\xÛ0†;©iMFXâÅ£sUßÚV°ÁHÌñ8˜“`
+<„|^|eÏ„Ga.<`1<ß5+áEh€—!¡Ú¡öÀ^xŞƒ^ø3œ„3p.Áeø7±“ûHù™B&^RIæù¤–<MV’—H€„È+¤ì ¯“½ä-r€ü‰ô£ä#rŠô“óä"¹JşC	µĞê yÔEÇĞûéƒT§t6GŸ¤?¥ÕtÉ=¨ÏÒ•ôyÚ@×ÓÍôUÚAKß¤ïÒú1=M?§§WhŒ&˜™e±ï°û˜ÊÆ²‰l*+f3˜Ÿ=Î°¥ì9¶š5²WXë`o°·ÙAö;ÁN±»À.³N¹ÌGpŸÀ'ó)üG¼œ?ÂŸäKù³üŞÈ7ğM|ßÍ÷òwøùş>ïâİü?ÊóùIŞÏ#üoü"¿Ä£üŸü_|€_çƒ&j2›2LYX„'n*é|?ÜA!œ™H±P	gn&1StN-D¢Ì88Z,Ä¨ôÆ™¡(*¬ÔŒG&Í0ŒÔú£Vb¥Yxo5IX±ÕB21–èeÂV±)CøÂ±6côGLx•’5eWaÉDoá+íw¢ğ6ú‘Uâ_RAC3VŒ’C²‘¡Ğˆ-vKšŒå˜2H±2•È"w˜=ûåÃTlØ‘]F-"ŠÈ„áŸŠÔkØ±Ÿy¨rŒÅ±¢ÍD¸ÙjFoÔl2lâLĞ†ÏÁ4‹uœ€\<];8­ÛğlÆ¶%÷høVŠ7Å^¼z¹¢%ãßè·^¤ÛwŞW
+¤îÍ9Q'j™ÜÍó#ŸåÄÿï´8†k‘
+UÔ2¯›+Õm2ÿ–´ğ¯ıº-îaZ²¥BµøËPKÓ½Ñ’ƒi·¶Hé—ıÍå.µD$İgá0-#„ø½Á»Ò2ú›}“ŠçÔÈ[«LiINÖÓ÷ÍşÃá´–NüòP#H|ŒĞ’­ú½¾¤–ˆ´m ‹Œï1-ëD—~ÕÀ_«@*ùp´RßÓ“8w¯‰)u–è™¯ÿØ&®; àß÷ŞÅ>àâœ“Ô;ƒç\~¢Uç… føBÈ¦lik;i«Î	
+c£Ô¬İÈQr	‰“L1£“œ™ø£Z»Š¦­ıcœc§Z:Ø´NLšŠ­H0$\ÁFPİÜŞ;Û!”_ÚVi{–,û|wï>~ïû}ß××XòVİ0Í²”˜º×êdœºÕÖØ»;ÿ…Öne5G‡'t%_ßvŞµìœ¼µ×ºªW_yb™YYó°aˆ…la/ÊÜraË"¬´D×l*­Jb©ëZwf4·Éæ—®ğ¢ŠÇj%U”’˜¤`¸Ñî×ô¦ƒK‘ç7.X$]¶ú²,¢¾üVÓMœ^~>z”«ƒ(,»Eh±Ï§ÃV{|t…)	áÇ‘OX¸`Xj÷C;³\‹v´Öå-Å¨£Yh÷%«æzµ+„÷ôj–Å#u‹MÊŒù%½Éãğ8#’1ë·ù| lÂ‘»—-¬°(ì¿°›,^PTH-º&xBÖ¯f©f§ÛîZz³ÔB;*ÎzÕ²Ôb­ÇæüšaÈ+,#œ1/´ûtf9ûâ²åòÍEÇFÛ¡™Ê¨k†¼†¼E`¥IqOéñ©cnhò¸*‘tzÅgOK0oä-h6Ùmk‘-ú‚Œ$¼Ó)ûÍ+_øØYrq„Zä3F)µd½[³¢ÈÃç€ç$ÙÆqÌÂ,}¡ÚF¾Y?R^bsr±j!7pâ„¾¿P÷½¢…]\C7­#üñäö³¤Ì±eË\µìè°77”Ÿ¤ÁP/¥ŒúKı60J“õRğäFŸoB»°:].WÌ»§{CY[•vóóFÒÆ,¤şÒÑ²×K/ŒÜnÎDâgN¿{âöu6-5öCjQ¿¬ù€¤³ÀE™é~2d4ÄÃV¤&—·¼0Ö½U¼PøØn:†6-‚t¹‡Ç¥#Î:ÃPéÔb×Ğol¼ÜW³}§æ•–&ßÑZ)j‡-Ë“ÅÊ$—Û°,ÕW´ıZm¬ßm*k›ê«£3@-f,á¡–ú
+f9·'­)^Es/¾88lYl•³.wæÍñ‰ñ-Z&Ìü1pñÒ{.¢v
+?aA‹‡ÒzvàÜG9•“aLÇlÓt¦z2“‹(iY±i›}öÊ  ŞºŒ[hŒ©­»QÑ2˜5&İUŞ€Û¢
+µ´ï09Ë2áH²EæıÇD/³T†Ú§mTvÌ§5DØ&iÆW­q‰%~
+ÃõÎ£ÌÒª"ÈŠo1€†­9fó$\Jæ#SnZ‚?R²Ù½ÄU›ìµ,f„àqqt?­m—t¬²(âÈH?ÛÊ‚Š›,ËszÈß`ç_º.Ÿ¬]Dƒ"µÃÜa7zú°q)•mìb/cÑ]f‘Gè¸¤,‹l³Ô˜^Zûæ“Zô@v£Òy5®‘a@òia%oYáŠzñ¨5Ç@§±š—·ğ	Ayû]ÔŸø-K°`±ÕP˜	‹“¦yù¶U¬ófR•AkSfv4Çï’ú²Ñäß´‡‹jÌ2D-æ0ÌÑ9F×—¹QóÕí€tfùökÓtÑì0bÅËeañ‚G³ü¾†×eã…KD3‚¦P›;$ù•°û±„{;gÅ?X±€Zø6,Ø
+‰Z2–%8i¾µÂ‚ê›4ŒSËÀäÕâ¸Ôé2ÒÙ¸”æ˜q -ù›R5ÁÕƒêjy‹ÚÁCè›§ºèÏçé*¹¡0.±óâ‘Z»–X–dG«P°©ü|(é’tªù²Z‚ºDËiŒ5øH>''¤8¡–VNÆœ"(óÔ"ä-•	‰Zª'¦œşŠ	OğìÎÓÑ–Zjé±xéG(=iì‰},^xÀO€lCÎT23ÖCæâu©VÖTu·±xé!DsrÑRŒ—‘ædšî™åü
+K«|dª¯Q‚0db©%m{PèöÒ<¦ Ûí&t­¤–©‹ˆaQ±ÖJ{NªúÌ%Ağh],­¿Réîz­zâ¾uU“ÿËy;_¨}ö;fÏÄiN -:F÷{‰®±TDw‚!ô_èDÃöh)cxú}ÇÇèúVW…A³íhSdi—ôç€¸XÈc%˜§k%`ÂÑµ’ådAÕ"´æãwFOÏˆÔ’¾i^5öŠÛç½´/¿yÈü}À4‰øB®¹ßœÌÈ‰Í~oÕd.°çÌ¥@UNë6@3İähUGRñªÒòŞàäf;ÄãßèBúCºV
+4ÒÙZ‰@cK}ÑØ·ç¸|=fYÔæm‰øS¡­öd¯Ê÷×sQ¦5LŞÒ"ÖŒy/JƒıcËrïx…YîîÅ°xEñ°òóCšV’?Óh ÙÃ²ğdá$Y_UW<Ÿ>{¬´bİØşÉcráÊ¤ï¹Àª}Êî0Ë)pvô2‹¸l¡õØeéRkyø­î·”™t¼L]~àéÅ:qŠzœcª km¥…»ïäG5û½– ş Jë[
+–ÒGÜ«hi{l¯…–ï”ZÆ0È<µD`ÙbÕüÿN³çßu/Ò…«Õû-†ZÌt<â^EËCvt÷·¢eƒ¬Z–RĞ„–ÿe{ì¾òÁÑ
+•Z€Wÿ?–ÿ°!/X„OÑ‚i8<Ÿ¥Õ|#|Z`;İ1~£›™.èığ
+ôÁ0DàU8§àu8¿‚_Ã9˜ƒ‹ğgø ş·`	­BåÈ‹D¨µ ¯ o ½èhM¢cèú%úšAï¢÷ÑetıİÁÛq9^‡×c7áVü%ü~÷àïâïã~<Š£x
+OãŸã·ğ;8‰‡ÿ„Óø¾‰—H	YMÖ‘HŸÂ«†|<EIi#äyÒE^$É‰‘ir†¼C~KRä=ò>ù€üÜ ·H+áœ‹«ãÖs›¹ÖÑ^5@Q]WøÜûî{{wYÜ·)«efß.‹‚Šh[ˆT6(Dí ÁhÇÎH‰•L'Q›V[#lt—!
+¨£42j[éL£Ö‰I[@Q£1¢3™ÔÎ˜´Æ¤1v¢Œ?¯ç^EQ;æ=ïí»?ç|÷ÜßÍaóÙØ2öö*kb­lû#ëfï²ØGì_ì»¡r5Q5Ô)êµ@­–¨ÕÅj•R£ê¯Ôj§ú†ú¶zT}_íW?VÏ«ÔÏÕËêzC#šªišKKÒ’5¯æÓ&h“´ÉÚtí)m†ö´V ióP/+w$Pco0"J5Vb#28AÇÄ
+6ªIU±Ä
+£D|•ª`¶áÄñÄâğ9†Ä¡j‡s*œøµaNÖá˜cG?v¢):²F;Z´[Vi‹cMÑ^äÄÅs¸´*ZØ‰•Z	£Øöazø€şO¢7
+ˆ(Œ¡c¤&Pæ¡o.
+üòŸÀD]L”Û‰Ç.ÑWAì;‘BQÄ·ŒƒN`ch…ÆÑ8’€ë%P1Z,NñÄ"¤(gKp4¼ÚR;XTY&ŸVQ7…8ÓlëØÇšy#äT·ãql<–âÿOn;²)êÕ#á¯ÍÅƒo·‘§>n$ú¨séHÜ8[äûú46¤{6¬|O¹÷º¾#!k) "Ÿş’¬†<£»9Õ]§ß¯Áí›à­¨’'b7]š5F*”oTG!¹q<õ§î0R]#_KÁåï…yŞH‡@’Ô³àÂ,(g4!+÷»g^xz«³ÍµsŞœíIşd¨¯Ë<ë€ïW¸I„	CâÚ"ïkvRÙmÙ0Ä ğ@¨™ñ&[ìœd@ú6¾Fcá- äæªÕ—ÚéHL¼99—nnC$¼#EÄ¤§83šÜÄÀıioUşó¢¹=¬8ìÕëıEFŞX«Ëå/iè]»Ú\"!·‘8t8fğ¢š6gO|X÷‚´*ñ`\¤†ŞhD$GÇ-”TdÇâFimøÕEŞ[HJƒÁEAD2ùœD’ğ×«™õtk/¸ÛÂ{C;u·›Óp‘Í¿¦65=ÜSoKL,ÔKÊwÕæ!’%ğMkÿéw*R_ßQĞ÷—]…­©VCçÚ¤¦C­'Ù©‰Å{s)F™,iY²á™ŠŒMïxú]¾|¥Ÿ¬Ìœïeà/ÔC~â*=Ğ2ßënÈËı¯D’ÔñìØ¡¸®ÛÚÇÎlWy^§ë×ÙršëÎµ†:ö<c{âı|½ÔøÃÉæ×
+æUÔw®óo_±6³´%³¼Ó:¾:âÎ\}´¿¿Ú4fÄ1`ß•bö^‹Y“•¼ª)Ù¾Ä4İğç3îçs‚%Ş%¦ñ¹ÛlnØİ^ât7ÌË=(,MÚ\ì;¾ÃÑiš7ê»"¿9—?Ëéo®õGEmOü-¬ûŒÅ.F'-Ü]Vÿ;Í_V:kª.‘¤7rmŞV< ÚDLŠdä—]åDŒÎBû‹mÇ+2İn]wr‡©§¯^kO#¥mNiÙv°Š˜H$ë7_MªX¤í²|õé•çKo‘Ó»‘x]Eãpt¸îÓCL—H"‘ÃeõÑÛHœz.'İIWúºÅ<™H {gÃ¾Ü›8:Ş¹öç®˜.‘D8O3Òçd‚wÉÊ²İ-àH>±¼85³#’ßöN­÷n7pq[»^ëorº¬bÆ:uŸÕg^Á–Hä½ÂúÎ"¿¿ôH,&/„@ÒåõßB:K&@tÒÅÚ©®¼PY„k'-Ñ0üaféèá0xuõÈÑñƒ æÉ”á;6²àÓ¯p0*«³&¯H>0ázõÛ¦™}tíó]]È'Ù's³–07äY6ûfO‹DWd¼•²iÆI¾ô½íË–ín½†Šı÷XÇÀM.V1o ãüê#¿ö8¶¾“Ğ'fì nê«V!ˆr1cí¾œÈC$ã{’ØÛ8²;İgg›FM€¸¹!×¤È§Fºl¨ßÛ„ÅÇ¶’[ù+C0*ÏLÄ=–wäy£±s§Qúºo’,O"©-~4$åÃAñ»ÛªĞÄ¬)uŞ¡m0ºÁW¦r·£jàˆ$CÂŒ£İâmÜÉƒqE‚ø”§kBUÿëKÄ9Œ¤æq!!xˆ‡ø&¤ÀdT“ ²a²ª EÈ¬Jà9X„±ÿ1ü–!·z~¯@Dá5Ø„«:a¼‰üê0œ€>É°>†Ïà¸AT¼7»ˆ›xÈx2™V6	âÆ5‡<Kæ“’
+ò©"/“5¤†¼Jê‘ym!ÛH+ÙIö7ÈŸÈ[¤‡!ï’Óär–ü“ü›\$_kÄ¤@µ=qQ72:/M¡é$:Î¼n>-§•t9]E×Ğ:¡èÚŠÌn7r»½t?ı3=LĞÓôí§çé R(²»D%Yñ+O*Ó•ÉÌJ‘›•+•Ê2dg5JTiTš£µ*Êï•J—r\9…,íŒ2€<mP¹¢\C¦Œ![³2;s0K`ÉÌÃ|l<›À¾Å¦°6e±lö=`ylÊ\PîaÊ#q)…2qŸ²+r'„ ¿˜ToúÜ%DÁ|y«Ç2¼Õ#ß°â,âhÇ‚Ê@~#Wf^"—‹rÁÌ`˜›0dH¢°Ç%¼M¨ØŸ@OÂÇ0¿P¥mÑ‚KLTø~\Š£mÑŠlYä°HÖf!öa¿RE?ÏŒa#vÅ‚u†ùŸyäXpïŒõ_HÖ´(ØÙi_ª†ña©êmA«QM0Z1"Œ3äq *²L>E™†ë×r‹K!«2o
+Şª¼öÄÆ—óp[ÀÌ¯(ˆË³Lú—–²••²/µğ„†OyB_ZõŞ¤È³##ö…Ç¶åÖQ3 !uxÃG¿ıøæ£Z®J¿Òoî2ÇºSë7w‡zü]Ç <Ù¾x¡HwÊ‡'†ú®üãg)?¼xñ—æg–/™u°Ú 6L@Øû*~¤ÖÿI1DêCòŒÔÁ~êdU€:´£CøÈ^NX?³ıºÒşG~ù GQİqü÷ŞÛì^på6!À3Şô¢h× ’ş‘l00IÄš©úo	 ­elFQ+¼ 9JÀP˜– ‚ÅÁş±¡{9‡	ÓŒ`GZi=„ìPØN/oû{»—äìÔã{÷ößûóûı>oßŞ÷¹vwUı(ŒÛ©{çnÆ¹wY¸¹¼q×ìĞÄæ?L»gïô2õhh7A»õ‚&‚mK¸©v~¨})Î­­Úœ‰eÜ#¾²ˆÀ‚“H3F…æ×d»\:è†œò­UíE¹„#ÂîáÄı…Gk ¦qşÉyÓkiõäq·ÉŸ®¾sNÕ)|Ş­Í
+Â‰Åí¯·¨¼ò†¾%ïoÎÄèôfŞ[K'‚©=Ï3µ ?®Á˜[oÌ>PPØ]230óñw3ı¯ï©Ç3³5Ş‘¿ùúCóËÛ‹
+ûĞîd·Î;ñ+cÔD*º=x¬Wwe¯hYqPØıæo¿â›È$Arçşû~ù·g_­,z®½ÀŠ®­ÚwXSoo:÷xw6
+†&^»ı!Å±4İ0ù‰‡*ÃÁú¹&[Ûzïšl>v|_ò¹KÏïa~Y{Q…°jã­‰ÊŞ7×4­*ÚräÃ}“'a¼áÈŠm9U;¥,Õ–²Ğnhÿƒ{*äTÔìkÏ_ttmuAwİR!–{ò~ÎëC;ú äØ‘ÂÍzĞ|©9Á­Û¾|oöW;eèıÊmÓÜxû;İx}U•=ÆØÒRV´Å<Ö‘ğÎòÆüŠP$´}Ú=»BY9'¡İ·Ü··rÿ
+Ü‚\‡v«:6Fşõµó"^tûÏ”äq]úş¾±e‘Ö³>l®É1?ÒA³ öiï†ë™(ls÷æ·é®Wf¥¥µ=[ë÷oşÅé{ùá³¿ùÜÑwŞ]şNñI”£³p¢°½ë¶kWlÜ{ö¦í7/lî„âğÍÒÄüfï÷›V>ùAä[ªŸ-^vfÌw~“µ!SØ…ó;Q
+•ó‰[‹rÃ‘İŞúÍL­ÅSH¸ú*4)Ì=²h'®S“Ø©¶šXfåÓD5‰q¥x`¤1ë¡íÒğ+»4÷‰œ²›¾ŞIÿö„]Û³»lt¨3RëˆÙxXÂIÿˆ‘Dí3ÇÓòS±³Ö‡XúÉSRÙÔRPSà&TS3 õT	ê©9P	wÀ<¸õÔ÷`!,‚û`),C=õ(¬†uğØmğsx
+öÁA8/¢¦:â*ª“pŞFMõ$À!Œ\E²ÈTUQW…É¨¬f[H)™C*É7P]İM¾C,²˜Üúê!òYMIi&›Qam#;I'y†"¿F…õ;r˜Ä>ƒ|”#$&o·È9r\JfP?Í¡×¢¾* ×SƒN§_¥&-£åôvZCï¢ß¦é"ú ]A£õ4B[è“ô¨³¡‡èoi”vÓcôOô§çèßé?èe–Á®fcPkM`T[7²¨¶f³JVÍîdßbµì~VÇ–³¨¹e±U¨¼ÙzÖÄ~Šê«õW;*°¶“=Åfì j±çÙ˜_$W(©'ä#))‚"ÿÛ3P#øÜ³„ï(u#x7"cÑuõúy}®DÈ£Ü§^ìÖd¸:B(FŠÅÏ³áE–¼³ĞKi5%Ÿ×íRaûÓ+)¡Ğc\
+è•›Ñ÷QXƒ…Jƒ)i>Ê4“‰z/>Ít}ó²2İ‘<¨¸DÜ4ÅW‚{TÊº¨G2TÊmá[“AO&)’Qbúâ3D‚A‹XÇLÀÃÛ C «Æ»¢uŸÍ'âó—Ìª&®ğÄÕò$EáC÷u%½¬YC%¨p»ŞáÁI|aXTÁpƒ†$Şù*ŞQOxlßçŠÿ}›`bŸ`!i¼Y¬ıÿ²°>vşÉ¡G°ĞTØ)ÿK« Øà´wE;µAıÉ¼ò‘7IøG¦™ØA¦± Æ¥ oÎBıƒ¦A%ı_’jA–=ÓÌTßø`õÉT¼ÄÖFöA˜q”®ÃwŠS²#õ yEÏ¡¤Ëé;…ŒHcáwŞòX(Î¢
+f}ÉÉ[©pİf“ì»°DŞêMÌNyÚkıé^-ôGÇïĞ…’Âñ€u’ş†d	*XVùS‰ÕN~ì9¡ ²È÷NÌto%ÀËŠ@³¤E4Ü`ó^ªy,ÒÈ§X(§ÏáU?ô3Òqæôx árC›œ¾{É”¸`ÁƒØ-ğÚÍ°Èc!KÈ¢q€E/Ì
+’å-ªû.‘
+l:•`JoÓŞl¤¼'`,à¶&Ë¬¦RÃ¶$ÂóI7,üÅÚüêTÎIl“sÜ:(Û ²Ğßuâd}Ğ=Œñ¯™-x¶D£EiÅ2Ë§…Ü›!z‚­WYiÅ &l™2¸dYVmEƒ>ŒEê{Á'a7ªO…ÇâŸg$sˆÅyX$µ†nƒæbŸ2µiy"A”ìÖRŞ3n6/–i nÍuYØ£‰=¥X2tK·Œh³¬fqÎê»áîj:‹¼‘,$Ï?¿ÃE+sÛpùqÑhiZ@!Æbˆp5tËfİ"ënj†ø@M>Ûg¶Q:Yh#YÔ›sÈ:²&§š{,Æ\¾t‹.K·FTtš;½¥Hõ«„3ãµ€0._Ó%X,€bê–ÊT¢G¹ÇÂR±£=BU-Š²M°àú ‹„>µa´rª·şù.é,jiİ0â«/¨ÅJß]§Y·XY0Õp’u-˜ËlËõ¼ÌtY HI_9ŒEì¼d®BÑM‚«|Hú™³Şñ'KN'qUfò\®§±ğ|A,æ&zêºrªlŸËb¼ó>²X3ÀâœCƒä%Sçr°T»;—ê5øMuYè`)y_§¶`1W†˜ê±ˆÁhbM™2À"†ßŞ(9‡³¤/àFŠk\¹$¦¨Ëï‰^>›û¿AÖë¦êÎ5¸ìœ*PuuIÛYHÔp_«â—ã½©éß%ˆ¯ÑÕÉa,NWëz˜Y÷oòë/6£ ø7·Ûİuºöí9ÁŒÉ5·ùCT¤HŒII\)Õ­İ‚dDPH]'Qj/¼`DeÏùNçCr¸B¢y@ôµEBâ±×K}­dÒöÍRûpÆ ”‡*U‹8nø¾İ=ß¹vÒ6„Ä<xÏw»³³¿™ı¾oN‹3©L±
+Î›­s|—Û×Ïä†ªŸC—ÊİéD;ïVË§«“ÃK~×b½ßâÏ,×b«Á(¤üï¸‰?šC‹Ç—Q¸&@G‹/ …UÒÉB,¯ÀnæOÖÃ•v­†³tÎü;İg¡ÿàÚ)mùØWkïÎş"ƒbdplqpaüÚ¹éEC9ëYØø¾ÿ­<»¥nµ,2YH¯‰IƒnF ‹T¸j¯¹·¯!ôİ¸Ø²%ğî—’çVFË}.õH®[v–Êcúá%[äTM÷Š©®ÅŸRºÇîÈ¡9Íû¬‡7[Fq^[	çŒ²ZøÂÿTŒÑ’A3gWÑBLŒ,–¦j2@û"L§ìóà"²0R3…Ãƒkú—Îócc{]Óà|Ä[LkŒmËš0„½*ÑÂÂğ+¸+ÈkwÔm\İóğ!}ç¦2`@İĞ‹™;û®-Â6ZX#ğm<Íƒ%<Ñc€tR­ˆòD-pµí²¬9ÕœS·ô9ºåŒSƒ‡G{r*(ËÈb^¢ÅdJÿ²ºÙ¬`.ˆ,ü™:Ü°´ÅS¥–Ÿ²P1ï EZÙËãkp-ö—ÉâÅÕºômxÌ2`º3t	‚M‹5qd|Í>u,<²8bŒ]Q¬éúşÚ“~É-òmœÒ¥ªì3ÿ©nw\Šá4‰©®{á•‚t¬jbñ„ö¼}İö
+3ÇÕËÎx-\ğ$Z¸˜òÈBï³Ô#­Ë­$¶CbF>ZLè¸.´ìEŞg1X‚‹º±wqœB¸ï%„o3­».x¶û‹|±kÑÏ†Yhm´€®?"¾›XÈAƒÛh±˜fMáûáúz=¶Oƒ`òê·¶zS¡…G¹¯wh]©¢UJ+*PBbñV#+#—c–Ùb‘>™3„¾õ…[Èè ÉBw«»œZ8á$ë¢y2±]ã{u'|ñ©¶
+Ñ"À9fØcõ5Šê¼Ñqp9 E/8¿Y¸×âw$ ¨ÎÉ">“]m™û—ìSÈ"Øn EæGêu\uİúûª£ƒZ9¯ZdÁŠ©‡Œ´Rá„¢ì‰¿ÈÔ›`Bã(Ğ;âmZ¸d¡TGG‹½hAu§_R*£cÁfÄšûÓaZQIâE+±ˆâ…WÍ‡L?_¼ªcìd|TÊØÂoŠh]HÈµÄøá«$y„óx5{Ñ½ÇÎ€Y¤¢l Á\ÃdÑänLm³˜^0ÿĞŠ×E]EZó)ƒòˆ3‰ZCj²ñˆ¸L±SnµÀ‹,°çG+¼L¸"˜;¿¿·.®şjZ`0Ëy4±8$çÙü¦…%™]—ŒAdQÄÇ€c÷}Å	‚‹ñƒd×œ×¥W´İÇâœ¤"R ßèYp^ğgìS{È¢°³E¦ÅÎi§êÕß¿İ{SuãÅ¡“ø\Ÿ|ˆ,zñÂÑê“}…70§~£Å”@/¶ÀìiO¼‘¶zn/^ø¯²0§â”9±Å§UØogĞ‚¿&›‰…=6¿iá³x—â¢ÅDV¨î$QdÍ´İlb¡“gPÅŒ¶i¡™ıã¢Âµ{¬ü0s]úå‰f©ÇNÊ©£iSÖV7Zù+ÏtóÈäé(ì·*|ÆH1ÆñBhëMXly«Xk]Ç,2TÁ/yq‘.˜Œj-²Ø…Ş„×—GŠ'íòj§Ì½»…óÇÚ+XPáÍR8\ÓÖÄ9-ªè5±…(’îGĞÂASN“E\ƒ–Y«˜… cì¦ÅïÄ[îYı$Z|ãhV|—*öôÏöjÂ¿0¶üäX£`cY×Z&ZÚ,Ì™Owë‹âˆê‹p–ƒ¡oÖZsğ†|qáúDkğ
+V»ÑëÕÈbÕà}½ú"Ã&±tÇ	/¶ØM±³œXØZÓEÑRû¼¢CÆô•,jãu|üúÕx/Ï—åëpÑˆ-l?¸,±–píxoäÚh‘¾Q¿©gŸ-ÒØÙsíÂ[budÊâÇ_8:äÏİd%¾¾q´Âƒ™|ö¥üì\em6®Ái³‚Ğ³î¤`Iu'ÖzQÃM­ŸYÿ¼ùsÚci³*dŠ’êNÕƒ4›€Ú'zue¯îÜót©ŠCd‘‰-Êd¡Zd± üÂ³v;Ğ`Hk¨[¡–ƒPä7)XAC…yÕØÀ ŞI×Zù´ÒJ·Ô†z5ßÒÍZk6]
+óí<Ìj·ÑW+ìŠjáu…wjKisã¬ÅšuÓ?¶Âd3¨mÌ˜ †Òû†Näêa>Ú›µ)k2™§İG¯Çú¢¦ğõcÍ~ÃMÇĞvg¡m§c3›îÛ(ÕNANÒFjÓ¢·Ñ¡H—ÑF1²Øå| Ëò½È§CƒÍ†ï)ƒ­MÂ'hÉüQ¼ˆ?p¶„·18R¿FòH½°ya¹ûë¿—¾ó’SN üĞ/ÉÀS}_qc‡6Ï+Å€°(ÃÈ"µeh¸‘x '9ö,4úÊËŞÍÂ»OØn±CÛÑ"éÂTá7Z!æM)Y•©RvËĞ¹Å`Í=[ôàÔú,,y/‹ `=‹Ñş¾>¡–ÒøWu¶|9›“°½Åß¥ÉÂup+Ç ²ÚÖ¡ì<€Û´0ùĞ³0Òòi¤–ºÿ÷÷õ‘‡ïw”^rtöÇ)²XÚf±ãšúø­ã Ïâ"”daÒİï/0ù™İ‹º~÷lróSö~Gé%Ç°ø¶>‹iòÁ»p“£ã^,t²¸úß´øßinrt\¿güZt›ãÆï…üwZhúÁÒq8gàëğ-8OCÇ,Ö²ÏÁOà—ğü~xŞ¿Àø+ü16È>ÅrL°'Øû&»Ä¾ñÙ2û5û-{­±÷Ø¿h¯¨(+<sgşì.,Šbè¿$K¢XMÑ´,¸Á×Š`vM‚X¢$¦‰F—PXËCÓ¨ØcìãéÆéÚ´õm}µšŸIã±¶>â1"ÁíŸE-§Ï1ıïŞÙ™{ïÜoîÌ?ÿÜùèVx‚1P øŞ^ë`9¼ëa3l‡ıp¾€+ĞÁ83°¾,‰¥²¡,‹cnæa?aóÙ"VÏV³õlÛÎÚØ'ì<»Â¾fí,ÈÃ¿êÃ­<‰?ÁÓùH>?Ç_à³¹—¿Á›ù&¾‹àGùYş%¿ÂoI‘RoI“lÒ“ÒHi¼T,M“*¤ÅR£ô–´IúP:"“®É\6Ë‰rºœ%;å©ò‹r¹¼X~C^/·Ê{äãò?äóò…)QÊ å)%W™ª¼¤ÌQæ)K”UÊ»ÊÊLk÷*‡•#Ê	åŒò…òOå¢Ò©2UUªIí«jxÃKQ©ƒÕ5S©æ"9Øãé–àéü ^`Uj"4’™iô¢*UA´T‚LŠ—Ô"‹²‹pU)ˆö¢‘ÄDÄD`¤Ñ4
+Y%ôh„ŞX¦1ºÔ dhC:«<íŒÂ+j„§İW85 ~”îK]#È@ÂIz0¡	"p„ÃQ>H„÷¨ #‚„û ¢Y´Îı¤8ÄG¦ˆáú8vD÷¸ NB=1r3ÊÍ<£Š¡f=bS7’ŞºŞ`&‘R$F<éGã0RÁ8ã8G$íÃ$ŒQBB®¾Fœµ0%Œ¢N¨Óê¨`°Nìã 	Ş
+^'bİ~ƒ³%¾Cşó ŞG7¨¸X“rµÿ
+x±xålI|tÿ·£îéÜ~=ÙÖt”M6øñº}™ßŠ‚½*ït_(úßA±¿j¿{XgDé„JåĞºµëöŞU´¢²ØV,9qÜK–=İ:¡±óÆªú_Ø:okGÔ7¿=½›0ƒóê÷Z¹~ş¦•¥’ñ9v¦£”¿¾(^q\‚áä¼¿g	õÇP_qiaºçP²Õ³oğßÎå¯¬ CÖO±–f…ÍÈ.plI©Ï3_–_]ÚòS_³}4á•ñŞ¸,;{ÿÌüÉ±Ê’ÓÎãÂy^^Š÷}jT2©p`ÓùÏ¾WqiŞIó´êÙÙ„$iNkÃ¢ØsécGÊ–	¯È$½jC`eÙ5ûÛ5ëËÇ¦4äovVÕÃZÇh2«äÒ½­¹c2_([r,6Uß~ £¿k.Ç½<wÂ™òÊİÓ‹œUIÖ›gO!õ>sµ¥õè¡ô’©Ë­½ï5goüË3ókæ{ŞÙ	:;z]¡Úp!¥öûùÕuUõ–Ë²–çS¹¶¥¹eïNNúHM›¶Õ©’ÓnÍşn·
+a¿|ñ&¢Ô-¾•½ñ}×™WéuF]lmK÷œÚ/b‰9ûÒ_³H~C^IRö5]hŞ¢6ä:jÍùÕIU¾ššmˆÒP’›ú~³¹EG‰…Ñ	Gş]î¹uÚ3c1?Ù3®ü9R•Ri©â9	cùªa‘Ñ„(úŒÕ5Ï2îï¬]Ñ·YİºõÁÆÕí«/jü`ŞŸ<Û~ğĞ2Ë´ª6ùHBãÀ-UË&e,§MsUcÊ³.ß¨„§w¾	Ã†6}¹ö®Ë©ö„¹Ü¡¯‹%ºât"®Î˜ş&ƒİø¿_|³o;á)TÕ¼jWÆUWˆš‡áºÜŞ8„˜CûD8Š:­¿É¢™™êiKNš±Oô¤^M77öD)ÆßöËdìfZJî$xwPtÄùx]¹{›á/u¾?ù3:ìä¡Ÿû|Çè G¤½üáÃƒèŞğFÑ¿E±$$`¨V’Œ»ÖF‘Áø=~’'?"ÙdÉ#ãI>æ[SÈ³äyœ*y”aæ5‡¼J’*RK–bîµ’¬&o“fò{ÒŠØ²› ‡É1ÌÃN“sä<ù¹FÚI%ÄYgD,íK¨•&ÓTú8B‡Ñ4“:h.G'ÒÉt
+-¢Ói)-£/Ó9´‚.À¬­š.¢µôõï€è¯é
+ÚDWÓµ˜n ~ÌÿHwĞ½ô ıˆ~JOÑÏ1/¼H¯Ğë´~$<ó"Á±ğfŠ)C`8d‚ò`æŒn(‚é0faîX¯aşXKa¬‚5z¹ü€m°sÉÃp>†“ğ9\€Kp¾‚ëĞ7¡‚Œ2†9f8‹Ä<3šÅ°>¬‹g	ÌÂ¬,™=Ê²Çë™!tKàò)@¦`T’È’€C‰h1ÓK	zÙ s½ŸÜELÔì#ë20yÔ½Š^Â‚‡,dì¯êvÂƒòËC-v[r7ñ)ÔtÉÅxßø…OÀH@øeJé™¬3a#.ë®‰ØÃ¸ˆ°+……é½ºúÊÿE]+h«‚Ä¥Tø—tæH]³$ëõ19××$Y½ğ…ë#J¡c÷¯ÚYââ ¶iF?$çzüö‰.m·Û’fëÑÔŒŠæ'Nd…./¹ıR?KVı<9ñÌ½”gÒlcœ.-@•GÈmN±…“\X-£<Ç‘ ŠmL€ÈN×{”.uh°:@lÁÏ›Z„jÕ¦i93~ZŒ0
+R-X·i£jT¾+Ñ­ù4_®Ç§ÒfLóàÀôT”øÜOà'¹fbYà²øíîøÛÕ·{8úé%üpİÏÊBÊtè "lc4?àtMtù½x¿İá·X´ÿ6§Ë¿Íoq»Ñ*òöHñÿµ™q¡1Gá˜#S±bèò‚s`÷·Ï×ÕJ´ø½>_¼ãµd[%=ö @t,9'@½N]åM´ÄA¢%Ñ‚ãt‹I6Š¹ÏÁ‘ZÜiâè‘š:›ğÔ˜|«¥ãSµ²+S¼ëÙÍ÷“R½vYüƒò'Á›r©”3H1¶‹‹¹‡LA½¹2‚Wñ¼ù‡¡úäÇ3ó‘ÇBYƒ\ı…—øÿÛÕâ8r†å¶İ³ì!‡a	›aÂ0Y” ëQ%û–»-ëaËİrû!–€dëiëQ’K¶Í²9ä0äBB!‡ö°,9…ÂÃ’ÃBÎËKØÃ2KtJ=½°,|şKõ¿¿*«¤úcê’ÄœT ¹>«ÿƒúEíçÔ/+Yç©²ş!õ!±{¯ù1Uyoüæ§Ô“úKê}2¯?!yWÔwØ«Áñ}Ê%so¬®>%ñşMæï6^P49+ÿYùŸãaàøœB7±¢kù¼vçÖ*¯Pß˜R¿#qDïgš—GçÍKê'ÍgW¯šSŠm<§@ãSê
+ÍgİüŒğñ[ªCÆï»;·îùŒzĞ|‡BDNI¦‘üºM|î5D½}ü6Õ'ºo¿G‘/Ÿ>©ãÇu…:"5·4áüWÔS¢ûFÕ#¹§êŸS÷Èø!Á%±ÔQ“ú£«¿5^}Aô<™«yyõ©£_­Qí?Ô#÷§ÇÇTNpà‚HmP§Äÿ-Rßı
+Uß_Éóá¦W¡~.›=J¹Ñı†à×Äÿññ¿jYqÅ×ñ“Úƒúmê7ø ±
+ÙäEšHï·›_½"1~@j‰ˆKlßà~…[/jïÖ_Ö~Ox1_Ëë±û¥l¼"kıüèûoPWïßø‘œµÿ|BÖÚ®pën9¸†Bı™ğóCÂ}µwî’^.›/¯>"§Åç×{ÿk8>PåÍ?æÍë_áZAXä‹µz?z­«“¹oS¡H{ÕÉqóöôÿ®£ë°µ/-®®şôUYûŠßw+k+M7¯Ço6ì`³"ò{¯+{}}óFŞd=
+äbÈ­Â#¤9ä¶ãY®ÇĞäFÉ±Õ¢™°œŒDÇ¶:N4ŒÑrÊßF i#Ÿã|«³mÅ5"Bñ;~N²´T½a±ˆÕ½3Şp™cÁ¥ˆbÑ„Å İ±]ÑÖÙ\™¤.6Nf<²¤ZÓ‚ÃÜFÜ.?bF'f€Ñóğ0`Gú$$áxÂ>ãZ_”‡¶Ş`qxC~ÖaŒ˜3İ“uB›©œõ‘rp2²XZÁiwt¥ŞfQ‚Èä@’XíÎ¢ÛÂ«iã“ıÖ5Á"y²¥§ÙlWÙ4i{%j—[5;ã€.Üi”ÅºÕN¨Ã(NÕi<ÓÛëÔ2Í÷S“ƒ	ã©Ÿi)í=’ïÇjÏKŠá.“Ü`a~-dErP/_jË­iğ¢¥;qÂÎ&1à¦-s™edTX[„ú­¤·ÃvtÂf|ééi¬MÎQbœî vØ˜âloë§¾8km„¹Ğ]ªN±‰Í¬U)M5²¾#„…,šle[^Ğ,lw'~1X¦©}2ël·çé8¢¼³c.pĞ
+ÍÀöÁÌõÕrnsvl‹S+ÕÑAÔÁšî¥é> Ûk=.SMÜZ¤yÀa0B,oVPí½<™®Åq,e…•Ã‘ "™Có"¦Ü¸lH?Ü Ğò@0À‹3mG[İX¶×mŒWy³­:Œu1Ï Ä²ØFR;HŒ¯uÇ,Ğí"ãõµm\ »Â Ç¦á¹–t“íÒ>Û»B¬Ü–0±ù±µ÷—vÉRá'±TZØÈ6b7ñSTuÏšqyâÀ@ëÆ£&H.q<r{X‹ûv&±zœÚÒ€ÓÑÑ*ZMìĞÆ4'«mĞ;UG^¢[±[ÅåìaÖ¡âI²ÂÊÊ`,dÅ¢±7ÕMº–1wrÃNY.i¿PÂ³HtDïb^ˆ Ó$‚ÁØu÷K§L^Èzz’—Á3Î”Ü‰ìBåÃBsD¬r{ıÀ‚_dÂ6Æ‚#EmzÚ’z·ìòX‰ÏMŒ½EÔ÷ä™ä­ç-·—î
+n.'çîJ… JZ\Õ¹st%\#~9î³: âs…_íŞÜ7SP"3u’!6C+Hubëì#uæâ¬L…ÅcKÒ#‘k‡;C÷‚ô˜ïíY
+ƒq¸èzì„‚¼Ô±…Løl»Ë†½(éê€q¬F9Fú&‡ûMK1´T?ã C|‚(KäC¹_IŠ/Hl%Û“R(†¾_ABkå®Ú‰1
+´ÌB\0…’!0	Rr¿Á¢@—Oé2¡š4ğÀ`9S'5Õix…·ö]¨±)¼ˆíñ2¡1¯pŠ¸C«½ps–.€°âö~Î	i^œn‡˜[c.“ûı ™vÑVÂefGêAÜ@9O1,½µXn`ğí;Öa¢Ş<&cØ±ºaÂ³äy}‚ò¨hc_Èµ5#FIİÖ¨7`A¼rôp+ó(KpÌƒÅélWˆ¬/°ĞOZãY¶,™rÛ=”yõx³N‘±İe©Á^M¦şv–î:†q@´R˜|²‰SÄ>LuRc„•d»æ‚èÔdã\—yt×‡Ÿ6‡6,$@š ¤”z
+–¥ÑH²‘eÉaÉÖÂv4Z¬m¤™‘4¶D ƒ!·.a)JhqBp mlCZCXb iBBX.”PlVÓÜ7Ÿœşùæ¾ß}ïİ;oÉ$ÍiwLC(E%šHRe¡ö0E¢QFäÂÖ°…Lú‰ ;ãÔX,­#Uòğ¹UÁ•h	±W
+X\0ÚTˆQ›ü®›fqc&šÒD2äĞè¨0ç§r¹åa—Òb
+*%äé´¼§Êp‹¥N¥¶Äì‹r1åVzC<m„\ŠL{IÒ¬ˆ‡ª«¨t\…7¶àe-ŒYeµÊ¨ÖË8£ÅÃL¼XUÈ3U"æÓ+ıa2àˆ*OÂj.äépA%Í**™´#íö'Ÿ ı†²¤'íIkŸçje©?ƒsVÇŠy†×©¬i¯›WºKˆ„Õ™àIÖ—G™“Šâ4'ˆvµ—Ùc.ªZĞ:r)ÎÌ%ÉŒ"NÙªŠÎëlv^Gç†L,_E2‘gŸÎ¹2ÉùÃ*Å.ÄÍVfyŒ¡ Ã„Õ:*×·Ğ•JÚï‹–
+‘\o&ãhB•Òª_T›§GLÉBÇãÆüáR6ÑP…nuÚS‡‹“f:O“)ı©R›*Hh“$¡"	Gâ,Ì…Ê	/M§Ö-İ?J}8–ÔŠnÁ•6…ıæòÅ–TëkÄeÎ8yc¹èö#.J%Æ	G¼Ø3Jw;cË$(Š­äz­ßëI‹5¥(Ÿ‹Õ}E„à"ˆ ©qFK‘eR¡h	«0X¬ÈÄ­‡.Çƒ^Á—²ø^¡(5G&}ÊŠˆ‡ÊØñşÆSÓZ>W£ôG]4£Òù­U;#BÅ$aÀ)«2áÕãóøªE¥ªšr˜S.ƒ—g˜¸&Îk’oİÊÒ˜ÇâÍ3±a.NÓ.Ú+ò¬6êñ‡M„ÔZ,xÓó	odM·–öã÷j:P…Ï»Xa
++şRÌÎjíSş4¿¾b…˜‡µkÜQ’‹ö¸Kôğøë(¨Ió•¥´Z¥aÙ 2LJ°U|ÊåÒ¶CÅ)“”ªHÔDäÆÍÂ ÚÓø^RFiÑc-E³ÁÈú™HÙG#'LTÌï<ÓÏ—uI°·Ÿ=ú~?ó<Y`Çg_ï;ù«#®Égm“æ.\Tğb3ßš5V1wPQ´ª~ìĞÙ[ZèÊùÂ†óÏ¼ÖwÉÑFMşg‡m<T?àÊ¸/¦n{e`üìë›v9T¸:æ‰}}øå°‹ŠúËw4Ô7ûrÀLKãìq÷nuíV¶mé¥-ZßÍUcõËÄ©[{"¿n]³ôöÔ‘İKÚ&¹3:ò‰‡¿¿âÄì·<Cß¹s¤p¼fİÈC3®ïéã7æÛ†S^á[jæÏ\¿Yİ>xmÖõ6Óó—uÙ]kì{tŸn™qãÑµÄÑk¦Ñ;×u/è,Ğgl©µd/|Xt`í/ÚŞ½{¾®õæ­äî¦èé	ä»u76ï
+´3íØ>§ç êM“P”Óéş¦hğıºe9s˜‹ëFåÚğÆ£ìÛN;¹UYSº}ååó–œ~pƒ‰WnX_ûÔ†O>š|øØòş>G¨eRã¹Ñ3ÆŸ´Õug·}¼{uÓ3ïŞËší¿ôÛôinv¦7œ	>Ê»˜¸k¼ıôÛ-ıO6Å¿­xúú“ÚC|ç;Z»O¶îÔÈHÑ˜Es¨†¾+í8YıBzÒ˜—ú*e‹NÎĞrºzD“×xähıçK:f]¸ºïK^¬´]x6‘³¦£ëª¬jhşB×ö]ÆmÚòuİû•Í¨!Û‹úÉ¡ş„¬Uö4²#Ò¡ß øW`Ñ*‚:P;j@sPa¯2y¨óÊGĞKèy4¸Wy©~¢ VÙÏqC©£ù?vôÚƒV#wÓ«@+QU )?*Ñ‚'”Ahîá£²Ÿ(h¯ì9ü5h–ılTáüĞğ}OŸYz„ä²¾@9NC.ë¶ˆ$¢à#àÀ‡Àïÿvïïïï oo»€À›Àÿo ¿^‡_¿ÿ€}]E>”…ŸRI²åèß`w ¯ ¿^^^^ ~<ü
+-A/âh_¡1¸t´Øî‹>»½—’òØÿ~<Ú0}Øüxr?ö!àAà`+ğŸÀ ?îîE-ˆÆyí}\êiÇñ%EšQˆ=Íè9(Õ`Oú ecMòÈ1_Æš¤ÈÑß‘óoh1’ë{ğRû+^“Yø9«{ Şnˆğ>äºíÄ³ğSÒv¢÷ˆK’&•¤Hïõö yä˜RÛ‘ÛÛ Í;ÀFàVèóm4sØoş&Do eso›ÑT(IıIŠıÚmBzÌ7ğœÈÑFhıgˆ¶ì×ë¥uŒÖ!-æZPş\=¬ï*àJˆùxWà•,G„:õàığ÷0§uPg9ğwhœÄNœÛ2P^.í];KñÆ”ƒ-Gµx¤¥÷©…µ0o‹á}áñ;‡=‹À³íÇ´GÍSá…x³çcMòÈ1¥‘i·J-_ÎC¨5ïq	âd V”j`P„·Néïë>l
+qËÄã´”9â³Ïƒ‡ÃG4ûÌ>¹ÅQÅZf?¹IŠE MX	ô½À¹À9ÀÙÀYÀ™È{}&”Ü§l'Ğ¬ –í@ÌTØV ,– -@3°¨çœ©úŸJìhØÓ€zàËğ6SÁœÌNNêpk9^s’­’@ğÿìVMLA~³İvt)XlËÏŠ *ÅS5%!HÀàÁ‹ñ¢HbjDÀÅÄ˜˜,&$şœ5ñäOÃÉ«èõ`RoD=hâ¡'‰1µøÍëêEj“ó2ß~ûfvvæÍ›÷¦›±:•RÌ;w1îdÜAÀæÛÛÛhş¡ã)ß¶±‡¶2O2¶P°™bÀ<^%‡õM°‘JÜ¿5õÌãŒ±Ş²D·ò¿ë¸W„qc­‡!X§†lüQÇSêÂTkêxÊ?V{mÕ|%WñM‰Q~[Å§«’5ŒAF‹1Àèg4}Ô4]UâEœ£HeTøl)<²àùÇêC{£Ï£ŞF]D]Bõ‘/^“›Rhs~³‘¥^¦[‚)	F5àK0ú0¿: CkØ,™TtÔ½I¦maÓüÚĞ[Dß§:ˆÎµ-QŠV[Ø¦xœâ¶«¼0N#5bœ&ˆ÷uĞ3±àÖÍèÙÑáúIhÚ :N;x'„pÄRà{ „#Ùæ`8€ÃjÑîA„°t
+ü‚ÑÄB0”áì6B£…DsúÇHBÖ.WÿBHÖO¡YFê¦U¶ÏXéº6¦ße'düÂÔ:s+¹.
+åsù\*l;vÒ±1Š“j¬ø®tİWùùÃY£ØÎG‰´ ºŒ±“™pÀ5iÎP\MX8>Ë¯C+éB1]è¢ÎbÏ”pj»Ùvz{·2-®”&ÜÒ¸¸ê*íniT,¸bxnGDD«TynñL…1§ÑœâšéÂåÓ¹nL°XX‘ö°h•ÅAõ‘¬"â^påÜ²â…RÔÌ-œ1Õ—ş 1DÁPş­\[!Ş³ww÷–Ú£9ÑšÍÎÎÜ83û@ù2}0;›ÍÊY$ÖáuåÌ2ÿ_6@ÊQ>Ë5ğ0E5èOJà'Mì¾ÿı’üGã®U4$l¹6Rz÷Ñµ¦Ÿó|õõê«Õù7ªgÁïE]wl“Æ~DĞ
+"kà7À¢rG4?4QÄ·2W;{=.ô!kà'=n€_êë<Ğßqxzbôôø¯_“ûpÏÄ§;Œ;á"ãÎt÷³)°Üú~İïoZx•Ïp5/{šL×\È÷Şüˆ6Áí¨u7CU¥?	Ûäw_:/Ÿù[ûGJ÷¾Ş0—Œ¶–·ß Ì|Vø
+endstream
+endobj
+48 0 obj
+<<
+/Type /FontDescriptor
+/Ascent 770
+/CapHeight 718
+/Descent -229
+/Flags 262240
+/FontBBox [-174 -228 1114 962]
+/FontName /Helvetica-BoldOblique
+/ItalicAngle -15
+/StemV 133
+/XHeight 532
+/StemH 140
+>>
+endobj
+4 0 obj
+<<
+/Type /Font
+/Subtype /TrueType
+/FirstChar 32
+/LastChar 251
+/Widths [250 0 0 0 500 833 0 180 333 333 500 0 250 333 250 278 
+500 500 500 500 500 500 500 500 500 500 278 278 0 0 0 444 
+921 722 667 667 722 611 556 722 722 333 389 722 611 889 722 722 
+556 722 667 556 611 722 722 944 0 0 611 0 0 0 0 500 
+0 444 500 444 500 444 333 500 500 278 278 500 278 778 500 500 
+500 500 333 389 278 500 500 722 500 500 444 0 200 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+444 0 444 0 0 0 0 444 444 444 444 0 0 0 278 0 
+0 0 0 0 500 0 0 0 0 500 0 500 ]
+/Encoding /WinAnsiEncoding
+/BaseFont /Times-Roman
+/FontDescriptor 40 0 R
+>>
+endobj
+5 0 obj
+<<
+/Type /Font
+/Subtype /TrueType
+/FirstChar 32
+/LastChar 233
+/Widths [250 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 500 500 500 0 0 500 0 0 500 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 944 0 0 
+0 0 722 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 444 0 0 0 0 0 0 0 0 278 833 0 500 
+0 0 0 389 333 556 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 444 ]
+/Encoding /WinAnsiEncoding
+/BaseFont /Times-Bold
+/FontDescriptor 41 0 R
+>>
+endobj
+6 0 obj
+<<
+/Type /Font
+/Subtype /TrueType
+/FirstChar 32
+/LastChar 251
+/Widths [278 0 0 0 0 0 0 238 0 0 0 0 0 0 278 0 
+0 556 556 556 556 556 556 556 0 0 0 0 0 0 0 0 
+0 0 722 722 722 667 0 0 0 278 0 0 0 833 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 556 611 556 611 556 333 611 611 278 0 0 278 889 611 611 
+611 611 389 556 333 611 556 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 556 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 611 ]
+/Encoding /WinAnsiEncoding
+/BaseFont /Helvetica-Bold
+/FontDescriptor 42 0 R
+>>
+endobj
+12 0 obj
+<<
+/Type /Font
+/Subtype /TrueType
+/FirstChar 32
+/LastChar 251
+/Widths [250 0 0 0 0 0 0 0 0 0 0 0 0 0 250 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 611 611 667 722 611 611 0 0 333 444 0 0 833 667 722 
+611 722 611 500 556 0 0 0 611 0 0 0 0 0 0 0 
+0 500 500 444 500 444 278 500 500 278 0 0 278 722 500 500 
+500 500 389 389 278 500 444 667 0 444 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 722 0 0 0 0 
+0 0 0 0 0 0 0 0 0 444 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 500 ]
+/Encoding /WinAnsiEncoding
+/BaseFont /Times-Italic
+/FontDescriptor 43 0 R
+>>
+endobj
+24 0 obj
+<<
+/Type /Font
+/Subtype /Type0
+/BaseFont /KDFJGE+Symbol
+/Encoding /Identity-H
+/DescendantFonts [ 49 0 R ]
+/ToUnicode 50 0 R
+>>
+endobj
+49 0 obj
+<<
+/Type /Font
+/Subtype /CIDFontType2
+/BaseFont /KDFJGE+Symbol
+/FontDescriptor 44 0 R
+/CIDSystemInfo<<
+/Registry (Adobe)
+/Ordering (Identity)
+/Supplement 0
+>>
+/DW 1000
+/W [
+41 [548]
+68 [712]
+139 [1041]
+142 [603]
+153 [712]
+]
+>>
+endobj
+16 0 obj
+<<
+/Type /Font
+/Subtype /TrueType
+/FirstChar 43
+/LastChar 149
+/Widths [549 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 549 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 460 ]
+/Encoding /WinAnsiEncoding
+/BaseFont /KDFJGF+Symbol
+/FontDescriptor 46 0 R
+>>
+endobj
+20 0 obj
+<<
+/Type /Font
+/Subtype /TrueType
+/FirstChar 32
+/LastChar 233
+/Widths [278 0 0 0 0 0 0 0 0 0 0 0 0 0 278 0 
+0 556 556 0 556 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 722 0 0 0 0 278 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 556 611 556 611 556 333 611 0 278 0 0 278 889 611 611 
+0 0 389 556 333 611 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 556 ]
+/Encoding /WinAnsiEncoding
+/BaseFont /Helvetica-BoldOblique
+/FontDescriptor 48 0 R
+>>
+endobj
+50 0 obj
+<<
+/Filter /FlateDecode
+/Length 247
+>>
+stream
+H‰TMo„ †ïüŠ9¶é$¶ÕÄxÙ½xØmSmï£KR‘ ü÷´Ûô “g^^æƒšsc´úîfÙ¢‡Aåp™W'zµŒƒÒÒ”n9	4˜Ûmñ85f˜¡ªıââİ]W>±G oN¡Óf™œ~…L»Zûê„.Â^Å„@“ñ/Ùm'ÎÚ³ÂÅ
+‰N˜¡bŒ—uehÔ<ï®~7áÈïkÎ_ò:R'bE¢¢”w­À¤ñ×Dåîc¬&¡Êñ_¬wqï_®Î…ÑÒÂÒ ±umğ¾S;ÛØe<äG€ ÿ¤uà
+endstream
+endobj
+1 0 obj
+<<
+/Type /Page
+/Parent 8 0 R
+/Resources 3 0 R
+/Contents 2 0 R
+>>
+endobj
+9 0 obj
+<<
+/Type /Page
+/Parent 8 0 R
+/Resources 11 0 R
+/Contents 10 0 R
+>>
+endobj
+13 0 obj
+<<
+/Type /Page
+/Parent 8 0 R
+/Resources 15 0 R
+/Contents 14 0 R
+>>
+endobj
+17 0 obj
+<<
+/Type /Page
+/Parent 8 0 R
+/Resources 19 0 R
+/Contents 18 0 R
+>>
+endobj
+21 0 obj
+<<
+/Type /Page
+/Parent 8 0 R
+/Resources 23 0 R
+/Contents 22 0 R
+>>
+endobj
+25 0 obj
+<<
+/Type /Page
+/Parent 8 0 R
+/Resources 27 0 R
+/Contents 26 0 R
+>>
+endobj
+28 0 obj
+<<
+/Type /Page
+/Parent 8 0 R
+/Resources 30 0 R
+/Contents 29 0 R
+>>
+endobj
+31 0 obj
+<<
+/Type /Page
+/Parent 8 0 R
+/Resources 33 0 R
+/Contents 32 0 R
+>>
+endobj
+34 0 obj
+<<
+/Type /Page
+/Parent 8 0 R
+/Resources 36 0 R
+/Contents 35 0 R
+>>
+endobj
+37 0 obj
+<<
+/Type /Page
+/Parent 8 0 R
+/Resources 39 0 R
+/Contents 38 0 R
+>>
+endobj
+51 0 obj
+<<
+/S /D
+>>
+endobj
+52 0 obj
+<<
+/Nums [0 51 0 R ]
+>>
+endobj
+8 0 obj
+<<
+/Type /Pages
+/Kids [1 0 R 9 0 R 13 0 R 17 0 R 21 0 R 25 0 R 28 0 R 31 0 R 34 0 R 37 0 R]
+/Count 10
+/MediaBox [0 0 612 792]
+>>
+endobj
+53 0 obj
+<<
+/CreationDate (D:20180214182543-05'00')
+/ModDate (D:20180214182543-05'00')
+/Producer (PSNormalizer.framework)
+>>
+endobj
+54 0 obj
+<<
+/Type /Catalog
+/Pages 8 0 R
+/PageLabels 52 0 R
+>>
+endobj
+xref
+0 55
+0000000000 65535 f 
+0000105985 00000 n 
+0000000016 00000 n 
+0000003830 00000 n 
+0000101442 00000 n 
+0000102233 00000 n 
+0000102844 00000 n 
+0000057366 00000 n 
+0000106879 00000 n 
+0000106065 00000 n 
+0000003947 00000 n 
+0000008685 00000 n 
+0000103540 00000 n 
+0000106147 00000 n 
+0000008804 00000 n 
+0000013097 00000 n 
+0000104633 00000 n 
+0000106230 00000 n 
+0000013229 00000 n 
+0000019497 00000 n 
+0000105026 00000 n 
+0000106313 00000 n 
+0000019642 00000 n 
+0000027677 00000 n 
+0000104247 00000 n 
+0000106396 00000 n 
+0000027810 00000 n 
+0000032749 00000 n 
+0000106479 00000 n 
+0000032870 00000 n 
+0000040825 00000 n 
+0000106562 00000 n 
+0000040946 00000 n 
+0000048321 00000 n 
+0000106645 00000 n 
+0000048440 00000 n 
+0000053107 00000 n 
+0000106728 00000 n 
+0000053226 00000 n 
+0000057236 00000 n 
+0000057506 00000 n 
+0000057703 00000 n 
+0000057905 00000 n 
+0000058111 00000 n 
+0000058311 00000 n 
+0000058501 00000 n 
+0000079894 00000 n 
+0000080085 00000 n 
+0000101227 00000 n 
+0000104390 00000 n 
+0000105665 00000 n 
+0000106811 00000 n 
+0000106839 00000 n 
+0000107023 00000 n 
+0000107155 00000 n 
+trailer
+<<
+/Size 55
+/Root 54 0 R
+/Info 53 0 R
+/ID [<ed56cc81d4e7efe9632805a2256b3c98><ed56cc81d4e7efe9632805a2256b3c98>]
+>>
+startxref
+107224
+%%EOF
